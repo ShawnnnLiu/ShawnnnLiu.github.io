@@ -1,0 +1,133 @@
+/* Minimal, clean, responsive styles */
+:root {
+  --bg: #0b0c10;
+  --card: #121317;
+  --text: #e6e6e6;
+  --muted: #a5a5a5;
+  --accent: #7dd3fc;
+  --border: #2a2b31;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
+html, body { margin: 0; padding: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, Apple Color Emoji, Segoe UI Emoji; background: var(--bg); color: var(--text); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 1.2rem; }
+
+.site-header { border-bottom: 1px solid var(--border); position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(11,12,16,0.7); }
+.site-title { font-size: 1.8rem; margin: 0 0 .25rem; }
+.site-subtitle { margin: 0 0 .75rem; color: var(--muted); }
+.site-nav { display: flex; flex-wrap: wrap; gap: .75rem; padding-bottom: .4rem; }
+.site-nav a { padding: .35rem .6rem; border: 1px solid var(--border); border-radius: 999px; }
+
+main section { padding: 2rem 0; border-bottom: 1px dashed var(--border); }
+h2 { margin: 0 0 1rem; font-size: 1.4rem; }
+.meta, .list { margin: .5rem 0 0 1rem; color: var(--muted); }
+.hint { color: var(--muted); font-size: .9rem; }
+
+.about-content { display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
+.about-text { flex: 1; min-width: 300px; }
+.about-image { flex-shrink: 0; text-align: center; max-width: 200px; }
+.about-image img { width: 200px; height: 300px; object-fit: cover; border-radius: 16px; border: 2px solid var(--border); }
+.image-caption { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); font-style: italic; }
+
+.carousel-container { position: relative; display: flex; align-items: center; gap: 1rem; }
+.cards-carousel { 
+  display: flex; 
+  gap: 1rem; 
+  overflow-x: auto; 
+  scroll-behavior: smooth; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  padding: 0.5rem 0;
+}
+.cards-carousel::-webkit-scrollbar { display: none; }
+.card { 
+  background: var(--card); 
+  border: 1px solid var(--border); 
+  border-radius: 16px; 
+  padding: 1rem; 
+  min-width: 320px; 
+  max-width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+}
+.card h3 { margin-top: 0; margin-bottom: 0.75rem; flex-shrink: 0; font-size: 1.1rem; }
+.card p:not(.tags) { flex-grow: 1; overflow: hidden; font-size: 0.95rem; line-height: 1.5; margin: 0.5rem 0; }
+.tags { color: var(--muted); font-size: .9rem; margin: 0.5rem 0; flex-shrink: 0; }
+.card p:last-child { margin-bottom: 0; flex-grow: 0; flex-shrink: 0; }
+.carousel-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.carousel-btn:hover { background: var(--border); transform: scale(1.1); }
+.carousel-btn:active { transform: scale(0.95); }
+
+@media (max-width: 768px) {
+  .carousel-btn { display: none; }
+  .cards-carousel { padding: 0.5rem; }
+}
+
+.pub { margin-bottom: 1rem; }
+.pub .title { font-weight: 600; }
+.pub .by, .pub .venue { color: var(--muted); margin: .1rem 0; }
+.pub .links a { margin-right: .75rem; }
+
+/* Demo (horizontal scrolling carousel) */
+.demo-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) var(--card);
+  padding: 0.5rem 0 1rem;
+}
+.demo-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.demo-carousel::-webkit-scrollbar-track {
+  background: var(--card);
+  border-radius: 4px;
+}
+.demo-carousel::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+.demo-carousel::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+.demo-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 400px;
+}
+.demo-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .demo-item { width: 300px; }
+}
+
+.site-footer { border-top: 1px solid var(--border); }

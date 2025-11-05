@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shawn Liu — Home</title>
+  <meta name="description" content="Personal academic homepage">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Shawn Liu</h1>
+      <p class="site-subtitle">CS @ UC Irvine · AI/ML · HDC · Privacy‑Preserving ML</p>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>🧠 I'm an undergraduate researcher in Computer Science at UC Irvine ('26). I work on neuro-symbolic AI, brain‑inspired learning (HDC), multimodal models, and privacy‑preserving inference in neural networks (CKKS‑FHE). I'm very grateful for the opportunity to work with Prof. Mohsen Imani for my undergraduate research.</p>
+          <ul class="meta">
+            <li>🔬 Current: BiasLab @ UCI</li>
+            <li>🏂 Hobbies: Snowboarding, music, gaming</li>
+            <li>🎵 Favorite Artists: D'Angelo, Dijon, Mkgee</li>
+            <li>🎮 Favorite Game: Cyberpunk 2077</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="assets/self_picture_1.jpg" alt="Shawn Liu with cats Coconut and Kumquat" />
+          <p class="image-caption">With my cats Coconut (left) 
+            & Kumquat (right) 🐱🐱</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="cards-carousel">
+        <article class="card">
+          <h3>Secure & Efficient Neurosymbolic Reasoning</h3>
+          <p>First-author <strong>IEEE TAI</strong> paper introducing a neurosymbolic AI framework that integrates open-vocabulary vision transformers with <strong>CKKS-based Fully Homomorphic Encryption</strong> for secure cloud reasoning. I led FHE implementation in Microsoft SEAL, developed the noise-injection simulator for encrypted GNN inference, and co-designed the MissionGNN architecture for privacy-preserving video anomaly detection. Corresponding author; rebuttal completed.</p>
+          <p class="tags">FHE · GNN · Neurosymbolic AI · Privacy-Preserving ML</p>
+          <p><a href="#" aria-disabled="true">IEEE TAI (rebuttal - in review)</a> · <a href="#" class="read-more" data-modal="secure-neurosymbolic">Read more →</a></p>
+        </article>        
+        <article class="card">
+          <h3>Geometric Priors for World Models</h3>
+          <p>Using Vector Symbolic Architecture (VSA) to build generalizable world models with learned group structure. Achieved 87.5% zero-shot accuracy and 4× noise robustness. Contributed to ablation studies with world model grid.</p>
+          <p class="tags">VSA · World Models · Generalization</p>
+          <p><a href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">NeurReps 2025</a> · <a href="#" class="read-more" data-modal="geometric-priors">Read more →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="list">
+        <li><strong>AdamsFoods Wholesale App</strong> — Full-stack JavaScript app with a React client and a Node.js/Express server. Product catalog, carts/checkout skeleton, and REST endpoints structured under <code>/server</code>. Integrates AWS S3 for media & document workflows (signed URL uploads, caching), and uses JWT-based auth with role guards for admin routes. <a href="https://github.com/antsuh1028/AFStore">code</a></li>
+        <li><strong>AdamsFoods Inventory Management System</strong> — React (Create React App) frontend for back-office stock tracking; deployed on Vercel. Implements item CRUD, search/filter, and low-stock flags with CSV export-friendly views. <a href="https://github.com/antsuh1028/AdamsFoodsInventory">code</a></li>
+        <li><strong>Safe UAV Landing for U.S. Navy</strong> — Through BiasLab & Prof. Mohsen Imani, I collaborated with the U.S. Navy to develop custom pose estimation & reasoning model to enable safe UAV landing, reducing casualty rates in bad weather conditions compared to their legacy fixed-pattern optical markers. Reasoning module attached to delay landing if crew on landing spot/deck. Worked on CUI (Controlled Unclassified Information) dataset.</li>
+        <li><strong>Crash Anticipation</strong> — VideoMAE baseline training achieved 100% on AP, F1, and lead-time recall, capable of real-time inference with a 5070 Ti. However, the computational cost remains too high for practical deployment. Next steps involve exploring smaller models such as MobileNetV2.0 that can run efficiently on mobile devices while maintaining similar performance. <a href="https://github.com/ShawnnnLiu/Crash-Anticipation">code</a></li>
+      </ul>
+
+      <h3>Safe UAV Landing — Demo</h3>
+      <div class="demo-carousel">
+        <div class="demo-item">
+          <img src="assets/naval_aeriel demonstration.gif" alt="Navy UAV aerial demonstration" />
+        </div>
+        <div class="demo-item">
+          <img src="assets/reasoning_1.png" alt="Object reasoning on aircraft carrier deck" />
+        </div>
+        <div class="demo-item">
+          <img src="assets/reasoning_2.png" alt="Object reasoning detecting crew and vehicles" />
+        </div>
+      </div>
+
+      <h3>Crash Anticipation — Demo</h3>
+      <div class="demo-carousel">
+        <div class="demo-item">
+          <img src="assets/ccd_000777.gif" alt="Crash Anticipation demo 1" />
+        </div>
+        <div class="demo-item">
+          <img src="assets/ccd_000855.gif" alt="Crash Anticipation demo 2" />
+        </div>
+        <div class="demo-item">
+          <img src="assets/ccd_001087.gif" alt="Crash Anticipation demo 3" />
+        </div>
+        <div class="demo-item">
+          <img src="assets/ccd_001096.gif" alt="Crash Anticipation demo 4" />
+        </div>
+        <div class="demo-item">
+          <img src="assets/ccd_001155.gif" alt="Crash Anticipation demo 5" />
+        </div>
+        <div class="demo-item">
+          <img src="assets/ccd_001184.gif" alt="Crash Anticipation demo 6" />
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching & Service</h2>
+      <ul class="list">
+        <li>Learning Assistant — ICS 33 (Spring 2025)</li>
+        <li>Volunteer web dev for non‑profits (Feeding Pets of the Homeless)</li>
+        <li>Youth In Action (YIA) - Student Counselor</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="list">
+        <li>Email: <a href="mailto:xiangjl4@uci.edu">xiangjl4@uci.edu</a></li>
+        <li>GitHub: <a href="https://github.com/ShawnnnLiu/" target="_blank" rel="noopener">ShawnnnLiu</a></li>
+        <li>OpenReview: <a href="https://openreview.net/profile?id=%7EXiangjian_Liu1" target="_blank" rel="noopener">Xiangjian Liu</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/xiangjian-shawn-liu/" target="_blank" rel="noopener">Xiangjian (Shawn) Liu</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Hidden modal content templates -->
+  <div hidden id="modal-content-secure-neurosymbolic" class="modal-content-template">
+    <h2 id="modal-title">Secure & Efficient Neurosymbolic Reasoning</h2>
+    <p class="tags">FHE · GNN · Neurosymbolic AI · Privacy‑Preserving ML</p>
+    <p>
+      A neurosymbolic AI framework that integrates open‑vocabulary vision transformers with CKKS‑based Fully
+      Homomorphic Encryption (FHE) for secure cloud reasoning. Includes a noise‑injection simulator for encrypted
+      GNN inference and a MissionGNN architecture for privacy‑preserving video anomaly detection.
+    </p>
+    <p>
+      My role: led FHE implementation (Microsoft SEAL), built the encrypted‑inference simulator, and co‑designed the
+      MissionGNN pipeline. Status: IEEE TAI (rebuttal in review).
+    </p>
+  </div>
+
+  <div hidden id="modal-content-geometric-priors" class="modal-content-template">
+    <h2 id="modal-title">Geometric Priors for Generalizable World Models via VSA</h2>
+    <p class="tags">VSA · World Models · Generalization</p>
+    <p>
+      We introduce a world modeling framework grounded in Vector Symbolic Architecture (VSA) with learnable Fourier
+      Holographic Reduced Representation encoders and group‑structured latent transitions via element‑wise complex
+      multiplication, enabling composition directly in latent space.
+    </p>
+    <ul class="list">
+      <li>87.5% zero‑shot accuracy on unseen state‑action pairs</li>
+      <li>53.6% higher accuracy on 20‑timestep rollouts vs. MLP baseline</li>
+      <li>4× robustness to noise</li>
+    </ul>
+    <p>My contribution: ablation studies with the world model grid. Post‑submission: MiniGrid experiments.</p>
+    <p><a href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">OpenReview</a></p>
+  </div>
+
+  <!-- Modal overlay -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Shawn Liu</p>
+    </div>
+  </footer>
+
+  <script>
+    // Modal helpers
+    (function() {
+      const modal = document.getElementById('modal');
+      const body = document.getElementById('modal-body');
+      function openModal(key) {
+        const tpl = document.getElementById(`modal-content-${key}`);
+        if (!tpl) return;
+        body.innerHTML = tpl.innerHTML;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        body.innerHTML = '';
+        document.body.style.overflow = '';
+      }
+      modal.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close]')) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('.read-more');
+        if (!link) return;
+        e.preventDefault();
+        const key = link.getAttribute('data-modal');
+        openModal(key);
+      });
+    })();
+
+    // Carousel scroll function
+    function scrollCarousel(direction) {
+      const carousel = document.querySelector('.cards-carousel');
+      const cardWidth = 320; // card width + gap
+      const scrollAmount = (cardWidth + 16) * direction;
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Optional publications rendering (only if #pubs exists)
+    (function() {
+      const wrap = document.getElementById('pubs');
+      if (!wrap) return;
+      fetch('publications.json')
+        .then(r => r.json())
+        .then(items => {
+          if (!Array.isArray(items) || items.length === 0) {
+            wrap.innerHTML = '<p>No publications yet.</p>';
+            return;
+          }
+          wrap.innerHTML = '';
+          items.forEach(p => {
+            const el = document.createElement('div');
+            el.className = 'pub';
+            const authors = (p.authors || []).join(', ');
+            const venue = [p.venue, p.year].filter(Boolean).join(', ');
+            el.innerHTML = `
+              <p class="title">${p.title || ''}</p>
+              <p class="by">${authors}</p>
+              <p class="venue">${venue}</p>
+              <p class="links">
+                ${p.doi ? `<a href="${p.doi}" target="_blank" rel="noopener">DOI</a>` : ''}
+                ${p.arxiv ? `<a href="${p.arxiv}" target="_blank" rel="noopener">arXiv</a>` : ''}
+                ${p.code ? `<a href="${p.code}" target="_blank" rel="noopener">Code</a>` : ''}
+                ${p.poster ? `<a href="${p.poster}" target="_blank" rel="noopener">Poster</a>` : ''}
+              </p>`;
+            wrap.appendChild(el);
+          });
+        })
+        .catch(() => { if (wrap) wrap.innerHTML = '<p>(Could not load publications.json)</p>'; });
+    })();
+
+    // (demos removed; single GIF is rendered statically in markup)
+  </script>
+</body>
+</html>
