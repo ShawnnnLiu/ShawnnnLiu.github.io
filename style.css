@@ -16,7 +16,7 @@ a:hover { text-decoration: underline; }
 
 .container { max-width: 900px; margin: 0 auto; padding: 1.2rem; }
 
-.site-header { border-bottom: 1px solid var(--border); position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(11,12,16,0.7); }
+.site-header { border-bottom: 1px solid var(--border); position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(11,12,16,0.7); z-index: 100; }
 .site-title { font-size: 1.8rem; margin: 0 0 .25rem; }
 .site-subtitle { margin: 0 0 .75rem; color: var(--muted); }
 .site-nav { display: flex; flex-wrap: wrap; gap: .75rem; padding-bottom: .4rem; }
