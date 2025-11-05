@@ -8,6 +8,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- SVG Filter for Glow Effect -->
+  <svg style="position: absolute; width: 0; height: 0;">
+    <defs>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+        <feMerge>
+          <feMergeNode in="coloredBlur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+
   <header class="site-header">
     <div class="container">
       <h1 class="site-title">Xiangjian (Shawn) Liu</h1>
@@ -70,11 +83,22 @@
     <section id="projects">
       <h2>Projects</h2>
       <ul class="list">
-        <li><strong>AdamsFoods Wholesale App</strong> — Full-stack JavaScript app with a React client and a Node.js/Express server. Product catalog, carts/checkout skeleton, and REST endpoints structured under <code>/server</code>. Integrates AWS S3 for media & document workflows (signed URL uploads, caching), and uses JWT-based auth with role guards for admin routes. <a href="https://github.com/antsuh1028/AFStore">code</a> & <a href="https://adamsfoodswholesale.com/ 
-          ">live website</a></li>
-        <li><strong>AdamsFoods Inventory Management System</strong> — React (Create React App) frontend for back-office stock tracking; deployed on Vercel. Implements item CRUD, search/filter, and low-stock flags with CSV export-friendly views. <a href="https://github.com/antsuh1028/AdamsFoodsInventory">code</a></li>
-        <li><strong>Safe UAV Landing for U.S. Navy</strong> — Through BiasLab & Prof. Mohsen Imani, I collaborated with the U.S. Navy to develop custom pose estimation & reasoning model to enable safe UAV landing, reducing casualty rates in bad weather conditions compared to their legacy fixed-pattern optical markers. Reasoning module attached to delay landing if crew on landing spot/deck. Worked on CUI (Controlled Unclassified Information) dataset.</li>
-        <li><strong>Crash Anticipation</strong> — VideoMAE baseline training achieved 100% on AP, F1, and lead-time recall, capable of real-time inference with a 5070 Ti. However, the computational cost remains too high for practical deployment. Next steps involve exploring smaller models such as MobileNetV2.0 that can run efficiently on mobile devices while maintaining similar performance. <a href="https://github.com/ShawnnnLiu/Crash-Anticipation">code</a></li>
+        <li>
+          <strong>AdamsFoods Wholesale App</strong> — Full-stack JavaScript app with React client and Node.js/Express server. Features product catalog, checkout system, AWS S3 integration, and JWT authentication. 
+          <a href="https://github.com/antsuh1028/AFStore">code</a> · <a href="https://adamsfoodswholesale.com/">live website</a> · <button class="read-more-btn" data-modal="adamsfood-app">✨ Read more<svg><rect></rect></svg></button>
+        </li>
+        <li>
+          <strong>AdamsFoods Inventory Management System</strong> — React frontend for back-office stock tracking with item CRUD, search/filter, and low-stock alerts. 
+          <a href="https://github.com/antsuh1028/AdamsFoodsInventory">code</a> · <button class="read-more-btn" data-modal="adamsfood-inventory">✨ Read more<svg><rect></rect></svg></button>
+        </li>
+        <li>
+          <strong>Safe UAV Landing for U.S. Navy</strong> — Custom pose estimation & reasoning model for safe UAV landing in adverse weather. Reduces casualty rates through intelligent deck clearance detection. 
+          <button class="read-more-btn" data-modal="navy-uav">✨ Read more<svg><rect></rect></svg></button>
+        </li>
+        <li>
+          <strong>Crash Anticipation</strong> — VideoMAE model achieving 100% on AP, F1, and lead-time recall with real-time inference capability. Future: neurosymbolic reasoning for proactive collision avoidance. 
+          <a href="https://github.com/ShawnnnLiu/Crash-Anticipation">code</a> · <button class="read-more-btn" data-modal="crash-anticipation">✨ Read more<svg><rect></rect></svg></button>
+        </li>
       </ul>
 
       <h3>Safe UAV Landing — Demo</h3>
@@ -165,6 +189,100 @@
     <p><a href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">OpenReview</a></p>
   </div>
 
+  <div hidden id="modal-content-adamsfood-app" class="modal-content-template">
+    <h2 id="modal-title">AdamsFoods Wholesale App</h2>
+    <p class="tags">Full-Stack · React · Node.js · AWS S3 · JWT Auth</p>
+    <p>
+      A comprehensive full-stack JavaScript application built with a React client and Node.js/Express server. The application serves as a wholesale platform with robust product management and user authentication.
+    </p>
+    <h3>Key Features</h3>
+    <ul class="list">
+      <li><strong>Product Catalog:</strong> Complete product browsing and management system</li>
+      <li><strong>Shopping Cart & Checkout:</strong> Fully functional cart system with checkout workflow skeleton</li>
+      <li><strong>AWS S3 Integration:</strong> Seamless media and document workflows using signed URL uploads with intelligent caching</li>
+      <li><strong>JWT Authentication:</strong> Secure token-based authentication with role-based access control</li>
+      <li><strong>Admin Routes:</strong> Protected admin endpoints with role guards for sensitive operations</li>
+      <li><strong>REST API:</strong> Well-structured REST endpoints organized under <code>/server</code></li>
+    </ul>
+    <p><a href="https://github.com/antsuh1028/AFStore" target="_blank" rel="noopener">View Code</a> · <a href="https://adamsfoodswholesale.com/" target="_blank" rel="noopener">Live Website</a></p>
+  </div>
+
+  <div hidden id="modal-content-adamsfood-inventory" class="modal-content-template">
+    <h2 id="modal-title">AdamsFoods Inventory Management System</h2>
+    <p class="tags">React · Vercel · Inventory Management · CRUD</p>
+    <p>
+      A React-based frontend application (Create React App) designed for back-office inventory tracking and stock management. Deployed on Vercel for reliable, fast access.
+    </p>
+    <h3>Features</h3>
+    <ul class="list">
+      <li><strong>Item CRUD Operations:</strong> Complete Create, Read, Update, Delete functionality for inventory items</li>
+      <li><strong>Advanced Search & Filter:</strong> Powerful search capabilities to quickly locate items</li>
+      <li><strong>Low-Stock Alerts:</strong> Automatic flagging of items with low inventory levels</li>
+      <li><strong>CSV Export:</strong> Export-friendly views for reporting and data analysis</li>
+      <li><strong>Interactive Map:</strong> 3D Map of warehouse storage rooms and item locations</li>
+    </ul>
+    <p><a href="https://github.com/antsuh1028/AdamsFoodsInventory" target="_blank" rel="noopener">View Code</a></p>
+  </div>
+
+  <div hidden id="modal-content-navy-uav" class="modal-content-template">
+    <h2 id="modal-title">Safe UAV Landing for U.S. Navy</h2>
+    <p class="tags">Computer Vision · Pose Estimation · Reasoning · CUI Dataset</p>
+    <p>
+      Through BiasLab & Prof. Mohsen Imani, I collaborated with the U.S. Navy to develop a custom computer vision system combining pose estimation and symbolic reasoning for safe autonomous UAV landing operations.
+    </p>
+    <h3>Problem Statement</h3>
+    <p>
+      Traditional UAV landing systems rely on legacy fixed-pattern optical markers, which perform poorly in adverse weather conditions, leading to increased casualty rates and mission failures. The Navy needed a more robust solution that could operate safely in challenging environments.
+    </p>
+    <h3>Solution</h3>
+    <ul class="list">
+      <li><strong>Pose Estimation Model:</strong> Custom-trained model for accurate UAV positioning relative to landing deck</li>
+      <li><strong>Reasoning Module:</strong> Intelligent system that delays landing when crew members or obstacles are detected on the landing spot/deck</li>
+      <li><strong>Weather Robustness:</strong> Significantly improved performance in bad weather conditions compared to legacy systems</li>
+      <li><strong>Real-time Processing:</strong> Fast inference for time-critical landing decisions</li>
+    </ul>
+    <h3>Impact</h3>
+    <p>
+      The system reduces casualty rates by preventing landings when the deck is not clear, providing a crucial safety layer for naval aviation operations. Worked on CUI (Controlled Unclassified Information) dataset under appropriate clearances.
+    </p>
+  </div>
+
+  <div hidden id="modal-content-crash-anticipation" class="modal-content-template">
+    <h2 id="modal-title">Crash Anticipation</h2>
+    <p class="tags">Computer Vision · VideoMAE · Autonomous Driving · Neurosymbolic AI</p>
+    <p>
+      A cutting-edge video analysis system for predicting vehicle crashes before they occur, with future integration of neurosymbolic reasoning for actionable collision avoidance commands.
+    </p>
+    <h3>Current Performance (VideoMAE Baseline)</h3>
+    <ul class="list">
+      <li><strong>100% Accuracy:</strong> Perfect scores on AP (Average Precision), F1, and lead-time recall metrics</li>
+      <li><strong>Real-time Inference:</strong> Capable of real-time processing with an NVIDIA 5070 Ti GPU</li>
+      <li><strong>High Reliability:</strong> Demonstrated robust crash prediction across diverse scenarios</li>
+    </ul>
+    <h3>Current Limitations</h3>
+    <p>
+      The VideoMAE model's computational cost is too high for practical deployment on mobile devices or embedded systems in vehicles. This limits real-world applicability despite excellent performance.
+    </p>
+    <h3>Next Steps: Model Compression</h3>
+    <p>
+      Exploring smaller, more efficient models such as <strong>MobileNetV2.0</strong> that can run on resource-constrained devices while maintaining similar performance levels. Goal: Enable deployment on standard automotive hardware.
+    </p>
+    <h3>Future Direction: Neurosymbolic Reasoning</h3>
+    <p>
+      Beyond simple crash prediction, the vision is to integrate a <strong>symbolic reasoning module</strong> that can:
+    </p>
+    <ul class="list">
+      <li><strong>Provide Direct Commands:</strong> Issue specific avoidance instructions (e.g., "turn left 15°", "brake immediately", "accelerate to avoid rear collision")</li>
+      <li><strong>Infer Vehicle Dynamics:</strong> Calculate incoming vehicle speed, trajectory, and direction in real-time</li>
+      <li><strong>Reason About Scenarios:</strong> Use symbolic reasoning to evaluate multiple avoidance strategies and select optimal actions</li>
+      <li><strong>Proactive Collision Avoidance:</strong> Transform from reactive warning system to proactive safety system that prevents crashes through intelligent intervention</li>
+    </ul>
+    <p>
+      This neurosymbolic approach combines the perceptual power of deep learning with the interpretability and logical reasoning of symbolic AI, aligning with my broader research focus on neurosymbolic reasoning systems.
+    </p>
+    <p><a href="https://github.com/ShawnnnLiu/Crash-Anticipation" target="_blank" rel="noopener">View Code</a></p>
+  </div>
+
   <!-- Modal overlay -->
   <div id="modal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close></div>
@@ -206,7 +324,7 @@
         if (e.key === 'Escape') closeModal();
       });
       document.addEventListener('click', (e) => {
-        const link = e.target.closest('.read-more');
+        const link = e.target.closest('.read-more, .read-more-btn');
         if (!link) return;
         e.preventDefault();
         const key = link.getAttribute('data-modal');
