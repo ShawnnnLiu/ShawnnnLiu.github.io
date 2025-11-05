@@ -72,16 +72,28 @@
       <h2>Research</h2>
       <div class="cards-carousel">
         <article class="card">
-          <h3>Secure & Efficient Neurosymbolic Reasoning</h3>
-          <p>First-author <strong>IEEE TAI</strong> paper introducing a neurosymbolic AI framework that integrates open-vocabulary vision transformers with <strong>CKKS-based Fully Homomorphic Encryption</strong> for secure cloud reasoning. I led FHE implementation in Microsoft SEAL, developed the noise-injection simulator for encrypted GNN inference, and co-designed the MissionGNN architecture for privacy-preserving video anomaly detection. Corresponding author; rebuttal completed.</p>
-          <p class="tags">FHE · GNN · Neurosymbolic AI · Privacy-Preserving ML</p>
-          <p><a href="#" aria-disabled="true">IEEE TAI (rebuttal - in review)</a> · <a href="#" class="read-more" data-modal="secure-neurosymbolic">Read more →</a></p>
+          <h3>Brain-Inspired Reasoning under Homomorphic Encryption</h3>
+          <p>Privacy-preserving neurosymbolic framework executing inference entirely under CKKS-FHE while preserving HDC-based reasoning robustness. Maintains >90% accuracy on encrypted graph inference with 4× reduction in bootstrapping overhead through noise-adaptive scheduling. Lead author; rebuttal completed.</p>
+          <p class="tags">FHE · HDC · Neurosymbolic AI · Privacy-Preserving ML</p>
+          <p><a href="#" aria-disabled="true">IEEE TAI 2026 (under review)</a> · <button class="read-more-btn" data-modal="secure-neurosymbolic">✨ Read more<svg><rect></rect></svg></button></p>
         </article>        
         <article class="card">
           <h3>Geometric Priors for World Models</h3>
           <p>Using Vector Symbolic Architecture (VSA) to build generalizable world models with learned group structure. Achieved 87.5% zero-shot accuracy and 4× noise robustness. Contributed to ablation studies with world model grid.</p>
           <p class="tags">VSA · World Models · Generalization</p>
-          <p><a href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">NeurReps 2025</a> · <a href="#" class="read-more" data-modal="geometric-priors">Read more →</a></p>
+          <p><a href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">NeurReps 2025</a> · <button class="read-more-btn" data-modal="geometric-priors">✨ Read more<svg><rect></rect></svg></button></p>
+        </article>
+        <article class="card">
+          <h3>Event-Based CLIP Encoder</h3>
+          <p>Extending CLIP's zero-shot capabilities to event-based vision, bridging asynchronous event data with image-text representations. Achieved +19% zero-shot accuracy over prior methods with cross-modal retrieval across five modalities. Contributed attention visualization pipeline.</p>
+          <p class="tags">Event-based Vision · CLIP · Cross-Modality</p>
+          <p><a href="#" aria-disabled="true">WACV 2026 (under review)</a> · <button class="read-more-btn" data-modal="event-clip">✨ Read more<svg><rect></rect></svg></button></p>
+        </article>
+        <article class="card">
+          <h3>Optimal Hyperdimensional Representation</h3>
+          <p>First universal HDC encoding framework that adapts dynamically between learning and cognitive reasoning. Achieves 95% learning accuracy with correlated encodings and 100% decoding accuracy under exclusive encodings. Quantifies correlation-separation trade-off for brain-like reasoning.</p>
+          <p class="tags">HDC · Cognitive Computation · Neural-Symbolic</p>
+          <p><a href="#" aria-disabled="true">Frontiers in AI (in review)</a> · <button class="read-more-btn" data-modal="optimal-hdc">✨ Read more<svg><rect></rect></svg></button></p>
         </article>
       </div>
     </section>
@@ -165,17 +177,73 @@
 
   <!-- Hidden modal content templates -->
   <div hidden id="modal-content-secure-neurosymbolic" class="modal-content-template">
-    <h2 id="modal-title">Secure & Efficient Neurosymbolic Reasoning</h2>
-    <p class="tags">FHE · GNN · Neurosymbolic AI · Privacy‑Preserving ML</p>
+    <h2 id="modal-title">Robust Reasoning and Learning with Brain-Inspired Representations under Homomorphic Encryption</h2>
+    <p class="tags">Privacy-Preserving AI · Neuro-Symbolic Learning · Homomorphic Encryption · HDC</p>
+    <p><strong>IEEE Transactions on Artificial Intelligence (2026, under review)</strong></p>
     <p>
-      A neurosymbolic AI framework that integrates open‑vocabulary vision transformers with CKKS‑based Fully
-      Homomorphic Encryption (FHE) for secure cloud reasoning. Includes a noise‑injection simulator for encrypted
-      GNN inference and a MissionGNN architecture for privacy‑preserving video anomaly detection.
+      We propose a privacy-preserving neurosymbolic framework that executes inference entirely under CKKS Fully Homomorphic Encryption (FHE) while preserving the robustness and interpretability of Hyperdimensional Computing (HDC)-based reasoning. The framework introduces distributed bootstrapping to mitigate ciphertext-noise explosion across deep layers, balancing accuracy and compute cost.
     </p>
+
+    <h3>Key Results</h3>
+    <ul class="list">
+      <li>Maintains <strong>>90% accuracy</strong> on encrypted graph inference without plaintext access</li>
+      <li><strong>4× reduction</strong> in bootstrapping overhead through noise-adaptive scheduling</li>
+      <li>Preserves symbolic structure of neural states under encrypted operations</li>
+      <li>Robust performance across multiple graph-based reasoning tasks</li>
+    </ul>
+
+    <h3>Why Homomorphic Encryption?</h3>
     <p>
-      My role: led FHE implementation (Microsoft SEAL), built the encrypted‑inference simulator, and co‑designed the
-      MissionGNN pipeline. Status: IEEE TAI (rebuttal in review).
+      Cloud-based AI inference poses significant privacy risks when handling sensitive data (medical records, financial information, biometric data). Traditional encryption requires decryption before processing, exposing data to potential breaches. Fully Homomorphic Encryption enables computation directly on encrypted data, ensuring privacy even in untrusted cloud environments.
     </p>
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/WhyFHEframework.png" alt="Why FHE framework diagram" />
+        <figcaption>FHE's security advantage: Data remains encrypted throughout the entire inference pipeline in untrusted cloud environments</figcaption>
+      </figure>
+    </div>
+
+    <h3>Framework Overview</h3>
+    <p>
+      Our end-to-end neurosymbolic pipeline integrates HDC-based symbolic reasoning with CKKS-FHE operations. The framework employs distributed bootstrapping at strategic network layers to prevent noise accumulation while minimizing computational overhead. Graph Neural Networks operate entirely on encrypted representations, with symbolic decoding preserving interpretability.
+    </p>
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/OVERALLframework.png" alt="Overall framework architecture" />
+        <figcaption>End-to-end neuro-symbolic FHE pipeline with distributed bootstrapping and symbolic decoding</figcaption>
+      </figure>
+    </div>
+
+    <h3>Noise-Adaptive Bootstrapping</h3>
+    <p>
+      A critical challenge in FHE-based deep learning is ciphertext noise accumulation. Without proper noise management, encrypted operations cause accuracy to collapse as noise overwhelms the signal. Our distributed bootstrapping scheme strategically refreshes ciphertexts at high-noise layers, achieving a 4× reduction in bootstrapping overhead compared to naive per-layer approaches.
+    </p>
+    <div class="research-figures">
+        <figcaption>Empirical analysis: Noise growth without bootstrapping leads to accuracy collapse. Our approach balances accuracy preservation with computational efficiency</figcaption>
+      </figure>
+    </div>
+
+    <h3>Technical Innovation</h3>
+    <ul class="list">
+      <li><strong>SEAL-Based Implementation:</strong> Built on Microsoft SEAL library for CKKS operations</li>
+      <li><strong>Noise Characterization:</strong> Empirical analysis of real noise distributions in encrypted GNN operations</li>
+      <li><strong>Distributed Bootstrapping:</strong> Adaptive scheduling reduces compute cost by 75% while maintaining accuracy</li>
+      <li><strong>Symbolic Preservation:</strong> HDC-based representations maintain interpretability under encryption</li>
+      <li><strong>Graph Reasoning:</strong> Encrypted inference on graph-structured data for video anomaly detection</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <p>
+      The framework enables privacy-preserving AI for sensitive domains:
+    </p>
+    <ul class="list">
+      <li><strong>Healthcare:</strong> Encrypted medical diagnosis without exposing patient data</li>
+      <li><strong>Finance:</strong> Fraud detection on encrypted transaction graphs</li>
+      <li><strong>Surveillance:</strong> Privacy-preserving video anomaly detection in public spaces</li>
+      <li><strong>IoT Security:</strong> Encrypted reasoning on edge device data</li>
+    </ul>
+
+    <p><strong>My contribution:</strong> Lead author and corresponding author. Designed and conducted SEAL-based experiments to characterize real noise distributions and evaluate CKKS performance under GNN operations. Implemented noise injection mechanisms and distributed bootstrapping schemes within the graph network to achieve robust encrypted reasoning. Led rebuttal process for IEEE TAI 2026.</p>
   </div>
 
   <div hidden id="modal-content-geometric-priors" class="modal-content-template">
@@ -186,13 +254,190 @@
       Holographic Reduced Representation encoders and group‑structured latent transitions via element‑wise complex
       multiplication, enabling composition directly in latent space.
     </p>
+    
+    <h3>Key Results</h3>
     <ul class="list">
       <li>87.5% zero‑shot accuracy on unseen state‑action pairs</li>
       <li>53.6% higher accuracy on 20‑timestep rollouts vs. MLP baseline</li>
       <li>4× robustness to noise</li>
     </ul>
-    <p>My contribution: ablation studies with the world model grid. Post‑submission: MiniGrid experiments.</p>
+
+    <h3>Structured State Representations</h3>
+    <p>
+      Our VSA-based model (FHRR) learns structured, grid-like state embeddings that preserve geometric relationships, while traditional MLP models produce unstructured representations.
+    </p>
+    <div class="research-figures">
+      <div class="figure-pair">
+        <figure class="research-figure">
+          <img src="assets/research/figures-160.png" alt="FHRR state embeddings showing grid-like structure" />
+          <figcaption>FHRR (VSA): Grid-like structured embeddings preserve spatial relationships</figcaption>
+        </figure>
+        <figure class="research-figure">
+          <img src="assets/research/figures-159.png" alt="MLP unstructured embeddings" />
+          <figcaption>MLP: Unstructured embeddings with no clear geometric pattern</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h3>Superior Generalization</h3>
+    <p>
+      VSA (FHRR) demonstrates significantly better generalization on held-out data across different data holdout ratios, maintaining high accuracy even when large portions of training data are withheld.
+    </p>
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/figures-158.png" alt="Rollout performance comparison" />
+        <figcaption>Rollout accuracy vs. data holdout ratio: VSA maintains strong performance while MLP degrades rapidly</figcaption>
+      </figure>
+    </div>
+
+    <h3>Robustness to Noise</h3>
+    <p>
+      The VSA approach exhibits greater robustness to Gaussian noise compared to MLP baselines, maintaining near-perfect accuracy under significant noise perturbations.
+    </p>
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/figures-166.png" alt="Robustness to noise comparison" />
+        <figcaption>1-step accuracy vs. Gaussian noise: VSA maintains >80% accuracy even with noise std of 5, while MLP drops to ~20%</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>My contribution:</strong> ablation studies with the world model grid. Post‑submission: MiniGrid experiments.</p>
     <p><a href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">OpenReview</a></p>
+  </div>
+
+  <div hidden id="modal-content-event-clip" class="modal-content-template">
+    <h2 id="modal-title">Expanding Event Modality Applications through a Robust CLIP-Based Encoder</h2>
+    <p class="tags">Event-based Vision · CLIP · Cross-Modality · Zero-Shot Learning</p>
+    <p><strong>WACV 2026 (Under Review)</strong></p>
+    <p>
+      We extend CLIP's zero-shot and text-alignment capabilities to the event modality, developing a robust encoder that bridges asynchronous event data with image-text representations. The framework aligns event embeddings with CLIP's visual and textual spaces, preserving zero-shot generalization and enabling cross-modal applications across five modalities (Image, Event, Text, Sound, Depth).
+    </p>
+    
+    <h3>Key Results</h3>
+    <ul class="list">
+      <li><strong>+19% zero-shot accuracy</strong> over prior event-based methods</li>
+      <li>Cross-modal retrieval between event, sound, and depth modalities</li>
+      <li>Event-based video anomaly detection without additional training</li>
+      <li>Five-modality alignment: Image, Event, Text, Sound, Depth</li>
+    </ul>
+
+    <h3>Event-Specific Attention Visualization</h3>
+    <p>
+      Our visualization pipeline extracts attention heatmaps and relevance maps from the trained encoder, illustrating how CLIP's transferred attention captures salient event-specific regions. These visualizations demonstrate that the encoder successfully learns to focus on semantically meaningful areas in event data.
+    </p>
+    
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/peacock_attention_imagenet.png" alt="Peacock attention heatmap on ImageNet" />
+        <figcaption>Attention heatmap: Peacock (ImageNet) - Model attends to distinctive features like tail feathers and body structure</figcaption>
+      </figure>
+    </div>
+
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/gramophone_attention_ncaltech.png" alt="Gramophone attention heatmap on N-Caltech" />
+        <figcaption>Attention heatmap: Gramophone (N-Caltech) - Event encoder focuses on characteristic horn and base components</figcaption>
+      </figure>
+    </div>
+
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/fight_tunnel_attention_UCFcrime.png" alt="Fight scene attention on UCF-Crime dataset" />
+        <figcaption>Attention heatmap: Fight scene (UCF-Crime) - Model captures action regions for video anomaly detection</figcaption>
+      </figure>
+    </div>
+
+    <h3>Technical Approach</h3>
+    <p>
+      The framework employs contrastive learning to align event representations with CLIP's pre-trained visual and textual embeddings. By leveraging CLIP's powerful multi-modal alignment, the encoder inherits zero-shot capabilities while learning event-specific features through asynchronous temporal patterns.
+    </p>
+
+    <h3>Cross-Modal Applications</h3>
+    <ul class="list">
+      <li><strong>Zero-Shot Classification:</strong> Direct transfer of text-based class descriptions to event data</li>
+      <li><strong>Cross-Modal Retrieval:</strong> Query across image, event, text, sound, and depth modalities</li>
+      <li><strong>Video Anomaly Detection:</strong> Event-based detection without task-specific training</li>
+      <li><strong>Multi-Modal Fusion:</strong> Combine complementary information from different sensor types</li>
+    </ul>
+
+    <p><strong>My contribution:</strong> Supported the visualization pipeline by extracting attention heatmaps and relevance maps from the trained encoder, demonstrating how the model attends to salient event-specific regions across different datasets (ImageNet, N-Caltech, UCF-Crime).</p>
+  </div>
+
+  <div hidden id="modal-content-optimal-hdc" class="modal-content-template">
+    <h2 id="modal-title">Optimal Hyperdimensional Representation for Learning and Cognitive Computation</h2>
+    <p class="tags">Hyperdimensional Computing · Cognitive Computation · Neural-Symbolic Encoding</p>
+    <p><strong>Frontiers in Artificial Intelligence (In Review)</strong></p>
+    <p>
+      This work introduces the first universal HDC encoding framework that adapts dynamically between learning and cognitive reasoning tasks. By modulating the correlation of hypervectors through tunable kernel scales, the model optimizes both memorization capacity and decodability, bridging the gap between symbolic reasoning and pattern learning within a unified high-dimensional representation.
+    </p>
+
+    <h3>Key Results</h3>
+    <ul class="list">
+      <li>Up to <strong>95% learning accuracy</strong> with correlated encodings vs. 65% in uncorrelated baselines</li>
+      <li><strong>100% decoding accuracy</strong> under exclusive encodings for cognitive tasks</li>
+      <li>Quantitative formulation of the correlation–separation trade-off that governs brain-like reasoning</li>
+      <li>Universal framework adaptable to both symbolic and pattern-based tasks</li>
+    </ul>
+
+    <h3>The Learning-Cognition Dichotomy</h3>
+    <p>
+      HDC systems face a fundamental trade-off: learning tasks benefit from correlated hypervector representations that enable generalization, while cognitive reasoning requires exclusive (orthogonal) encodings for symbolic manipulation. Traditional HDC methods optimize for one regime at the expense of the other. Our framework dynamically adapts encoding parameters to achieve optimal performance across both domains.
+    </p>
+
+    <h3>Learning Accuracy Analysis</h3>
+    <p>
+      We conducted comprehensive parameter sweeps to characterize how encoding dimensions (D) and kernel scales (w) affect learning performance. The heatmaps reveal distinct optimal regions: correlated encodings (smaller w values) dramatically improve learning accuracy, especially at lower dimensions where orthogonal encodings fail.
+    </p>
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/learning_accuracy.png" alt="Learning accuracy and separation heatmaps" />
+        <figcaption>Learning accuracy (top) and separation (bottom) as functions of dimension D and kernel scale w. Correlated encodings (low w) achieve 95% accuracy, while maintaining measurable separation for downstream reasoning.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Decoding Accuracy Analysis</h3>
+    <p>
+      For cognitive tasks requiring symbolic manipulation, decoding accuracy depends on the exclusivity of hypervector encodings. Our analysis shows that higher kernel scales (larger w) produce more orthogonal representations, achieving 100% decoding accuracy. The 2D parameter space reveals the sweet spot where encodings are sufficiently exclusive for symbolic operations yet not overly sparse.
+    </p>
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/decoding_accuracy.png" alt="Decoding accuracy heatmaps" />
+        <figcaption>Decoding accuracy as functions of D and w (left) and wx vs wy (right). Exclusive encodings (high w) enable perfect symbolic decoding, demonstrating the cognitive reasoning capability of the framework.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Signal-to-Noise Ratio Characterization</h3>
+    <p>
+      To formalize the correlation-separation trade-off, we analyzed the signal-to-noise ratio (SNR) distributions for both same-class and different-class hypervector pairs across varying dimensionality. The histograms reveal clear separation patterns: at higher dimensions (p=100), same-class pairs maintain high correlation while different-class pairs remain decorrelated, enabling both generalization and discrimination.
+    </p>
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/signal_to_noise.png" alt="Signal-to-noise ratio distributions" />
+        <figcaption>SNR distributions for same-class (blue) and different-class (orange) hypervector pairs at p=10, 50, 100. Higher dimensionality provides better class separation while maintaining within-class correlation for generalization.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Technical Contribution</h3>
+    <ul class="list">
+      <li><strong>Universal Encoding Framework:</strong> Single parameterized system adaptable to learning and cognitive tasks</li>
+      <li><strong>Tunable Correlation:</strong> Kernel scale parameters (w, wx, wy) modulate hypervector similarity</li>
+      <li><strong>Theoretical Foundation:</strong> Mathematical formulation of the correlation-separation trade-off</li>
+      <li><strong>Empirical Validation:</strong> Comprehensive parameter sweeps across dimensions and scales</li>
+      <li><strong>Brain-Inspired Design:</strong> Mimics dual-process reasoning in biological neural systems</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <p>
+      The adaptive HDC framework enables:
+    </p>
+    <ul class="list">
+      <li><strong>Hybrid AI Systems:</strong> Seamlessly combine symbolic reasoning with pattern learning</li>
+      <li><strong>Edge Computing:</strong> Lightweight, efficient representations for resource-constrained devices</li>
+      <li><strong>Cognitive Architectures:</strong> Brain-inspired models balancing memory and reasoning</li>
+      <li><strong>Neuromorphic Hardware:</strong> Optimized encodings for analog compute substrates</li>
+    </ul>
+
+    <p><strong>My contribution:</strong> Conducted decoding analyses and developed learning-accuracy heatmaps to visualize how encoding parameters affect separability and generalization. Collected and analyzed the signal-to-noise ratio distributions that support the theoretical derivation of optimal kernel scales for learning and cognition.</p>
   </div>
 
   <div hidden id="modal-content-adamsfood-app" class="modal-content-template">
