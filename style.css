@@ -33,6 +33,10 @@ h2 { margin: 0 0 1rem; font-size: 1.4rem; }
 .about-image img { width: 200px; height: 300px; object-fit: cover; border-radius: 16px; border: 2px solid var(--border); }
 .image-caption { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); font-style: italic; }
 
+.album-covers { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+.album-covers img { width: 160px; height: 160px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); transition: transform 0.2s; }
+.album-covers img:hover { transform: scale(1.05); }
+
 .carousel-container { position: relative; display: flex; align-items: center; gap: 1rem; }
 .cards-carousel { 
   display: flex; 
