@@ -47,6 +47,7 @@ a:hover { text-decoration: underline; }
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
   filter: blur(4px) drop-shadow(0 0 8px var(--color));
@@ -85,11 +86,21 @@ h2 { margin: 0 0 1rem; font-size: 1.4rem; }
 .about-text { flex: 1; min-width: 300px; }
 .about-image { flex-shrink: 0; text-align: center; max-width: 200px; }
 .about-image img { width: 200px; height: 300px; object-fit: cover; border-radius: 16px; border: 2px solid var(--border); }
+.about-image img.clickable-image { 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+}
+.about-image img.clickable-image:hover {
+  transform: scale(1.02);
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(125, 211, 252, 0.3);
+}
 .image-caption { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); font-style: italic; }
 
 .album-covers { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
-.album-covers img { width: 160px; height: 160px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); transition: transform 0.2s; }
-.album-covers img:hover { transform: scale(1.05); }
+.album-covers a { display: block; transition: transform 0.2s; }
+.album-covers a:hover { transform: scale(1.05); }
+.album-covers img { width: 160px; height: 160px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); display: block; }
 
 .carousel-container { position: relative; display: flex; align-items: center; gap: 1rem; }
 .cards-carousel { 
@@ -403,6 +414,41 @@ h2 { margin: 0 0 1rem; font-size: 1.4rem; }
   
   .modal-dialog h2 {
     font-size: 1.3rem;
+  }
+}
+
+/* Cat Collage Grid */
+.cat-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.cat-collage img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: zoom-in;
+}
+
+.cat-collage img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(125, 211, 252, 0.3);
+  border-color: var(--accent);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .cat-collage {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  .cat-collage img {
+    height: 140px;
   }
 }
 

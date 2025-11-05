@@ -49,15 +49,21 @@
             <li>🎮 Favorite Game: Cyberpunk 2077</li>
           </ul>
           <div class="album-covers">
-            <img src="assets/dangelo_voodoo_cover.jpeg" alt="D'Angelo - Voodoo album cover" />
-            <img src="assets/Dijon_Absolutely_AlbumCover.jpeg" alt="Dijon - Absolutely album cover" />
-            <img src="assets/mkgee_twostart_cover.jpg" alt="Mkgee - Two Star & the Dream Police album cover" />
+            <a href="https://www.youtube.com/playlist?list=PLj0iicDFTqJq8CcEMDS1VUbT0DPjFYOm1" target="_blank" rel="noopener" title="Listen to D'Angelo - Voodoo on YouTube">
+              <img src="assets/dangelo_voodoo_cover.jpeg" alt="D'Angelo - Voodoo album cover" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=FEkOYs6aWIg" target="_blank" rel="noopener" title="Listen to Dijon - Absolutely on YouTube">
+              <img src="assets/Dijon_Absolutely_AlbumCover.jpeg" alt="Dijon - Absolutely album cover" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=aZ13RneU1S0" target="_blank" rel="noopener" title="Listen to Mkgee - Two Star & the Dream Police on YouTube">
+              <img src="assets/mkgee_twostart_cover.jpg" alt="Mkgee - Two Star & the Dream Police album cover" />
+            </a>
           </div>
         </div>
         <div class="about-image">
-          <img src="assets/self_picture_1.jpg" alt="Shawn Liu with cats Coconut and Kumquat" />
+          <img src="assets/self_picture_1.jpg" alt="Shawn Liu with cats Coconut and Kumquat" class="clickable-image" data-modal="cat-collage" />
           <p class="image-caption">With my cats Coconut (left) 
-            & Kumquat (right) 🐱🐱</p>
+            & Kumquat (right) 🐱🐱 <br><small style="color: var(--accent); cursor: default;">Click photo for more cat pics! 📸</small></p>
         </div>
       </div>
     </section>
@@ -283,6 +289,26 @@
     <p><a href="https://github.com/ShawnnnLiu/Crash-Anticipation" target="_blank" rel="noopener">View Code</a></p>
   </div>
 
+  <div hidden id="modal-content-cat-collage" class="modal-content-template">
+    <h2 id="modal-title">Coconut & Kumquat 🐱🐱</h2>
+    <p>Here are some of my favorite photos of my cats!</p>
+    <div class="cat-collage">
+      <img src="assets/cats/IMG_0021.JPG" alt="Cat photo" />
+      <img src="assets/cats/IMG_5885.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6085.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6412.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6549.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6707.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6722.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6798.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6803.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6826.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6960.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_6961.jpg" alt="Cat photo" />
+      <img src="assets/cats/IMG_8631.jpg" alt="Cat photo" />
+    </div>
+  </div>
+
   <!-- Modal overlay -->
   <div id="modal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close></div>
@@ -324,7 +350,7 @@
         if (e.key === 'Escape') closeModal();
       });
       document.addEventListener('click', (e) => {
-        const link = e.target.closest('.read-more, .read-more-btn');
+        const link = e.target.closest('.read-more, .read-more-btn, .clickable-image');
         if (!link) return;
         e.preventDefault();
         const key = link.getAttribute('data-modal');
