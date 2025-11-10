@@ -95,6 +95,12 @@
           <p class="tags">HDC · Cognitive Computation · Neural-Symbolic</p>
           <p><a href="#" aria-disabled="true">Frontiers in AI (in review)</a> · <button class="read-more-btn" data-modal="optimal-hdc">✨ Read more<svg><rect></rect></svg></button></p>
         </article>
+        <article class="card">
+          <h3>Hardware-Efficient HDC with FeFET Non-Idealities</h3>
+          <p>Energy-efficient HDC framework eliminating non-linear activations by harnessing FeFET device non-idealities. Achieves 33-41% energy reduction and 17% area savings through stacked complementary crossbars while maintaining robust performance under analog computation noise.</p>
+          <p class="tags">HDC · Compute-in-Memory · Neuromorphic · Efficient AI</p>
+          <p><a href="#" aria-disabled="true">IEEE TCAS-I (in review)</a> · <button class="read-more-btn" data-modal="efficient-hdc">✨ Read more<svg><rect></rect></svg></button></p>
+        </article>
       </div>
     </section>
 
@@ -102,12 +108,16 @@
       <h2>Projects</h2>
       <ul class="list">
         <li>
-          <strong>AdamsFoods Wholesale App</strong> — Full-stack JavaScript app with React client and Node.js/Express server. Features product catalog, checkout system, AWS S3 integration, and JWT authentication. 
+          <strong>AdamsFoods Wholesale</strong> — Full-stack JavaScript app with React client and Node.js/Express server. Features product catalog, checkout system, AWS S3 integration, and JWT authentication. 
           <a href="https://github.com/antsuh1028/AFStore">code</a> · <a href="https://adamsfoodswholesale.com/">live website</a> · <button class="read-more-btn" data-modal="adamsfood-app">✨ Read more<svg><rect></rect></svg></button>
         </li>
         <li>
           <strong>AdamsFoods Inventory Management System</strong> — React frontend for back-office stock tracking with item CRUD, search/filter, and low-stock alerts. 
           <a href="https://github.com/antsuh1028/AdamsFoodsInventory">code</a> · <button class="read-more-btn" data-modal="adamsfood-inventory">✨ Read more<svg><rect></rect></svg></button>
+        </li>
+        <li>
+          <strong>Feeding Pets of the Homeless Dashboard</strong> — Full-stack donation management platform for CTC @ UCI partnering with non-profit. React/TypeScript frontend with Node.js/Express backend, PostgreSQL database, Firebase Auth, and role-based access control. 
+          <a href="https://github.com/ctc-uci/fph-frontend">frontend</a> · <a href="https://github.com/ctc-uci/fph-backend">backend</a> · <button class="read-more-btn" data-modal="fph-dashboard">✨ Read more<svg><rect></rect></svg></button>
         </li>
         <li>
           <strong>Safe UAV Landing for U.S. Navy</strong> — Custom pose estimation & reasoning model for safe UAV landing in adverse weather. Reduces casualty rates through intelligent deck clearance detection. 
@@ -159,7 +169,7 @@
       <h2>Teaching & Service</h2>
       <ul class="list">
         <li>Learning Assistant — ICS 33 (Spring 2025)</li>
-        <li>Volunteer web dev for non‑profits (Feeding Pets of the Homeless)</li>
+        <li>Web dev for non‑profits, pro bono (Feeding Pets of the Homeless)</li>
         <li>Youth In Action (YIA) - Student Counselor</li>
       </ul>
     </section>
@@ -443,6 +453,96 @@
     <p><strong>My contribution:</strong> Conducted decoding analyses and developed learning-accuracy heatmaps to visualize how encoding parameters affect separability and generalization. Collected and analyzed the signal-to-noise ratio distributions that support the theoretical derivation of optimal kernel scales for learning and cognition.</p>
   </div>
 
+  <div hidden id="modal-content-efficient-hdc" class="modal-content-template">
+    <h2 id="modal-title">Efficient Hyperdimensional Computing Eliminating Non-Linear Activations through Technology Non-Idealities</h2>
+    <p class="tags">Hyperdimensional Computing · Compute-in-Memory · Neuromorphic Hardware · Efficient AI</p>
+    <p><strong>IEEE Transactions on Circuits and Systems I (In Submission)</strong></p>
+    <p><em>Hamza Errahmouni Barkam, <strong>Xiangjian Liu</strong>, Tamoghno Das, Zhen Ye, Prathyush P. Poduval, Kai Ni, Mohsen Imani</em></p>
+    <p>
+      We introduce an energy-efficient Hyperdimensional Computing (HDC) framework that removes traditional non-linear activation functions by harnessing the inherent non-idealities of FeFET-based Computing-in-Memory (CIM) devices. Instead of treating device-level imperfections such as non-linear I–V dependence and read noise as limitations, our design leverages them as computational resources—embedding activation behavior directly into hardware. This synergy between HDC's noise tolerance and CIM's parallelism results in a scalable, low-overhead system for edge AI applications.
+    </p>
+
+    <h3>Key Results</h3>
+    <ul class="list">
+      <li><strong>Eliminates costly non-linear activations</strong> by exploiting FeFET non-idealities</li>
+      <li><strong>33–41% energy reduction</strong> and up to <strong>17% area savings</strong> through stacked complementary FeFET crossbars</li>
+      <li>Maintains learning and decoding performance without dataset-specific tuning</li>
+      <li>Tunable kernel width enables adaptive trade-offs between generalization and decoding precision</li>
+      <li>Preserves HDC robustness under analog computation noise</li>
+    </ul>
+
+    <h3>Hardware-Embedded Activation</h3>
+    <p>
+      Traditional HDC frameworks rely on explicit sine and cosine activations to encode separable features. Our method substitutes these with <strong>Gaussian-shaped non-linear responses natively produced by FeFET devices</strong>. These responses modulate kernel width dynamically, creating a self-adjusting encoding process that balances learning efficiency and separability without extra compute steps.
+    </p>
+    <p>
+      By exploiting the natural I-V characteristics of ferroelectric devices, we eliminate the need for:
+    </p>
+    <ul class="list">
+      <li>Dedicated activation function hardware blocks</li>
+      <li>High-precision analog-to-digital converters</li>
+      <li>Separate digital processing stages for non-linearity</li>
+    </ul>
+
+    <h3>Computing-in-Memory Integration</h3>
+    <p>
+      We implement the system using <strong>complementary FeFET crossbar arrays</strong> capable of analog accumulation and direct Gaussian activation generation. The stacked crossbar architecture enables:
+    </p>
+    <ul class="list">
+      <li><strong>Parallel In-Memory Computation:</strong> Eliminates data movement overhead between memory and compute</li>
+      <li><strong>Complementary Operation:</strong> Reduces power consumption through push-pull FeFET configurations</li>
+      <li><strong>Analog Processing:</strong> Native analog operations reduce quantization losses</li>
+      <li><strong>Compact Design:</strong> 17% area reduction compared to conventional HDC accelerators</li>
+    </ul>
+    <p>
+      By eliminating high-resolution ADCs and separate digital activation blocks, the design achieves significant gains in both energy efficiency (33-41% reduction) and silicon area.
+    </p>
+
+    <h3>Theoretical Insight</h3>
+    <p>
+      Combining kernel theory with <strong>Bochner's theorem</strong> and <strong>Random Fourier Features</strong>, the framework formalizes how hardware-induced non-linearities translate to tunable kernel properties. This mathematical foundation provides:
+    </p>
+    <ul class="list">
+      <li><strong>Formal Equivalence:</strong> Proof that FeFET-generated Gaussian responses approximate ideal kernel functions</li>
+      <li><strong>Tunable Kernels:</strong> Device parameters map directly to kernel width, enabling hardware-software co-optimization</li>
+      <li><strong>Noise Tolerance:</strong> Theoretical analysis of how HDC's inherent robustness compensates for analog noise</li>
+      <li><strong>Design Guidelines:</strong> Mathematical framework for co-designing algorithms and devices in neuromorphic architectures</li>
+    </ul>
+
+    <h3>Technical Innovation</h3>
+    <ul class="list">
+      <li><strong>Device-Algorithm Co-Design:</strong> First work to systematically exploit FeFET non-idealities as computational primitives in HDC</li>
+      <li><strong>Activation-Free Architecture:</strong> Eliminates explicit activation functions through hardware embedding</li>
+      <li><strong>Complementary FeFET Arrays:</strong> Novel crossbar design with push-pull operation for energy efficiency</li>
+      <li><strong>Theoretical Framework:</strong> Mathematical formalization connecting device physics to kernel properties</li>
+      <li><strong>Edge AI Optimization:</strong> Designed for resource-constrained embedded systems</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <p>
+      The efficient HDC-CIM framework enables:
+    </p>
+    <ul class="list">
+      <li><strong>IoT Edge Devices:</strong> Ultra-low-power inference for battery-powered sensors</li>
+      <li><strong>Wearable Computing:</strong> Real-time processing with minimal energy consumption</li>
+      <li><strong>Embedded AI:</strong> On-device learning without cloud connectivity</li>
+      <li><strong>Neuromorphic Systems:</strong> Hardware substrate for brain-inspired computing paradigms</li>
+      <li><strong>Autonomous Systems:</strong> Energy-efficient perception for drones and robotics</li>
+    </ul>
+
+    <h3>Impact on Hardware Design</h3>
+    <p>
+      This work challenges the traditional paradigm of viewing device non-idealities as limitations to overcome. Instead, it demonstrates that <strong>imperfections can become features</strong> when properly integrated into algorithm design. This philosophy opens new directions for:
+    </p>
+    <ul class="list">
+      <li>Hardware-aware algorithm development that embraces rather than fights device physics</li>
+      <li>Energy-efficient AI accelerators that minimize data movement and digital overhead</li>
+      <li>Co-designed systems where hardware characteristics directly implement algorithmic primitives</li>
+    </ul>
+
+    <p><strong>My contribution:</strong> Co-author contributing to the theoretical analysis connecting device non-idealities to kernel properties, and validation of the framework's performance across different HDC encoding schemes.</p>
+  </div>
+
   <div hidden id="modal-content-adamsfood-app" class="modal-content-template">
     <h2 id="modal-title">AdamsFoods Wholesale App</h2>
     <p class="tags">Full-Stack · React · Node.js · AWS S3 · JWT Auth</p>
@@ -476,6 +576,74 @@
       <li><strong>Interactive Map:</strong> 3D Map of warehouse storage rooms and item locations</li>
     </ul>
     <p><a href="https://github.com/antsuh1028/AdamsFoodsInventory" target="_blank" rel="noopener">View Code</a></p>
+  </div>
+
+  <div hidden id="modal-content-fph-dashboard" class="modal-content-template">
+    <h2 id="modal-title">Feeding Pets of the Homeless Dashboard</h2>
+    <p class="tags">Full-Stack · React · Node.js/Express · Firebase Auth · PostgreSQL</p>
+    <p>
+      Developed for the student organization <strong>Commit the Change (CTC)</strong> at University of California, Irvine in partnership with the non-profit <strong>Feeding Pets of the Homeless</strong>, this end-to-end donation-management platform tracks, visualizes, and authenticates donation flows across multiple regional chapters.
+    </p>
+
+    <h3>Key Features</h3>
+    <ul class="list">
+      <li><strong>Unified Web Frontend:</strong> Built with React and TypeScript powering donation dashboards, forms, and admin workflows with modern UI/UX</li>
+      <li><strong>Secure Backend API:</strong> Node.js/Express with SQL/PostgreSQL routing, user authentication, and data aggregation endpoints</li>
+      <li><strong>Role-Based Access Control:</strong> Chapter coordinators, donors, and admins each access customized UIs and views tailored to their needs</li>
+      <li><strong>Firebase Authentication:</strong> Secure user authentication and authorization with Firebase Auth integration</li>
+      <li><strong>PostgreSQL Database:</strong> Robust relational database design for donation tracking, user management, and chapter coordination</li>
+      <li><strong>Multi-Chapter Support:</strong> Scales across multiple regional chapters with isolated data views and aggregated reporting</li>
+    </ul>
+
+    <h3>Development Practices</h3>
+    <p>
+      The project followed professional software engineering practices aligned with CTC's workflow:
+    </p>
+    <ul class="list">
+      <li><strong>Git-Based Version Control:</strong> Branch management, merge-conflict resolution, and code reviews</li>
+      <li><strong>Agile Development:</strong> Iterative sprints with regular stakeholder feedback and requirement refinement</li>
+      <li><strong>CI/CD Alignment:</strong> Continuous integration and deployment practices ensuring code quality</li>
+      <li><strong>Team Collaboration:</strong> Coordinated with multiple developers, designers, and project managers</li>
+      <li><strong>Code Quality:</strong> Pull request reviews, testing standards, and documentation maintenance</li>
+    </ul>
+
+    <h3>Technical Architecture</h3>
+    <ul class="list">
+      <li><strong>Frontend:</strong> React with TypeScript, modern component architecture, state management, and responsive design</li>
+      <li><strong>Backend:</strong> RESTful API built with Express.js, middleware for authentication and validation</li>
+      <li><strong>Database:</strong> PostgreSQL with normalized schema design, efficient queries, and data integrity constraints</li>
+      <li><strong>Authentication:</strong> Firebase Auth providing secure token-based authentication and role management</li>
+      <li><strong>Deployment:</strong> Professional hosting setup with separate staging and production environments</li>
+    </ul>
+
+    <h3>Stakeholder Collaboration</h3>
+    <p>
+      Working directly with <strong>Feeding Pets of the Homeless</strong> coordinators required:
+    </p>
+    <ul class="list">
+      <li><strong>Requirements Gathering:</strong> Understanding non-profit workflows and pain points in manual donation tracking</li>
+      <li><strong>UX Alignment:</strong> Iterative design feedback to ensure accessibility for non-technical users</li>
+      <li><strong>Deployment Iterations:</strong> Multiple release cycles incorporating real-world usage feedback</li>
+      <li><strong>Training & Support:</strong> Creating documentation and providing training for chapter coordinators</li>
+    </ul>
+
+    <h3>Impact</h3>
+    <p>
+      The platform streamlines donation management for a national non-profit organization, enabling:
+    </p>
+    <ul class="list">
+      <li>Real-time tracking of donations across multiple chapters</li>
+      <li>Automated reporting and data visualization for coordinators</li>
+      <li>Secure donor information management and authentication</li>
+      <li>Scalable infrastructure supporting organizational growth</li>
+      <li>Reduced administrative overhead through digital workflow automation</li>
+    </ul>
+
+    <p><strong>My contribution:</strong> Served as Full-Stack Developer (November 2023 – June 2024). Bridged design ↔ implementation, delivered SQL routing and front-end features, and drove Git governance for branch quality and team collaboration. Coordinated with nonprofit stakeholders to ensure platform met both user and organizational goals.</p>
+    <p>
+      <a href="https://github.com/ctc-uci/fph-frontend" target="_blank" rel="noopener">Frontend Repository</a> · 
+      <a href="https://github.com/ctc-uci/fph-backend" target="_blank" rel="noopener">Backend Repository</a>
+    </p>
   </div>
 
   <div hidden id="modal-content-navy-uav" class="modal-content-template">
