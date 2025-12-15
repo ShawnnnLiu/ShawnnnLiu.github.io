@@ -95,10 +95,10 @@
           <p><a href="#" aria-disabled="true">Frontiers in AI (in review)</a> · <button class="read-more-btn" data-modal="optimal-hdc">✨ Read more<svg><rect></rect></svg></button></p>
         </article>
         <article class="card">
-          <h3>Hardware-Efficient HDC with FeFET Non-Idealities</h3>
-          <p>Energy-efficient HDC framework eliminating non-linear activations by harnessing FeFET device non-idealities. Achieves 33-41% energy reduction and 17% area savings through stacked complementary crossbars while maintaining robust performance under analog computation noise.</p>
-          <p class="tags">HDC · Compute-in-Memory · Neuromorphic · Efficient AI</p>
-          <p><a href="#" aria-disabled="true">IEEE TCAS-I (in review)</a> · <button class="read-more-btn" data-modal="efficient-hdc">✨ Read more<svg><rect></rect></svg></button></p>
+          <h3>HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient and Secure Learning</h3>
+          <p>We study Hyperdimensional Computing (HDC) as an alternative to encrypted deep learning: instead of long DNN compute chains that force frequent bootstrapping, HDC uses shallow, noise-resilient algebra that better matches FHE constraints. Using FHRR and GHRR, we connect hypervector similarity to shift-invariant kernels via Bochner's theorem, then quantify how CKKS noise degrades similarity structure, capacity, classification accuracy, and input decodability.</p>
+          <p class="tags">HDC · Kernel Methods · Privacy-Preserving ML · CKKS</p>
+          <p><a href="#" aria-disabled="true">IEEE TAI 2026 (under review)</a> · <button class="read-more-btn" data-modal="hyperencrypt">✨ Read more<svg><rect></rect></svg></button></p>
         </article>
       </div>
     </section>
@@ -451,93 +451,34 @@
     <p><strong>My contribution:</strong> Conducted decoding analyses and developed learning-accuracy heatmaps to visualize how encoding parameters affect separability and generalization. Collected and analyzed the signal-to-noise ratio distributions that support the theoretical derivation of optimal kernel scales for learning and cognition.</p>
   </div>
 
-  <div hidden id="modal-content-efficient-hdc" class="modal-content-template">
-    <h2 id="modal-title">Efficient Hyperdimensional Computing Eliminating Non-Linear Activations through Technology Non-Idealities</h2>
-    <p class="tags">Hyperdimensional Computing · Compute-in-Memory · Neuromorphic Hardware · Efficient AI</p>
-    <p><strong>IEEE Transactions on Circuits and Systems I (In Submission)</strong></p>
-    <p><em>Hamza Errahmouni Barkam, <strong>Xiangjian Liu</strong>, Tamoghno Das, Zhen Ye, Prathyush P. Poduval, Kai Ni, Mohsen Imani</em></p>
+  <div hidden id="modal-content-hyperencrypt" class="modal-content-template">
+    <h2 id="modal-title">HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient and Secure Learning</h2>
+    <p class="tags">Fully Homomorphic Encryption · Hyperdimensional Computing · Kernel Methods · Privacy-Preserving ML · CKKS</p>
+    <p><strong>IEEE TAI 2026 (under review)</strong></p>
     <p>
-      We introduce an energy-efficient Hyperdimensional Computing (HDC) framework that removes traditional non-linear activation functions by harnessing the inherent non-idealities of FeFET-based Computing-in-Memory (CIM) devices. Instead of treating device-level imperfections such as non-linear I–V dependence and read noise as limitations, our design leverages them as computational resources—embedding activation behavior directly into hardware. This synergy between HDC's noise tolerance and CIM's parallelism results in a scalable, low-overhead system for edge AI applications.
+      We study Hyperdimensional Computing (HDC) as an alternative to encrypted deep learning: instead of long DNN compute chains that force frequent bootstrapping, HDC uses shallow, noise-resilient algebra that better matches FHE constraints. Using FHRR and GHRR, we connect hypervector similarity to shift-invariant kernels via Bochner's theorem, then quantify how CKKS noise degrades similarity structure, capacity, classification accuracy, and input decodability.
     </p>
 
     <h3>Key Results</h3>
     <ul class="list">
-      <li><strong>Eliminates costly non-linear activations</strong> by exploiting FeFET non-idealities</li>
-      <li><strong>33–41% energy reduction</strong> and up to <strong>17% area savings</strong> through stacked complementary FeFET crossbars</li>
-      <li>Maintains learning and decoding performance without dataset-specific tuning</li>
-      <li>Tunable kernel width enables adaptive trade-offs between generalization and decoding precision</li>
-      <li>Preserves HDC robustness under analog computation noise</li>
+      <li><strong>Bootstrapping reduction:</strong> Modest bootstrapping schedules + noise-robust encodings recover near-clean performance, achieving up to an order-of-magnitude fewer bootstrapping operations without sacrificing accuracy.</li>
+      <li><strong>Theory-backed noise behavior:</strong> Under CKKS noise, similarity remains unbiased but its variance grows with encryption noise and shrinks with hypervector dimension (∝ σ²/D). This yields an explicit SNR expression that predicts when classification becomes unreliable.</li>
+      <li><strong>Capacity under noise:</strong> CKKS noise collapses the separation between positive vs. negative cosine-similarity distributions; 25%–50% bootstrapping restores much of the margin, with GHRR recovering faster and more fully than FHRR.</li>
+      <li><strong>Encrypted classification:</strong> On FMNIST, sparse schedules like 25% or 50% bootstrapping recover most of the lost accuracy (with diminishing returns beyond 50%); the plot reports an ~18% improvement from minimal bootstrapping.</li>
+      <li><strong>Decodability trade-off:</strong> Increasing hypervector dimension and using moderate bootstrapping (e.g., 25%) restores much of the input reconstruction quality at far lower cost than full refresh; at higher D, 25% can get close to the clean baseline.</li>
     </ul>
 
-    <h3>Hardware-Embedded Activation</h3>
+    <h3>Why HDC for FHE?</h3>
     <p>
-      Traditional HDC frameworks rely on explicit sine and cosine activations to encode separable features. Our method substitutes these with <strong>Gaussian-shaped non-linear responses natively produced by FeFET devices</strong>. These responses modulate kernel width dynamically, creating a self-adjusting encoding process that balances learning efficiency and separability without extra compute steps.
-    </p>
-    <p>
-      By exploiting the natural I-V characteristics of ferroelectric devices, we eliminate the need for:
-    </p>
-    <ul class="list">
-      <li>Dedicated activation function hardware blocks</li>
-      <li>High-precision analog-to-digital converters</li>
-      <li>Separate digital processing stages for non-linearity</li>
-    </ul>
-
-    <h3>Computing-in-Memory Integration</h3>
-    <p>
-      We implement the system using <strong>complementary FeFET crossbar arrays</strong> capable of analog accumulation and direct Gaussian activation generation. The stacked crossbar architecture enables:
-    </p>
-    <ul class="list">
-      <li><strong>Parallel In-Memory Computation:</strong> Eliminates data movement overhead between memory and compute</li>
-      <li><strong>Complementary Operation:</strong> Reduces power consumption through push-pull FeFET configurations</li>
-      <li><strong>Analog Processing:</strong> Native analog operations reduce quantization losses</li>
-      <li><strong>Compact Design:</strong> 17% area reduction compared to conventional HDC accelerators</li>
-    </ul>
-    <p>
-      By eliminating high-resolution ADCs and separate digital activation blocks, the design achieves significant gains in both energy efficiency (33-41% reduction) and silicon area.
+      FHE enables computation directly on encrypted data, but the practical blocker is ciphertext noise growth and the cost of bootstrapping refreshes. This paper argues HDC is a natural fit: its operations are simpler and its representations degrade more gracefully, so you can reach strong accuracy with far fewer refresh points than deep networks typically require.
     </p>
 
-    <h3>Theoretical Insight</h3>
+    <h3>Technical Idea</h3>
     <p>
-      Combining kernel theory with <strong>Bochner's theorem</strong> and <strong>Random Fourier Features</strong>, the framework formalizes how hardware-induced non-linearities translate to tunable kernel properties. This mathematical foundation provides:
+      We treat hypervector similarity as a kernel estimator (for FHRR) and analyze how CKKS perturbations distort that similarity. The analysis shows exactly how noise scales with multiplicative depth and how increasing D and choosing sparse bootstrapping points can preserve margins. Empirically, GHRR + sparse bootstrapping consistently maintains higher capacity and better downstream accuracy than FHRR under the same noise budget.
     </p>
-    <ul class="list">
-      <li><strong>Formal Equivalence:</strong> Proof that FeFET-generated Gaussian responses approximate ideal kernel functions</li>
-      <li><strong>Tunable Kernels:</strong> Device parameters map directly to kernel width, enabling hardware-software co-optimization</li>
-      <li><strong>Noise Tolerance:</strong> Theoretical analysis of how HDC's inherent robustness compensates for analog noise</li>
-      <li><strong>Design Guidelines:</strong> Mathematical framework for co-designing algorithms and devices in neuromorphic architectures</li>
-    </ul>
 
-    <h3>Technical Innovation</h3>
-    <ul class="list">
-      <li><strong>Device-Algorithm Co-Design:</strong> First work to systematically exploit FeFET non-idealities as computational primitives in HDC</li>
-      <li><strong>Activation-Free Architecture:</strong> Eliminates explicit activation functions through hardware embedding</li>
-      <li><strong>Complementary FeFET Arrays:</strong> Novel crossbar design with push-pull operation for energy efficiency</li>
-      <li><strong>Theoretical Framework:</strong> Mathematical formalization connecting device physics to kernel properties</li>
-      <li><strong>Edge AI Optimization:</strong> Designed for resource-constrained embedded systems</li>
-    </ul>
-
-    <h3>Applications</h3>
-    <p>
-      The efficient HDC-CIM framework enables:
-    </p>
-    <ul class="list">
-      <li><strong>IoT Edge Devices:</strong> Ultra-low-power inference for battery-powered sensors</li>
-      <li><strong>Wearable Computing:</strong> Real-time processing with minimal energy consumption</li>
-      <li><strong>Embedded AI:</strong> On-device learning without cloud connectivity</li>
-      <li><strong>Neuromorphic Systems:</strong> Hardware substrate for brain-inspired computing paradigms</li>
-      <li><strong>Autonomous Systems:</strong> Energy-efficient perception for drones and robotics</li>
-    </ul>
-
-    <h3>Impact on Hardware Design</h3>
-    <p>
-      This work challenges the traditional paradigm of viewing device non-idealities as limitations to overcome. Instead, it demonstrates that <strong>imperfections can become features</strong> when properly integrated into algorithm design. This philosophy opens new directions for:
-    </p>
-    <ul class="list">
-      <li>Hardware-aware algorithm development that embraces rather than fights device physics</li>
-      <li>Energy-efficient AI accelerators that minimize data movement and digital overhead</li>
-      <li>Co-designed systems where hardware characteristics directly implement algorithmic primitives</li>
-    </ul>
-
+    <p><strong>My contribution:</strong> I analyzed how CKKS noise and bootstrapping distort the kernel behavior of HDC representations, and ran controlled comparisons between GHRR vs. FHRR under identical noise budgets. I produced the bootstrapping-by-noise heatmaps, the binding/bundling sensitivity plots, and cosine-similarity histograms that quantify margin collapse and recovery with refresh. I also implemented and evaluated reconstruction of binarized images from FHRR under CKKS noise to measure how encryption noise impacts decodability and information retention.</p>
   </div>
 
   <div hidden id="modal-content-adamsfood-app" class="modal-content-template">
