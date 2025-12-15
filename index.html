@@ -126,6 +126,12 @@
           <strong>Crash Anticipation</strong> — VideoMAE model achieving 100% on AP, F1, and lead-time recall with real-time inference capability. Future: neurosymbolic reasoning for proactive collision avoidance. 
           <a href="https://github.com/ShawnnnLiu/Crash-Anticipation">code</a> · <button class="read-more-btn" data-modal="crash-anticipation">✨ Read more<svg><rect></rect></svg></button>
         </li>
+        <li>
+          <strong>Generalizable Arrhythmia Detection Under Patient-Wise Evaluation</strong> — Most MIT-BIH arrhythmia pipelines report ~98 to 99% accuracy using beat-wise splits, but these splits leak patient identity across train and test. This project benchmarks CNN and LSTM-autoencoder baselines under clean patient-wise evaluation, then introduces an optimal patient-wise split search that preserves patient separation while improving class coverage and generalization.
+          <div class="project-links">
+            <em>Manuscript in preparation (extended from CS184A)</em> · <a href="https://github.com/ShawnnnLiu/Arrythmia_Classifier">repo</a> · <button class="read-more-btn" data-modal="arrhythmia">✨ Read more<svg><rect></rect></svg></button>
+          </div>
+        </li>
       </ul>
 
       <h3>Safe UAV Landing — Demo</h3>
@@ -641,6 +647,67 @@
       This neurosymbolic approach combines the perceptual power of deep learning with the interpretability and logical reasoning of symbolic AI, aligning with my broader research focus on neurosymbolic reasoning systems.
     </p>
     <p><a href="https://github.com/ShawnnnLiu/Crash-Anticipation" target="_blank" rel="noopener">View Code</a></p>
+  </div>
+
+  <div hidden id="modal-content-arrhythmia" class="modal-content-template">
+    <h2 id="modal-title">Generalizable Arrhythmia Detection Under Patient-Wise Evaluation</h2>
+    <p class="tags">Healthcare ML · ECG · Robust Evaluation · Data Leakage · Deep Learning</p>
+    <p><strong>Manuscript in preparation (extended from CS184A)</strong></p>
+    <p>
+      This work revisits a common benchmarking pitfall in ECG classification: evaluation protocol can dominate results. On the MIT-BIH Arrhythmia Database, beat-wise pooling can leak patient-specific patterns across splits, dramatically inflating accuracy and macro-F1. We evaluate two simple baselines under strict patient-wise separation and show that carefully curating patient splits to match class distributions improves clean generalization.
+    </p>
+
+    <h3>Key Results</h3>
+    <ul class="list">
+      <li><strong>Beat-wise pooled (leaky):</strong> CNN: 98.36% accuracy, 0.7540 macro-F1; LSTM-AE: 98.95% accuracy, 0.7766 macro-F1</li>
+      <li><strong>Random patient-wise (no leakage, unstable class coverage):</strong> CNN: 83.88% accuracy, 0.3732 macro-F1; LSTM-AE: 82.06% accuracy, 0.3928 macro-F1</li>
+      <li><strong>Optimal patient-wise (no leakage, improved coverage):</strong> CNN: 89.74% accuracy, 0.4173 macro-F1; LSTM-AE: 91.54% accuracy, 0.4091 macro-F1</li>
+    </ul>
+    <p>
+      <strong>Takeaway:</strong> Leakage can create "SOTA-looking" numbers, while true inter-patient generalization is far harder, and rare-class coverage heavily affects macro-F1.
+    </p>
+
+    <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/Arrhythmia_macro_f1_inflation.png" alt="Bar chart comparing macro-F1 for CNN and LSTM-autoencoder under beat-wise pooled, random patient-wise, and optimal patient-wise splits." />
+        <figcaption>Macro-F1 is dramatically inflated by beat-wise pooling due to patient leakage. Strict patient-wise evaluation reveals the true generalization gap, and an optimal patient-wise split improves clean performance without changing architecture.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Why splitting matters</h3>
+    <p>
+      Beat-wise splits mix beats from the same patient across train and test, so models can exploit patient-specific morphology and noise characteristics rather than learning general arrhythmia features. Patient-wise evaluation better reflects deployment, where models must generalize to unseen patients.
+    </p>
+
+    <h3>Method: Optimal patient-wise split search</h3>
+    <p>
+      We search over patient assignments for train, validation, and test under strict patient separation and select splits that minimize the discrepancy between each split's label distribution and the overall dataset distribution. This improves rare-class coverage and produces a more stable evaluation than naive random patient-wise splitting.
+    </p>
+
+    <h3>Models evaluated</h3>
+    <ul class="list">
+      <li><strong>Simple 1D CNN baseline</strong></li>
+      <li><strong>LSTM autoencoder with a classification head</strong> (joint reconstruction + classification objective)</li>
+    </ul>
+    <p>
+      <em>Note: A deeper residual CNN was implemented but excluded from the main narrative due to overfitting and weaker generalization.</em>
+    </p>
+
+    <h3>Dataset and preprocessing</h3>
+    <p>
+      MIT-BIH Arrhythmia Database (48 half-hour recordings, 2 channels, 360 Hz). Beats are extracted as a 0.8-second window (288 samples) centered on the R-peak. Labels are mapped into 6 classes: Normal, Supraventricular, Ventricular, Fusion, Paced, Unknown.
+    </p>
+
+    <h3>Next steps (paper direction)</h3>
+    <ul class="list">
+      <li>Expand to stronger patient-wise baselines and calibrate for class imbalance</li>
+      <li>Add confidence intervals over multiple patient-wise splits</li>
+      <li>Evaluate cross-dataset transfer or record-level generalization protocols</li>
+      <li>Package the split-search method as a reproducible benchmark utility</li>
+    </ul>
+
+    <p><strong>My contribution:</strong> I implemented the end-to-end pipeline and evaluation framework, including the patient-wise split logic and the script that searches for the optimal patient-wise split. I ran all ablations across splitting protocols, trained both baselines, and produced the evaluation summary used to highlight leakage and generalization gaps.</p>
+    <p><a href="https://github.com/ShawnnnLiu/Arrythmia_Classifier" target="_blank" rel="noopener">View Repository</a></p>
   </div>
 
   <div hidden id="modal-content-cat-collage" class="modal-content-template">
