@@ -27,10 +27,12 @@
       <p class="site-subtitle">CS @ UC Irvine · AI/ML · Neurosymbolic AI · Reasoning · Secure ML Inference</p>
       <nav class="site-nav">
         <a href="#about">About</a>
+        <a href="#news">News</a>
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
+        <a href="assets/CV/Shawn Liu - CV.pdf" target="_blank" rel="noopener" class="cv-link">CV</a>
       </nav>
     </div>
   </header>
@@ -40,10 +42,10 @@
       <h2>About</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>🧠 I'm an undergraduate researcher in Computer Science at UC Irvine ('26). I work on neuro-symbolic AI, brain‑inspired learning (HDC), multimodal models, and secure inference in neural networks (CKKS‑FHE). I'm very grateful for the opportunity to work with Prof. Mohsen Imani for my undergraduate research.</p>
+          <p>🧠 I'm an undergraduate researcher in Computer Science at UC Irvine ('26). I work on neuro-symbolic AI, brain‑inspired learning (HDC), multimodal models, and secure inference in neural networks (CKKS‑FHE). I'm very grateful for the opportunity to work with Prof. Mohsen Imani and Dr. Haleh Alimohamadi for my undergraduate research.</p>
           <ul class="meta">
-            <li>🔬 Current: BiasLab @ UCI</li>
-            <li>🏂 Hobbies: Snowboarding, music, gaming</li>
+            <li>🔬 Current: BiasLab @ UCI & BioIntelligence Lab @ UCI</li>
+            <li>🏂 Hobbies: Basketball, snowboarding, music, gaming</li>
             <li>🎵 Favorite Artists: D'Angelo, Dijon, Mkgee (Corresponding fave albums below)</li>
             <li>🎮 Favorite Game: Cyberpunk 2077</li>
           </ul>
@@ -65,6 +67,28 @@
             & Kumquat (right) 🐱🐱 <br><small style="color: var(--accent); cursor: default;">Click photo for more cat pics! 📸</small></p>
         </div>
       </div>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">Jan 19, 2026</span>
+          <span class="news-content"><strong>Optimal Hyperdimensional Representation for Learning and Cognitive Computation</strong> — Third author; accepted to <em>Frontiers in Artificial Intelligence</em>.</span>
+        </li>
+        <li>
+          <span class="news-date">Dec 15, 2025</span>
+          <span class="news-content">Started new position at <strong>BioIntelligence Lab</strong> with Dr. Haleh Alimohamadi: peptides research building classifiers on AMP vs non-AMP based on geometric features and QSAR (incorporating ESM Fold).</span>
+        </li>
+        <li>
+          <span class="news-date">Nov 10, 2025</span>
+          <span class="news-content"><strong>Cross-Modal Event Encoder: Bridging Image–Text Knowledge to Event Streams</strong> — Accepted to <em>WACV 2026</em>.</span>
+        </li>
+        <li>
+          <span class="news-date">Sept 23, 2025</span>
+          <span class="news-content"><strong>Geometric Priors for Generalizable World Models via Vector Symbolic Architecture</strong> — Accepted to <em>NeurIPS 2025 Workshop NeurReps</em>.</span>
+        </li>
+      </ul>
     </section>
 
     <section id="research">
@@ -92,7 +116,7 @@
           <h3>Optimal Hyperdimensional Representation</h3>
           <p>First universal HDC encoding framework that adapts dynamically between learning and cognitive reasoning. Achieves 95% learning accuracy with correlated encodings and 100% decoding accuracy under exclusive encodings. Quantifies correlation-separation trade-off for brain-like reasoning.</p>
           <p class="tags">HDC · Cognitive Computation · Neural-Symbolic</p>
-          <p><a href="#" aria-disabled="true">Frontiers in AI (in review)</a> · <button class="read-more-btn" data-modal="optimal-hdc">✨ Read more<svg><rect></rect></svg></button></p>
+          <p><a href="#" aria-disabled="true">Frontiers in AI</a> · <button class="read-more-btn" data-modal="optimal-hdc">✨ Read more<svg><rect></rect></svg></button></p>
         </article>
         <article class="card">
           <h3>HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient and Secure Learning</h3>
@@ -195,6 +219,7 @@
     <h2 id="modal-title">Robust Reasoning and Learning with Brain-Inspired Representations under Homomorphic Encryption</h2>
     <p class="tags">Privacy-Preserving AI · Neuro-Symbolic Learning · Homomorphic Encryption · HDC</p>
     <p><strong>IEEE Transactions on Artificial Intelligence (2026, under review)</strong></p>
+    <p class="authors"><strong class="highlight-author">Xiangjian Liu</strong>, Hamza Errahmouni, Zhuowen Zou, Hyunwoo Oh, Hanning Chen, Mohsen Imani, Rosario Cammarota, Nathaniel D. Bastian</p>
     <p>
       We propose a privacy-preserving neurosymbolic framework that executes inference entirely under CKKS Fully Homomorphic Encryption (FHE) while preserving the robustness and interpretability of Hyperdimensional Computing (HDC)-based reasoning. The framework introduces distributed bootstrapping to mitigate ciphertext-noise explosion across deep layers, balancing accuracy and compute cost.
     </p>
@@ -265,6 +290,7 @@
     <h2 id="modal-title">Geometric Priors for Generalizable World Models via VSA</h2>
     <p class="tags">VSA · World Models · Generalization</p>
     <p><strong>NeurIPS 2025 Workshop on Symmetry and Geometry in Neural Representations</strong></p>
+    <p class="authors">William Youngwoo Chung, Calvin Yeung, Hansen Lillemark, Zhuowen Zou, <strong class="highlight-author">Xiangjian Liu</strong>, Mohsen Imani</p>
     <p>
       We introduce a world modeling framework grounded in Vector Symbolic Architecture (VSA) with learnable Fourier
       Holographic Reduced Representation encoders and group‑structured latent transitions via element‑wise complex
@@ -325,6 +351,7 @@
     <h2 id="modal-title">Cross-Modal Event Encoder: Bridging Image–Text Knowledge to Event Streams</h2>
     <p class="tags">Event-based Vision · CLIP · Cross-Modality · Zero-Shot Learning</p>
     <p><strong>WACV 2026</strong> · arXiv preprint (CoRR 2024)</p>
+    <p class="authors">SungHeon Jeong, Hanning Chen, Sanggeon Yun, Suhyeon Cho, Wenjun Huang, <strong class="highlight-author">Xiangjian Liu</strong>, Mohsen Imani</p>
     <p>
       We extend CLIP's zero-shot and text-alignment capabilities to the event modality, developing a robust encoder that bridges asynchronous event data with image-text representations. The framework aligns event embeddings with CLIP's visual and textual spaces, preserving zero-shot generalization and enabling cross-modal applications across five modalities (Image, Event, Text, Sound, Depth).
     </p>
@@ -383,7 +410,8 @@
   <div hidden id="modal-content-optimal-hdc" class="modal-content-template">
     <h2 id="modal-title">Optimal Hyperdimensional Representation for Learning and Cognitive Computation</h2>
     <p class="tags">Hyperdimensional Computing · Cognitive Computation · Neural-Symbolic Encoding</p>
-    <p><strong>Frontiers in Artificial Intelligence (In Review)</strong></p>
+    <p><strong>Frontiers in Artificial Intelligence</strong></p>
+    <p class="authors">Prathyush Poduval, Hamza Errahmouni Barkam, <strong class="highlight-author">Xiangjian Liu</strong>, Sanggeon Yun, Yang Ni, Zhuowen Zou, Nathaniel Bastian, Mohsen Imani</p>
     <p>
       This work introduces the first universal HDC encoding framework that adapts dynamically between learning and cognitive reasoning tasks. By modulating the correlation of hypervectors through tunable kernel scales, the model optimizes both memorization capacity and decodability, bridging the gap between symbolic reasoning and pattern learning within a unified high-dimensional representation.
     </p>
@@ -461,6 +489,7 @@
     <h2 id="modal-title">HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient and Secure Learning</h2>
     <p class="tags">Fully Homomorphic Encryption · Hyperdimensional Computing · Kernel Methods · Privacy-Preserving ML · CKKS</p>
     <p><strong>IEEE TAI 2026 (under review)</strong></p>
+    <p class="authors">Hamza Errahmouni Barkam, <strong class="highlight-author">Xiangjian Liu</strong>, William Cho, Calvin Yeung, Zhuowen Zou, Mohsen Imani</p>
     <p>
       We study Hyperdimensional Computing (HDC) as an alternative to encrypted deep learning: instead of long DNN compute chains that force frequent bootstrapping, HDC uses shallow, noise-resilient algebra that better matches FHE constraints. Using FHRR and GHRR, we connect hypervector similarity to shift-invariant kernels via Bochner's theorem, then quantify how CKKS noise degrades similarity structure, capacity, classification accuracy, and input decodability.
     </p>
