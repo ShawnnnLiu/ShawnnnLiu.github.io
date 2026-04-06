@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "api/spotify.js": {
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

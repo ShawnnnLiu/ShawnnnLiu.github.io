@@ -59,6 +59,12 @@
             <a href="https://www.youtube.com/watch?v=aZ13RneU1S0" target="_blank" rel="noopener" title="Listen to Mkgee - Two Star & the Dream Police on YouTube">
               <img src="assets/mkgee_twostart_cover.jpg" alt="Mkgee - Two Star & the Dream Police album cover" />
             </a>
+            <button class="spotify-stats-trigger" title="View my live Spotify listening stats">
+              <svg viewBox="0 0 24 24" class="spotify-trigger-icon" aria-hidden="true">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+              </svg>
+              <span class="spotify-trigger-label">My Stats</span>
+            </button>
           </div>
         </div>
         <div class="about-image">
@@ -72,6 +78,10 @@
     <section id="news">
       <h2>News</h2>
       <ul class="news-list">
+        <li>
+          <span class="news-date">Apr 5, 2026</span>
+          <span class="news-content"><strong>Live Spotify Stats</strong> — Feel free to stalk my recent listening history and see how our music tastes match up :)</span>
+        </li>
         <li>
           <span class="news-date">Jan 19, 2026</span>
           <span class="news-content"><strong>Optimal Hyperdimensional Representation for Learning and Cognitive Computation</strong> — Third author; accepted to <em>Frontiers in Artificial Intelligence</em>. <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1690492/full" target="_blank" rel="noopener">[Paper]</a></span>
@@ -846,6 +856,171 @@
     })();
 
     // (demos removed; single GIF is rendered statically in markup)
+  </script>
+
+  <script>
+    // Spotify Stats — fetches from /api/spotify and renders into the existing modal
+    (function() {
+      var SPOTIFY_API = 'https://personal-website-mauve-tau.vercel.app/api/spotify';
+      var modal = document.getElementById('modal');
+      var modalBody = document.getElementById('modal-body');
+      var trigger = document.querySelector('.spotify-stats-trigger');
+      if (!trigger) return;
+
+      var SPOTIFY_SVG = '<svg viewBox="0 0 24 24" width="28" height="28" style="fill:#1DB954;flex-shrink:0"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>';
+
+      var spotifyData = null;
+      var activeTab = 'recent';
+      var activeRanges = { songs: 'short_term', albums: 'short_term', artists: 'short_term' };
+
+      function openSpotifyModal() {
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function esc(s) {
+        var d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+      }
+
+      function renderTracks(tracks) {
+        if (!tracks || !tracks.length) return '<p style="color:var(--muted)">No data available.</p>';
+        var items = tracks.map(function(t, i) {
+          return '<li class="spotify-track">' +
+            '<span class="spotify-rank">' + (i + 1) + '</span>' +
+            '<img src="' + esc(t.image) + '" alt="" loading="lazy" />' +
+            '<div class="spotify-track-info">' +
+              '<a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.name) + '</a>' +
+              '<span>' + esc(t.artist) + '</span>' +
+            '</div></li>';
+        }).join('');
+        return '<ul class="spotify-tracks">' + items + '</ul>';
+      }
+
+      function renderAlbums(albums) {
+        if (!albums || !albums.length) return '<p style="color:var(--muted)">No data available.</p>';
+        var items = albums.map(function(a) {
+          return '<a href="' + esc(a.url) + '" target="_blank" rel="noopener" class="spotify-album">' +
+            '<img src="' + esc(a.image) + '" alt="' + esc(a.name) + '" loading="lazy" />' +
+            '<span class="spotify-album-name">' + esc(a.name) + '</span>' +
+            '<span class="spotify-album-artist">' + esc(a.artist) + '</span>' +
+          '</a>';
+        }).join('');
+        return '<div class="spotify-albums">' + items + '</div>';
+      }
+
+      function renderArtists(artists) {
+        if (!artists || !artists.length) return '<p style="color:var(--muted)">No data available.</p>';
+        var items = artists.map(function(a) {
+          var genres = (a.genres || []).map(function(g) { return esc(g); }).join(', ');
+          return '<a href="' + esc(a.url) + '" target="_blank" rel="noopener" class="spotify-artist">' +
+            '<img src="' + esc(a.image) + '" alt="' + esc(a.name) + '" loading="lazy" />' +
+            '<span class="spotify-artist-name">' + esc(a.name) + '</span>' +
+            (genres ? '<span class="spotify-artist-genres">' + genres + '</span>' : '') +
+          '</a>';
+        }).join('');
+        return '<div class="spotify-artists">' + items + '</div>';
+      }
+
+      function buildRangeButtons(tabId) {
+        return '<div class="spotify-tab-flyout">' +
+          '<button class="spotify-range active" data-stab="' + tabId + '" data-srange="short_term">4 Weeks</button>' +
+          '<button class="spotify-range" data-stab="' + tabId + '" data-srange="medium_term">6 Months</button>' +
+          '<button class="spotify-range" data-stab="' + tabId + '" data-srange="long_term">All Time</button>' +
+          '</div>';
+      }
+
+      function getPanelContent(tab, range) {
+        if (!spotifyData) return '';
+        if (tab === 'recent') return renderTracks(spotifyData.recentTracks);
+        if (tab === 'songs') return renderTracks(spotifyData.tracks && spotifyData.tracks[range]);
+        if (tab === 'albums') return renderAlbums(spotifyData.albums && spotifyData.albums[range]);
+        if (tab === 'artists') return renderArtists(spotifyData.artists && spotifyData.artists[range]);
+        return '';
+      }
+
+      function buildContent(data) {
+        spotifyData = data;
+        activeTab = 'recent';
+        activeRanges = { songs: 'short_term', albums: 'short_term', artists: 'short_term' };
+
+        var html = '<div class="spotify-header">' +
+          '<h2 id="modal-title" class="spotify-modal-title">' + SPOTIFY_SVG + ' My Spotify Stats</h2>' +
+          '<div class="spotify-tabs" role="tablist">' +
+          '<button class="spotify-tab active" data-stab="recent" role="tab">Recently Played</button>' +
+          '<div class="spotify-tab-group"><button class="spotify-tab" data-stab="songs" role="tab">Top Songs</button>' + buildRangeButtons('songs') + '</div>' +
+          '<div class="spotify-tab-group"><button class="spotify-tab" data-stab="albums" role="tab">Top Albums</button>' + buildRangeButtons('albums') + '</div>' +
+          '<div class="spotify-tab-group"><button class="spotify-tab" data-stab="artists" role="tab">Top Artists</button>' + buildRangeButtons('artists') + '</div>' +
+          '</div></div>';
+
+        html += '<div class="spotify-panel" role="tabpanel">' + getPanelContent('recent', 'short_term') + '</div>';
+        return html;
+      }
+
+      function switchTab(tab, range) {
+        activeTab = tab;
+        if (range && activeRanges.hasOwnProperty(tab)) activeRanges[tab] = range;
+        var currentRange = activeRanges[tab] || 'short_term';
+
+        modalBody.querySelectorAll('.spotify-tab').forEach(function(t) {
+          t.classList.toggle('active', t.getAttribute('data-stab') === tab);
+        });
+        modalBody.querySelectorAll('.spotify-range').forEach(function(r) {
+          r.classList.toggle('active',
+            r.getAttribute('data-stab') === tab && r.getAttribute('data-srange') === currentRange);
+        });
+
+        var panel = modalBody.querySelector('.spotify-panel');
+        if (panel) {
+          panel.innerHTML = getPanelContent(tab, currentRange);
+          panel.style.animation = 'none';
+          void panel.offsetWidth;
+          panel.style.animation = '';
+        }
+      }
+
+      modalBody.addEventListener('click', function(e) {
+        var range = e.target.closest('.spotify-range');
+        if (range) {
+          switchTab(range.getAttribute('data-stab'), range.getAttribute('data-srange'));
+          return;
+        }
+        var tab = e.target.closest('.spotify-tab');
+        if (!tab) return;
+        switchTab(tab.getAttribute('data-stab'));
+      });
+
+      trigger.addEventListener('click', function() {
+        modalBody.innerHTML =
+          '<div class="spotify-header">' +
+          '<h2 id="modal-title" class="spotify-modal-title">' + SPOTIFY_SVG + ' My Spotify Stats</h2>' +
+          '</div>' +
+          '<div class="spotify-loading"><div class="spotify-spinner"></div><p>Loading stats from Spotify&hellip;</p></div>';
+        openSpotifyModal();
+
+        fetch(SPOTIFY_API)
+          .then(function(r) {
+            if (!r.ok) throw new Error(r.status);
+            return r.json();
+          })
+          .then(function(data) {
+            if (modal.classList.contains('open')) {
+              modalBody.innerHTML = buildContent(data);
+            }
+          })
+          .catch(function() {
+            if (modal.classList.contains('open')) {
+              modalBody.innerHTML =
+                '<div class="spotify-header">' +
+                '<h2 id="modal-title" class="spotify-modal-title">' + SPOTIFY_SVG + ' My Spotify Stats</h2>' +
+                '</div>' +
+                '<p class="spotify-error">Could not load Spotify data right now. Please try again later.</p>';
+            }
+          });
+      });
+    })();
   </script>
 </body>
 </html>
