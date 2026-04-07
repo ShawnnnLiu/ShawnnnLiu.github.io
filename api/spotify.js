@@ -45,6 +45,7 @@ function parseTracks(data) {
     album: t.album?.name || '',
     image: t.album?.images?.[1]?.url || t.album?.images?.[0]?.url || '',
     url: t.external_urls?.spotify || '',
+    popularity: t.popularity ?? null,
   }));
 }
 
@@ -71,6 +72,7 @@ function parseArtists(data) {
     image: a.images?.[1]?.url || a.images?.[0]?.url || '',
     url: a.external_urls.spotify,
     genres: (a.genres || []).slice(0, 3),
+    popularity: a.popularity ?? null,
   }));
 }
 
