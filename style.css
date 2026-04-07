@@ -915,12 +915,8 @@ h2 { margin: 0 0 1rem; font-size: 1.4rem; }
 
 @media (max-width: 768px) {
   .spotify-stats-trigger {
-    width: 120px;
-    height: 120px;
-  }
-  .spotify-trigger-icon {
-    width: 36px;
-    height: 36px;
+    width: 160px;
+    height: 160px;
   }
   .spotify-header {
     margin: -1.5rem -1.5rem 0;
