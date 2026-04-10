@@ -26,6 +26,9 @@ a:hover { text-decoration: underline; }
   padding: .28rem .8rem .38rem;
   border: 2px solid transparent;
   border-radius: var(--roundness);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
   color: var(--color);
   position: relative;
