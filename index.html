@@ -749,7 +749,7 @@
     <p>Here are some of my favorite photos of my cats!</p>
     <div class="birthday-counter">
       <span class="birthday-emoji">🎂</span>
-      <span class="birthday-text">Coconut & Kumquat's birthday: <strong>June 18, 2024</strong><br><span class="birthday-countdown" data-birthday="2024-06-18"></span></span>
+      <span class="birthday-text">Coconut & Kumquat's birthday: <strong>February 28, 2024</strong><br><span class="birthday-countdown" data-birthday="2024-02-28"></span></span>
       <button class="confetti-btn" data-state="initial">🎉 Confetti!</button>
     </div>
     <div class="cat-collage">
@@ -916,7 +916,7 @@
     var countdownInterval = null;
     function isBirthdayToday() {
       var nowPST = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-      return nowPST.getMonth() === 5 && nowPST.getDate() === 18;
+      return nowPST.getMonth() === 1 && nowPST.getDate() === 28;
     }
 
     function startBirthdayCountdown() {
@@ -953,9 +953,9 @@
       function tick() {
         var nowPST = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
         var year = nowPST.getFullYear();
-        var nextBday = new Date(year, 5, 18);
-        if (nowPST >= new Date(year, 5, 19)) {
-          nextBday = new Date(year + 1, 5, 18);
+        var nextBday = new Date(year, 1, 28);
+        if (nowPST >= new Date(year, 1, 29)) {
+          nextBday = new Date(year + 1, 1, 28);
         }
         var diff = nextBday - nowPST;
         if (diff <= 0) {
