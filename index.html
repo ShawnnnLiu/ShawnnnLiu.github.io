@@ -80,6 +80,10 @@
       <h2>News</h2>
       <ul class="news-list">
         <li>
+          <span class="news-date">May 22, 2026</span>
+          <span class="news-content"><strong>Integrating Symbolic and Neural Mechanisms for Adversarially Robust Hyperdimensional Computing</strong> — Accepted to <em>ISLPED 2026</em>.</span>
+        </li>
+        <li>
           <span class="news-date">Apr 5, 2026</span>
           <span class="news-content"><strong>Live Spotify Stats</strong> — Feel free to stalk my recent listening history and see how our music tastes match up :)</span>
         </li>
@@ -134,6 +138,12 @@
           <p>We study Hyperdimensional Computing (HDC) as an alternative to encrypted deep learning: instead of long DNN compute chains that force frequent bootstrapping, HDC uses shallow, noise-resilient algebra that better matches FHE constraints. Using FHRR and GHRR, we connect hypervector similarity to shift-invariant kernels via Bochner's theorem, then quantify how CKKS noise degrades similarity structure, capacity, classification accuracy, and input decodability.</p>
           <p class="tags">HDC · Kernel Methods · Privacy-Preserving ML · CKKS</p>
           <p><a href="#" aria-disabled="true">IEEE TAI 2026 (under review)</a> · <button class="read-more-btn" data-modal="hyperencrypt">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
+        </article>
+        <article class="card">
+          <h3>Adversarially Robust Hyperdimensional Computing</h3>
+          <p>A hybrid neuro-symbolic pipeline that fuses Vision Transformer features with classical texture-, shape-, and color descriptors (LBP, HOG, PHOG) through Hyperdimensional Computing. Across CIFAR10, COIL100, and ETH80 under FGSM and Genetic Attack, ViT + Classical HDC degrades more gracefully than pure HDC and ViT + HDC baselines — higher normalized AURC, tighter decision margins, and larger gains from partial adversarial retraining (+6.6–10.9 pp under FGSM, +17.1–26.3 pp under Genetic Attack).</p>
+          <p class="tags">HDC · Neurosymbolic AI · Adversarial Robustness · ViT</p>
+          <p><a href="https://doi.org/10.1145/3816440.3818596" target="_blank" rel="noopener">ISLPED 2026</a> · <button class="read-more-btn" data-modal="adversarial-hdc">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
         </article>
       </div>
     </section>
@@ -526,6 +536,41 @@
     </p>
 
     <p><strong>My contribution:</strong> I analyzed how CKKS noise and bootstrapping distort the kernel behavior of HDC representations, and ran controlled comparisons between GHRR vs. FHRR under identical noise budgets. I produced the bootstrapping-by-noise heatmaps, the binding/bundling sensitivity plots, and cosine-similarity histograms that quantify margin collapse and recovery with refresh. I also implemented and evaluated reconstruction of binarized images from FHRR under CKKS noise to measure how encryption noise impacts decodability and information retention.</p>
+  </div>
+
+  <div hidden id="modal-content-adversarial-hdc" class="modal-content-template">
+    <h2 id="modal-title">Integrating Symbolic and Neural Mechanisms for Adversarially Robust Hyperdimensional Computing</h2>
+    <p class="tags">Hyperdimensional Computing · Neurosymbolic AI · Adversarial Robustness · Vision Transformers · Robust Machine Learning</p>
+    <p><strong>ISLPED 2026 (International Symposium on Low Power Electronics and Design)</strong></p>
+    <p>
+      Neuro-symbolic models may improve robustness by combining learned representations with structured composition, but their behavior under adversarial perturbation remains underexplored. We study a hybrid pipeline that fuses Vision Transformer (ViT) features with classical texture-, shape-, and color descriptors through Hyperdimensional Computing (HDC), treating each feature source as a symbol and composing them into class prototypes for similarity-based inference.
+    </p>
+
+    <h3>Key Results</h3>
+    <ul class="list">
+      <li><strong>Graceful degradation:</strong> Across CIFAR10 (Subset), COIL100, and ETH80 under FGSM and Genetic Attack, ViT + Classical HDC degrades more gracefully than pure HDC and ViT + HDC baselines.</li>
+      <li><strong>Highest normalized AURC:</strong> The classical-neural fusion achieves the highest Area Under the Robustness Curve, indicating the slowest accuracy degradation across the evaluated perturbation sweep.</li>
+      <li><strong>Stabler decision margins:</strong> Under attack, the fusion variants keep lower and tighter decision-margin distributions, reflecting less overconfident misclassification than ViT + HDC.</li>
+      <li><strong>Stronger retraining recovery:</strong> Partial adversarial retraining yields larger gains for the fusion model — averaged across datasets, +6.6–10.9 percentage points under FGSM and +17.1–26.3 points under Genetic Attack.</li>
+      <li><strong>Consistent clean ordering:</strong> Clean accuracy follows Pure HDC &lt; ResNet + HDC &lt; ViT + HDC &lt; ViT + Classical HDC, and the fusion advantage widens under stronger perturbations.</li>
+    </ul>
+
+    <h3>Why Classical–Neural Fusion?</h3>
+    <p>
+      Adversarial perturbations most directly corrupt the globally optimized, pixel-level activations that learned encoders rely on. Classical descriptors such as Local Binary Pattern (texture), HOG, and PHOG (shape/edge) capture structural and relational cues that remain visually stable under FGSM and Genetic Attack. Fusing them with ViT's semantic abstraction inside a shared HDC space lets the final prototype-based decision draw on both structural stability and semantic richness, rather than depending on any single corruptible feature source.
+    </p>
+
+    <h3>Framework</h3>
+    <p>
+      The pipeline combines three components: a classical descriptor branch (texture, shape, color), a neural branch that provides learned semantic representations, and an HDC composition layer that maps each heterogeneous feature into a high-dimensional space and bundles them into class-specific prototypes. At inference, a test hypervector is assigned to the most similar prototype by cosine similarity. Four variants are compared under the same HDC-style decision rule — HDC Classifier (pure symbolic), ResNet18 + HDC, ViT + HDC, and the proposed ViT + Classical HDC — so observed gains are attributed to representational content rather than a different downstream classifier.
+    </p>
+
+    <h3>Threat Model</h3>
+    <p>
+      Robustness is evaluated under two complementary attacks: FGSM, a first-order white-box attack that perturbs inputs along the loss gradient, and Genetic Attack, a gradient-free gray-box attack that evolves adversarial examples through mutation and selection under partial observability. Gaussian noise is included only as a sanity-check baseline. Evaluation spans clean accuracy, degradation under increasing perturbation budgets, decision-margin behavior, hypervector-dimension sweeps, and partial adversarial retraining.
+    </p>
+
+    <p><strong>My contribution:</strong> </p>
   </div>
 
   <div hidden id="modal-content-adamsfood-app" class="modal-content-template">
