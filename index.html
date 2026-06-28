@@ -3,243 +3,637 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shawn Liu | Xiangjian Liu - AI/ML Researcher at UC Irvine</title>
-  <meta name="description" content="Official website of Shawn (Xiangjian) Liu, a Computer Science researcher at UC Irvine specializing in Neuro-symbolic AI, FHE, and Machine Learning.">
+  <title>Shawn Liu · ML researcher who ships | UC Irvine to Columbia MSCS</title>
+  <meta name="description" content="Xiangjian (Shawn) Liu is an AI/ML researcher (WACV, NeurIPS, ISLPED, Frontiers in AI) and full-stack engineer. CS at UC Irvine '26, incoming M.S. CS at Columbia. Open to ML Engineer, Research Engineer, and SWE roles." />
+  <meta name="theme-color" content="#f3efe6" />
+  <link rel="canonical" href="https://shawnliu.dev/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shawn Liu · ML researcher who ships" />
+  <meta property="og:description" content="Published AI/ML researcher and full-stack engineer. UC Irvine '26, incoming Columbia MSCS. Open to ML, Research Engineer, and SWE roles." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Perf: warm up font + Spotify API origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://personal-website-mauve-tau.vercel.app" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
+  <noscript>
+    <style>.reveal{opacity:1 !important;transform:none !important}</style>
+  </noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Xiangjian (Shawn) Liu",
+    "alternateName": "Shawn Liu",
+    "jobTitle": "AI/ML Researcher & Software Engineer",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of California, Irvine" },
+      { "@type": "CollegeOrUniversity", "name": "Columbia University" }
+    ],
+    "knowsAbout": ["Neurosymbolic AI", "Hyperdimensional Computing", "Fully Homomorphic Encryption", "Machine Learning", "Computer Vision", "Full-Stack Engineering"],
+    "email": "mailto:xiangjl4@uci.edu",
+    "sameAs": [
+      "https://github.com/ShawnnnLiu/",
+      "https://www.linkedin.com/in/xiangjian-shawn-liu/",
+      "https://openreview.net/profile?id=%7EXiangjian_Liu1"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- SVG Filter for Glow Effect -->
-  <svg style="position: absolute; width: 0; height: 0;">
-    <defs>
-      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-        <feMerge>
-          <feMergeNode in="coloredBlur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-  </svg>
+  <a class="skip-link" href="#research">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Xiangjian (Shawn) Liu</h1>
-      <p class="site-subtitle">CS @ UC Irvine ’26 · Incoming M.S. CS @ Columbia · AI/ML · Neurosymbolic AI · Secure ML Inference · Computational Biology</p>
-      <nav class="site-nav">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="nav__brand"><span class="mk">SL</span> Shawn&nbsp;Liu</a>
+      <nav class="nav__links" aria-label="Primary">
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
-        <a href="#teaching">Teaching</a>
+        <a href="#skills">Skills</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="assets/CV/Shawn Liu - CV.pdf" target="_blank" rel="noopener" class="cv-link">CV</a>
       </nav>
+      <div class="nav__cta">
+        <span class="nav__status"><span class="pulse"></span> Open to roles</span>
+        <a class="btn btn--accent" href="assets/CV/Shawn Liu - CV.pdf" target="_blank" rel="noopener">CV
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+        <button class="nav__menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section id="about">
-      <h2>About</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>🧠 I'm an undergraduate researcher in Computer Science at UC Irvine ('26) and an incoming M.S. student in Computer Science at Columbia University. I work on neuro-symbolic AI, brain‑inspired learning (HDC), multimodal models, and secure inference in neural networks (CKKS‑FHE). I'm very grateful for the opportunity to work with Prof. Mohsen Imani and Dr. Haleh Alimohamadi for my undergraduate research.</p>
-          <ul class="meta">
-            <li>🔬 Current: BiasLab @ UCI & BioIntelligence Lab @ UCI</li>
-            <li>🏂 Hobbies: Basketball, snowboarding, music, gaming</li>
-            <li>🎵 Favorite Artists: D'Angelo, Dijon, Mkgee (Corresponding fave albums below)</li>
-            <li>🎮 Favorite Game: Cyberpunk 2077</li>
-            <li>📖 Currently Reading: <em>Designing Machine Learning Systems</em> by Chip Huyen</li>
-          </ul>
-          <div class="album-covers">
-            <a href="https://www.youtube.com/playlist?list=PLj0iicDFTqJq8CcEMDS1VUbT0DPjFYOm1" target="_blank" rel="noopener" title="Listen to D'Angelo - Voodoo on YouTube">
-              <img src="assets/dangelo_voodoo_cover.jpeg" alt="D'Angelo - Voodoo album cover" />
+  <!-- mobile drawer -->
+  <div class="nav__drawer" id="nav-drawer">
+    <nav aria-label="Mobile">
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#news">News</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/CV/Shawn Liu - CV.pdf" target="_blank" rel="noopener">Download CV ↗</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap" aria-label="Intro">
+      <div class="hero__grid">
+        <div class="hero__lead">
+          <p class="hero__eyebrow"><span class="sq"></span> ML Researcher × Software Engineer</p>
+          <h1>Research<br />that <span class="ship">ships</span>.</h1>
+          <p class="hero__lede">I'm <strong>Shawn Liu</strong>. I publish AI/ML research at venues like <strong>WACV</strong>, <strong>NeurIPS</strong>, and <strong>ISLPED</strong>, and I build the production systems that actually use it.</p>
+          <div class="hero__id">
+            <span><span class="k">CS</span> · UC Irvine '26</span>
+            <span class="arrow">→</span>
+            <span><span class="k">Incoming MSCS</span> · Columbia</span>
+            <span class="arrow">·</span>
+            <span>Open to <span class="k">ML / Research-Eng / SWE</span></span>
+          </div>
+          <div class="hero__cta">
+            <a class="btn btn--accent" href="#research">View research
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="https://www.youtube.com/watch?v=FEkOYs6aWIg" target="_blank" rel="noopener" title="Listen to Dijon - Absolutely on YouTube">
-              <img src="assets/Dijon_Absolutely_AlbumCover.jpeg" alt="Dijon - Absolutely album cover" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=aZ13RneU1S0" target="_blank" rel="noopener" title="Listen to Mkgee - Two Star & the Dream Police on YouTube">
-              <img src="assets/mkgee_twostart_cover.jpg" alt="Mkgee - Two Star & the Dream Police album cover" />
-            </a>
-            <button class="spotify-stats-trigger" title="View my live Spotify listening stats">
-              <svg viewBox="0 0 24 24" class="spotify-trigger-icon" aria-hidden="true">
-                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-              </svg>
-              <span class="spotify-trigger-label">My Stats</span>
+            <a class="btn btn--ghost" href="#projects">See what I've shipped</a>
+            <a class="btn btn--light" href="#contact">Get in touch</a>
+          </div>
+          <div class="hero__social">
+            <a href="https://github.com/ShawnnnLiu/" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg> GitHub</a>
+            <a href="https://www.linkedin.com/in/xiangjian-shawn-liu/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
+            <a href="https://openreview.net/profile?id=%7EXiangjian_Liu1" target="_blank" rel="noopener" aria-label="OpenReview"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3.2A6.8 6.8 0 1 1 5.2 12 6.8 6.8 0 0 1 12 5.2zm0 3.1A3.7 3.7 0 1 0 15.7 12 3.7 3.7 0 0 0 12 8.3z"/></svg> OpenReview</a>
+            <a href="mailto:xiangjl4@uci.edu" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.8 5.6L19.8 6H4.2zm15.8 1.6-7.43 5.33a1 1 0 0 1-1.14 0L4 7.6V18h16V7.6z"/></svg> Email</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <figure class="media-frame" data-label="WACV 2026 event-encoder attention">
+            <img src="assets/research/peacock_attention_imagenet.png" alt="Cross-modal attention heatmap learned by the WACV 2026 event-encoder, highlighting salient regions" loading="eager" decoding="async" width="652" height="302" />
+            <figcaption class="media-frame__tag"><span class="ftag">Published</span> Cross-modal event-encoder attention · WACV 2026</figcaption>
+          </figure>
+          <p class="media-cap">Cross-modal attention learned by our WACV 2026 event-encoder, one of six peer-reviewed papers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROOF BAR ============ -->
+    <section class="proofbar" aria-label="Highlights">
+      <div class="wrap proofbar__in">
+        <div class="venues reveal">
+          <span class="lbl">Published at</span>
+          <span class="badge badge--top"><span class="dot"></span> WACV 2026</span>
+          <span class="badge badge--top"><span class="dot"></span> NeurIPS 2025</span>
+          <span class="badge"><span class="dot"></span> ISLPED 2026</span>
+          <span class="badge"><span class="dot"></span> Frontiers in AI</span>
+          <span class="badge badge--review"><span class="dot"></span> IEEE TAI ×2 (under review)</span>
+        </div>
+        <div class="metrics reveal">
+          <div class="metric">
+            <div class="num"><span class="cval" data-count="6">6</span></div>
+            <div class="lab">Peer-reviewed papers across top venues</div>
+          </div>
+          <div class="metric">
+            <div class="num"><span class="pfx">&gt;</span><span class="cval" data-count="90">90</span><span class="sfx">%</span></div>
+            <div class="lab">Accuracy on inference under homomorphic encryption</div>
+          </div>
+          <div class="metric">
+            <div class="num"><span class="pfx">+</span><span class="cval" data-count="19">19</span><span class="sfx">%</span></div>
+            <div class="lab">Zero-shot gain over prior SOTA · WACV 2026</div>
+          </div>
+          <div class="metric">
+            <div class="num"><span class="cval" data-count="100">100</span><span class="sfx">%</span></div>
+            <div class="lab">Crash-anticipation AP · F1 · lead-time recall</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRIPLE-THREAT BAND ============ -->
+    <section class="pillars" aria-label="What I do">
+      <div class="wrap pillars__in">
+        <div class="pillar reveal">
+          <div class="pillar__n">01 / Research</div>
+          <h3 class="pillar__t">Published &amp; <span class="em">peer-reviewed</span></h3>
+          <p class="pillar__d">I work on neurosymbolic AI, hyperdimensional computing, and secure ML inference (FHE/CKKS). I'm lead author on work at IEEE TAI, with papers at WACV, NeurIPS, and ISLPED.</p>
+          <a class="pillar__lnk" href="#research">Read the papers</a>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar__n">02 / Engineering</div>
+          <h3 class="pillar__t">Shipped to <span class="em">production</span></h3>
+          <p class="pillar__d">Full-stack work in React, Node, Postgres, AWS, and Firebase. I've shipped a live e-commerce platform, a nonprofit donation system, and a U.S. Navy computer-vision collaboration.</p>
+          <a class="pillar__lnk" href="#projects">See the projects</a>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar__n">03 / Bio</div>
+          <h3 class="pillar__t">Off the <span class="em">clock</span></h3>
+          <p class="pillar__d">I live with Coconut and Kumquat, listen to way too much D'Angelo, and spend my free time shooting hoops, snowboarding, or gaming. The Spotify feed is live (yes, it's mostly D'Angelo), and there's a wall of cat photos because I take way too many. Enjoy.</p>
+          <a class="pillar__lnk" href="#about">Meet the person</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section class="section research" id="research">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-eyebrow"><span class="idx">01</span> Selected research</p>
+          <h2 class="sec-title">Publications</h2>
+          <p class="sec-sub">Six peer-reviewed papers across neurosymbolic AI, hyperdimensional computing, and secure ML inference. The ones marked <em>lead</em> are where I'm first author. Open any of them for the full abstract, key results, figures, and exactly what I worked on.</p>
+        </header>
+
+        <div class="pub-list">
+          <!-- Featured 1: FHE, lead author -->
+          <article class="pub pub--feat reveal">
+            <div class="pub__main">
+              <div class="pub__badges">
+                <span class="badge badge--lead"><span class="dot"></span> Lead author</span>
+                <span class="badge badge--review"><span class="dot"></span> IEEE TAI 2026 · under review</span>
+              </div>
+              <h3 class="pub__title">Brain-Inspired Reasoning under Homomorphic Encryption</h3>
+              <p class="pub__sum">A privacy-preserving neurosymbolic framework that runs inference <span class="hl">entirely under CKKS-FHE</span> while keeping HDC-based reasoning robust. It holds <span class="hl">&gt;90% accuracy</span> on encrypted graph inference with a <span class="hl">4× reduction</span> in bootstrapping overhead, thanks to noise-adaptive scheduling.</p>
+              <p class="pub__tags">FHE · HDC · Neurosymbolic AI · Privacy-Preserving ML</p>
+              <div class="pub__cta">
+                <button class="read-more-btn" data-modal="secure-neurosymbolic">Read more</button>
+                <span class="pub__tags">Lead &amp; corresponding author · rebuttal completed</span>
+              </div>
+            </div>
+            <figure class="pub__fig" data-label="FHE neurosymbolic framework">
+              <img src="assets/research/OVERALLframework.png" alt="End-to-end neuro-symbolic FHE pipeline with distributed bootstrapping and symbolic decoding" loading="lazy" decoding="async" />
+            </figure>
+          </article>
+
+          <!-- Featured 2: WACV -->
+          <article class="pub pub--feat reveal">
+            <div class="pub__main">
+              <div class="pub__badges">
+                <span class="badge badge--top"><span class="dot"></span> WACV 2026</span>
+              </div>
+              <h3 class="pub__title">Cross-Modal Event Encoder: Bridging Image–Text Knowledge to Event Streams</h3>
+              <p class="pub__sum">Extends CLIP's zero-shot power to event-based vision, aligning asynchronous event data with image–text space across five modalities (image, event, text, sound, depth), for a <span class="hl">+19% zero-shot accuracy</span> gain over prior event methods.</p>
+              <p class="pub__tags">Event-based Vision · CLIP · Cross-Modality · Zero-Shot</p>
+              <div class="pub__cta">
+                <button class="read-more-btn" data-modal="event-clip">Read more</button>
+                <a class="tlink" href="https://arxiv.org/abs/2412.03093" target="_blank" rel="noopener">arXiv:2412.03093 ↗</a>
+              </div>
+            </div>
+            <figure class="pub__fig" data-label="Event-encoder attention map">
+              <img src="assets/research/peacock_attention_imagenet.png" alt="Attention heatmap from the cross-modal event encoder attending to salient regions" loading="lazy" decoding="async" />
+            </figure>
+          </article>
+
+          <!-- Compact rows -->
+          <article class="pub reveal">
+            <div class="pub__main">
+              <div class="pub__badges"><span class="badge badge--top"><span class="dot"></span> NeurIPS 2025 · NeurReps</span></div>
+              <h3 class="pub__title">Geometric Priors for Generalizable World Models via VSA</h3>
+              <p class="pub__sum">Vector Symbolic Architecture builds generalizable world models with learned group structure, reaching <span class="hl">87.5% zero-shot</span> accuracy and <span class="hl">4× noise robustness</span> over an MLP baseline.</p>
+              <p class="pub__tags">VSA · World Models · Generalization</p>
+            </div>
+            <div class="pub__side">
+              <span class="pub__year">2025</span>
+              <div class="pub__links">
+                <button class="read-more-btn" data-modal="geometric-priors">Read more</button>
+                <a class="tlink" href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">OpenReview ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub__main">
+              <div class="pub__badges"><span class="badge"><span class="dot"></span> Frontiers in AI</span></div>
+              <h3 class="pub__title">Optimal Hyperdimensional Representation for Learning &amp; Cognitive Computation</h3>
+              <p class="pub__sum">The first universal HDC encoding that adapts between learning and cognition, reaching <span class="hl">95% learning accuracy</span> with correlated encodings and <span class="hl">100% decoding</span> under exclusive encodings.</p>
+              <p class="pub__tags">HDC · Cognitive Computation · Neural-Symbolic</p>
+            </div>
+            <div class="pub__side">
+              <span class="pub__year">2026</span>
+              <div class="pub__links">
+                <button class="read-more-btn" data-modal="optimal-hdc">Read more</button>
+                <a class="tlink" href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1690492/full" target="_blank" rel="noopener">Paper ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub__main">
+              <div class="pub__badges"><span class="badge badge--review"><span class="dot"></span> IEEE TAI 2026 · under review</span></div>
+              <h3 class="pub__title">HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient &amp; Secure Learning</h3>
+              <p class="pub__sum">Positions HDC as an alternative to encrypted deep learning: shallow, noise-resilient algebra that fits FHE, using up to an <span class="hl">order-of-magnitude fewer</span> bootstrapping ops at near-clean accuracy.</p>
+              <p class="pub__tags">HDC · Kernel Methods · CKKS · Privacy-Preserving ML</p>
+            </div>
+            <div class="pub__side">
+              <span class="pub__year">2026</span>
+              <div class="pub__links">
+                <button class="read-more-btn" data-modal="hyperencrypt">Read more</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub__main">
+              <div class="pub__badges"><span class="badge"><span class="dot"></span> ISLPED 2026</span></div>
+              <h3 class="pub__title">Integrating Symbolic &amp; Neural Mechanisms for Adversarially Robust HDC</h3>
+              <p class="pub__sum">Fuses Vision-Transformer features with classical texture/shape descriptors through HDC for graceful degradation under FGSM and Genetic attacks, with <span class="hl">+17–26 pp</span> recovery from partial adversarial retraining.</p>
+              <p class="pub__tags">HDC · Neurosymbolic AI · Adversarial Robustness · ViT</p>
+            </div>
+            <div class="pub__side">
+              <span class="pub__year">2026</span>
+              <div class="pub__links">
+                <button class="read-more-btn" data-modal="adversarial-hdc">Read more</button>
+                <a class="tlink" href="https://doi.org/10.1145/3816440.3818596" target="_blank" rel="noopener">DOI ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-eyebrow"><span class="idx">02</span> Engineering</p>
+          <h2 class="sec-title">Things I've shipped</h2>
+          <p class="sec-sub">Production full-stack products and applied-ML systems, from a live e-commerce platform to a U.S. Navy computer-vision collaboration. Real stacks, real outcomes.</p>
+        </header>
+
+        <div class="proj-grid">
+          <!-- Featured: Navy -->
+          <article class="proj proj--feat reveal">
+            <div class="proj__media proj__media--restricted">
+              <div class="restricted__in">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4.5" y="11" width="15" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                <span class="restricted__t">Visuals restricted</span>
+                <span class="restricted__s">CUI · U.S. Navy collaboration</span>
+              </div>
+            </div>
+            <div class="proj__body">
+              <div class="proj__top">
+                <span class="proj__kicker">Applied research · BiasLab @ UCI</span>
+                <span class="proj__flag proj__flag--gov">U.S. Navy</span>
+              </div>
+              <h3 class="proj__title">Safe UAV Landing for the U.S. Navy</h3>
+              <p class="proj__desc">A custom pose-estimation + symbolic-reasoning system for autonomous UAV landing in adverse weather, replacing brittle fixed-pattern optical markers. The reasoning module holds the landing whenever crew or obstacles are detected on the deck.</p>
+              <div class="chips">
+                <span class="chip">Computer Vision</span><span class="chip">Pose Estimation</span><span class="chip">Symbolic Reasoning</span><span class="chip">PyTorch</span><span class="chip">CUI dataset</span>
+              </div>
+              <div class="proj__outcome"><span class="v">Safety layer</span> that holds landings until the deck is clear, cutting casualty risk.</div>
+              <div class="proj__foot">
+                <button class="read-more-btn" data-modal="navy-uav">Read more</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured: AdamsFoods Wholesale (live) -->
+          <article class="proj proj--feat reveal">
+            <div class="proj__media proj__media--site">
+              <div class="sitebar"><span class="dots"><i></i><i></i><i></i></span><span class="url">adamsfoodswholesale.com</span></div>
+              <div class="sitebig"><span class="livedot"></span> LIVE<span class="sitesub">e-commerce, in production</span></div>
+            </div>
+            <div class="proj__body">
+              <div class="proj__top">
+                <span class="proj__kicker">Full-stack · solo build</span>
+                <span class="proj__flag proj__flag--live">● Live site</span>
+              </div>
+              <h3 class="proj__title">AdamsFoods Wholesale</h3>
+              <p class="proj__desc">A full-stack wholesale e-commerce platform with a React client and Node/Express server: product catalog, checkout, signed-URL media on S3, and JWT auth with role-guarded admin routes. It's serving real customers today.</p>
+              <div class="chips">
+                <span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">AWS S3</span><span class="chip">JWT Auth</span><span class="chip">REST API</span>
+              </div>
+              <div class="proj__outcome"><span class="v">Live in production</span> at adamsfoodswholesale.com</div>
+              <div class="proj__foot">
+                <a class="lnk" href="https://adamsfoodswholesale.com/" target="_blank" rel="noopener">live site ↗</a>
+                <a class="lnk" href="https://github.com/antsuh1028/AFStore" target="_blank" rel="noopener">code ↗</a>
+                <button class="read-more-btn" data-modal="adamsfood-app">Read more</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Grid -->
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__kicker">Full-stack · nonprofit</span>
+              <span class="proj__flag proj__flag--live">Nonprofit</span>
+            </div>
+            <h3 class="proj__title">Feeding Pets of the Homeless Dashboard</h3>
+            <p class="proj__desc">An end-to-end donation-management platform built with Commit the Change @ UCI for a national nonprofit: role-based access for coordinators, donors and admins across multiple regional chapters.</p>
+            <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Node / Express</span><span class="chip">PostgreSQL</span><span class="chip">Firebase Auth</span></div>
+            <div class="proj__outcome"><span class="v">Multi-chapter</span> donation tracking for a national org.</div>
+            <div class="proj__foot">
+              <a class="lnk" href="https://github.com/ctc-uci/fph-frontend" target="_blank" rel="noopener">frontend ↗</a>
+              <a class="lnk" href="https://github.com/ctc-uci/fph-backend" target="_blank" rel="noopener">backend ↗</a>
+              <button class="read-more-btn" data-modal="fph-dashboard">Read more</button>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__kicker">Front-end · internal tool</span>
+            </div>
+            <h3 class="proj__title">AdamsFoods Inventory System</h3>
+            <p class="proj__desc">A back-office inventory tool: item CRUD, search/filter, low-stock alerts, CSV export, and a 3D map of warehouse storage rooms and item locations.</p>
+            <div class="chips"><span class="chip">React</span><span class="chip">CRA</span><span class="chip">Vercel</span><span class="chip">CSV export</span><span class="chip">3D map</span></div>
+            <div class="proj__outcome"><span class="v">Low-stock alerts</span> + spatial item lookup.</div>
+            <div class="proj__foot">
+              <a class="lnk" href="https://github.com/antsuh1028/AdamsFoodsInventory" target="_blank" rel="noopener">code ↗</a>
+              <button class="read-more-btn" data-modal="adamsfood-inventory">Read more</button>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__kicker">Computer vision · autonomous driving</span>
+            </div>
+            <h3 class="proj__title">Crash Anticipation</h3>
+            <p class="proj__desc">A VideoMAE model that predicts vehicle crashes before they happen, with real-time inference. Next: model compression for embedded deployment and a neurosymbolic module that issues direct avoidance commands.</p>
+            <div class="chips"><span class="chip">VideoMAE</span><span class="chip">PyTorch</span><span class="chip">Real-time</span><span class="chip">Neurosymbolic</span></div>
+            <div class="proj__outcome"><span class="v">100%</span> AP · F1 · lead-time recall (baseline).</div>
+            <div class="proj__foot">
+              <a class="lnk" href="https://github.com/ShawnnnLiu/Crash-Anticipation" target="_blank" rel="noopener">code ↗</a>
+              <button class="read-more-btn" data-modal="crash-anticipation">Read more</button>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__kicker">Healthcare ML · manuscript in prep</span>
+            </div>
+            <h3 class="proj__title">Generalizable Arrhythmia Detection</h3>
+            <p class="proj__desc">Shows how beat-wise splits leak patient identity and inflate ECG-classification accuracy, then introduces an optimal patient-wise split search for honest, generalizable evaluation on MIT-BIH.</p>
+            <div class="chips"><span class="chip">CNN</span><span class="chip">LSTM-AE</span><span class="chip">MIT-BIH</span><span class="chip">Patient-wise eval</span></div>
+            <div class="proj__outcome"><span class="v">Exposes leakage</span> behind "SOTA-looking" numbers.</div>
+            <div class="proj__foot">
+              <a class="lnk" href="https://github.com/ShawnnnLiu/Arrythmia_Classifier" target="_blank" rel="noopener">repo ↗</a>
+              <button class="read-more-btn" data-modal="arrhythmia">Read more</button>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__kicker">Computational biology · ongoing</span>
+            </div>
+            <h3 class="proj__title">Structure-Aware Antimicrobial Peptide Prediction</h3>
+            <p class="proj__desc">An ML pipeline that combines biochemical descriptors with structure-aware features from ESMFold-predicted conformations, comparing SVM, MLP and graph neural networks across QSAR, geometric and residue-graph representations.</p>
+            <div class="chips"><span class="chip">ESMFold</span><span class="chip">SVM / MLP / GNN</span><span class="chip">QSAR</span><span class="chip">BioIntelligence Lab</span></div>
+            <div class="proj__outcome"><span class="v">Ongoing</span>, exploring the activity vs. hemolysis trade-off.</div>
+          </article>
+        </div>
+
+        <!-- Demo gallery -->
+        <div class="demos reveal">
+          <div class="demos__head">
+            <span class="demos__title"><span class="sq"></span> Crash Anticipation demo</span>
+            <span class="demos__hint">scroll →</span>
+          </div>
+          <div class="demo-rail">
+            <div class="demo-card" data-label="Crash demo 1"><img src="assets/ccd_000777.gif" alt="Crash anticipation demo 1" loading="lazy" decoding="async" /></div>
+            <div class="demo-card" data-label="Crash demo 2"><img src="assets/ccd_000855.gif" alt="Crash anticipation demo 2" loading="lazy" decoding="async" /></div>
+            <div class="demo-card" data-label="Crash demo 3"><img src="assets/ccd_001087.gif" alt="Crash anticipation demo 3" loading="lazy" decoding="async" /></div>
+            <div class="demo-card" data-label="Crash demo 4"><img src="assets/ccd_001096.gif" alt="Crash anticipation demo 4" loading="lazy" decoding="async" /></div>
+            <div class="demo-card" data-label="Crash demo 5"><img src="assets/ccd_001155.gif" alt="Crash anticipation demo 5" loading="lazy" decoding="async" /></div>
+            <div class="demo-card" data-label="Crash demo 6"><img src="assets/ccd_001184.gif" alt="Crash anticipation demo 6" loading="lazy" decoding="async" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-eyebrow" style="color:#9fb0ff"><span class="idx" style="color:#fff">03</span> Stack</p>
+          <h2 class="sec-title" style="color:#fff">Tools of the trade</h2>
+        </header>
+        <div class="skills__grid">
+          <div class="skillcol reveal">
+            <h4>Languages</h4>
+            <ul>
+              <li>Python</li>
+              <li>TypeScript <span class="mut">/ JavaScript</span></li>
+              <li>C / C++</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skillcol reveal">
+            <h4>ML / AI</h4>
+            <ul>
+              <li>PyTorch</li>
+              <li>CLIP · ViT · VideoMAE</li>
+              <li>Hyperdimensional Computing</li>
+              <li>CKKS-FHE <span class="mut">(SEAL)</span></li>
+              <li>ESMFold · GNNs</li>
+            </ul>
+          </div>
+          <div class="skillcol reveal">
+            <h4>Full-Stack</h4>
+            <ul>
+              <li>React</li>
+              <li>Node / Express</li>
+              <li>PostgreSQL</li>
+              <li>Firebase</li>
+              <li>REST APIs</li>
+            </ul>
+          </div>
+          <div class="skillcol reveal">
+            <h4>Infra &amp; Tools</h4>
+            <ul>
+              <li>AWS <span class="mut">(S3)</span></li>
+              <li>Vercel</li>
+              <li>Git</li>
+              <li>JWT Auth</li>
+              <li>Linux · CUDA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWS ============ -->
+    <section class="section news" id="news">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-eyebrow"><span class="idx">04</span> News</p>
+          <h2 class="sec-title">Recent updates</h2>
+        </header>
+        <div class="timeline">
+          <div class="tl reveal">
+            <div class="tl__date">May 22, 2026</div>
+            <div class="tl__body"><strong>Integrating Symbolic and Neural Mechanisms for Adversarially Robust Hyperdimensional Computing</strong> was accepted to <em>ISLPED 2026</em>.</div>
+          </div>
+          <div class="tl reveal">
+            <div class="tl__date">Apr 5, 2026</div>
+            <div class="tl__body"><strong>Live Spotify Stats</strong>: feel free to stalk my recent listening history and see how our music tastes match up :)</div>
+          </div>
+          <div class="tl reveal">
+            <div class="tl__date">Jan 19, 2026</div>
+            <div class="tl__body"><strong>Optimal Hyperdimensional Representation for Learning and Cognitive Computation</strong>: third author, accepted to <em>Frontiers in Artificial Intelligence</em>. <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1690492/full" target="_blank" rel="noopener">[Paper]</a></div>
+          </div>
+          <div class="tl reveal">
+            <div class="tl__date">Dec 15, 2025</div>
+            <div class="tl__body">Started a new position at <strong>BioIntelligence Lab</strong> with Dr. Haleh Alimohamadi, working on peptides research building AMP vs non-AMP classifiers from geometric features and QSAR (incorporating ESMFold).</div>
+          </div>
+          <div class="tl reveal">
+            <div class="tl__date">Nov 10, 2025</div>
+            <div class="tl__body"><strong>Cross-Modal Event Encoder: Bridging Image–Text Knowledge to Event Streams</strong> was accepted to <em>WACV 2026</em>.</div>
+          </div>
+          <div class="tl reveal">
+            <div class="tl__date">Sept 23, 2025</div>
+            <div class="tl__body"><strong>Geometric Priors for Generalizable World Models via Vector Symbolic Architecture</strong> was accepted to <em>NeurIPS 2025 Workshop NeurReps</em>.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HUMAN / ABOUT ============ -->
+    <section class="section human" id="about">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-eyebrow"><span class="idx">05</span> The person</p>
+          <h2 class="sec-title">Beyond the résumé</h2>
+        </header>
+        <div class="human__grid">
+          <div class="reveal">
+            <p class="bio">I'm an undergraduate researcher in Computer Science at UC Irvine ('26) and an incoming M.S. student at Columbia. I work on neuro-symbolic AI, brain-inspired learning (HDC), multimodal models, and secure inference (CKKS-FHE), and I'm grateful to research with <strong>Prof. Mohsen Imani</strong> and <strong>Dr. Haleh Alimohamadi</strong>.</p>
+            <div class="meta-list">
+              <div class="meta-row"><span class="k">Current labs</span><span class="v">BiasLab @ UCI · BioIntelligence Lab @ UCI</span></div>
+              <div class="meta-row"><span class="k">Hobbies</span><span class="v">Basketball, snowboarding, music, gaming</span></div>
+              <div class="meta-row"><span class="k">On repeat</span><span class="v">D'Angelo · Dijon · Mkgee</span></div>
+              <div class="meta-row"><span class="k">Playing</span><span class="v">Cyberpunk 2077</span></div>
+              <div class="meta-row"><span class="k">Reading</span><span class="v"><em>Designing Machine Learning Systems</em> by Chip Huyen</span></div>
+            </div>
+
+            <p class="music__lbl" style="margin-top:1.8rem;"><span class="sq"></span> Favorite albums &amp; live listening</p>
+      
+            <div class="albums">
+              <a href="https://www.youtube.com/playlist?list=PLj0iicDFTqJq8CcEMDS1VUbT0DPjFYOm1" target="_blank" rel="noopener" title="Listen to D'Angelo - Voodoo on YouTube">
+                <img src="assets/dangelo_voodoo_cover.jpeg" alt="D'Angelo - Voodoo album cover" loading="lazy" decoding="async" />
+              </a>
+              <a href="https://www.youtube.com/watch?v=FEkOYs6aWIg" target="_blank" rel="noopener" title="Listen to Dijon - Absolutely on YouTube">
+                <img src="assets/Dijon_Absolutely_AlbumCover.jpeg" alt="Dijon - Absolutely album cover" loading="lazy" decoding="async" />
+              </a>
+              <a href="https://www.youtube.com/watch?v=aZ13RneU1S0" target="_blank" rel="noopener" title="Listen to Mkgee - Two Star &amp; the Dream Police on YouTube">
+                <img src="assets/mkgee_twostart_cover.jpg" alt="Mkgee - Two Star & the Dream Police album cover" loading="lazy" decoding="async" />
+              </a>
+              <button class="spotify-stats-trigger" title="View my live Spotify listening stats">
+                <svg viewBox="0 0 24 24" class="spotify-trigger-icon" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                <span class="spotify-trigger-label">My Stats</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="me-card reveal">
+            <button class="me-photo clickable-image" data-modal="cat-collage" aria-label="Open cat photo collage">
+              <img src="assets/self_picture_1.jpg" alt="Shawn Liu with his cats Coconut and Kumquat" loading="lazy" decoding="async" />
+              <span class="me-photo__cap">Coconut (left) &amp; Kumquat (right) 🐱🐱<span class="more">More cat pics</span></span>
             </button>
           </div>
         </div>
-        <div class="about-image">
-          <img src="assets/self_picture_1.jpg" alt="Shawn Liu with cats Coconut and Kumquat" class="clickable-image" data-modal="cat-collage" />
-          <p class="image-caption">With my cats Coconut (left) 
-            & Kumquat (right) 🐱🐱 <br><small style="color: var(--accent); cursor: default;">Click photo for more cat pics! 📸</small></p>
-        </div>
-      </div>
-    </section>
 
-    <section id="news">
-      <h2>News</h2>
-      <ul class="news-list">
-        <li>
-          <span class="news-date">May 22, 2026</span>
-          <span class="news-content"><strong>Integrating Symbolic and Neural Mechanisms for Adversarially Robust Hyperdimensional Computing</strong> — Accepted to <em>ISLPED 2026</em>.</span>
-        </li>
-        <li>
-          <span class="news-date">Apr 5, 2026</span>
-          <span class="news-content"><strong>Live Spotify Stats</strong> — Feel free to stalk my recent listening history and see how our music tastes match up :)</span>
-        </li>
-        <li>
-          <span class="news-date">Jan 19, 2026</span>
-          <span class="news-content"><strong>Optimal Hyperdimensional Representation for Learning and Cognitive Computation</strong> — Third author; accepted to <em>Frontiers in Artificial Intelligence</em>. <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1690492/full" target="_blank" rel="noopener">[Paper]</a></span>
-        </li>
-        <li>
-          <span class="news-date">Dec 15, 2025</span>
-          <span class="news-content">Started new position at <strong>BioIntelligence Lab</strong> with Dr. Haleh Alimohamadi: peptides research building classifiers on AMP vs non-AMP based on geometric features and QSAR (incorporating ESM Fold).</span>
-        </li>
-        <li>
-          <span class="news-date">Nov 10, 2025</span>
-          <span class="news-content"><strong>Cross-Modal Event Encoder: Bridging Image–Text Knowledge to Event Streams</strong> — Accepted to <em>WACV 2026</em>.</span>
-        </li>
-        <li>
-          <span class="news-date">Sept 23, 2025</span>
-          <span class="news-content"><strong>Geometric Priors for Generalizable World Models via Vector Symbolic Architecture</strong> — Accepted to <em>NeurIPS 2025 Workshop NeurReps</em>.</span>
-        </li>
-      </ul>
-    </section>
-
-    <section id="research">
-      <h2>Research</h2>
-      <div class="cards-carousel">
-        <article class="card">
-          <h3>Brain-Inspired Reasoning under Homomorphic Encryption</h3>
-          <p>Privacy-preserving neurosymbolic framework executing inference entirely under CKKS-FHE while preserving HDC-based reasoning robustness. Maintains >90% accuracy on encrypted graph inference with 4× reduction in bootstrapping overhead through noise-adaptive scheduling. Lead author; rebuttal completed.</p>
-          <p class="tags">FHE · HDC · Neurosymbolic AI · Privacy-Preserving ML</p>
-          <p><a href="#" aria-disabled="true">IEEE TAI 2026 (under review)</a> · <button class="read-more-btn" data-modal="secure-neurosymbolic">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
-        </article>        
-        <article class="card">
-          <h3>Geometric Priors for World Models</h3>
-          <p>Using Vector Symbolic Architecture (VSA) to build generalizable world models with learned group structure. Achieved 87.5% zero-shot accuracy and 4× noise robustness. Contributed to ablation studies with world model grid.</p>
-          <p class="tags">VSA · World Models · Generalization</p>
-          <p><a href="https://openreview.net/forum?id=0MJ1PW2vE8" target="_blank" rel="noopener">NeurIPS 2025 Workshop</a> · <button class="read-more-btn" data-modal="geometric-priors">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
-        </article>
-        <article class="card">
-          <h3>Cross-Modal Event Encoder: Bridging Image–Text Knowledge to Event Streams</h3>
-          <p>Extending CLIP's zero-shot capabilities to event-based vision, bridging asynchronous event data with image-text representations. Achieved +19% zero-shot accuracy over prior methods with cross-modal retrieval across five modalities. Contributed attention visualization pipeline.</p>
-          <p class="tags">Event-based Vision · CLIP · Cross-Modality</p>
-          <p><a href="https://arxiv.org/abs/2412.03093" target="_blank" rel="noopener">WACV 2026</a> · <button class="read-more-btn" data-modal="event-clip">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
-        </article>
-        <article class="card">
-          <h3>Optimal Hyperdimensional Representation</h3>
-          <p>First universal HDC encoding framework that adapts dynamically between learning and cognitive reasoning. Achieves 95% learning accuracy with correlated encodings and 100% decoding accuracy under exclusive encodings. Quantifies correlation-separation trade-off for brain-like reasoning.</p>
-          <p class="tags">HDC · Cognitive Computation · Neural-Symbolic</p>
-          <p><a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1690492/full" aria-disabled="true">Frontiers in AI</a> · <button class="read-more-btn" data-modal="optimal-hdc">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
-        </article>
-        <article class="card">
-          <h3>HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient and Secure Learning</h3>
-          <p>We study Hyperdimensional Computing (HDC) as an alternative to encrypted deep learning: instead of long DNN compute chains that force frequent bootstrapping, HDC uses shallow, noise-resilient algebra that better matches FHE constraints. Using FHRR and GHRR, we connect hypervector similarity to shift-invariant kernels via Bochner's theorem, then quantify how CKKS noise degrades similarity structure, capacity, classification accuracy, and input decodability.</p>
-          <p class="tags">HDC · Kernel Methods · Privacy-Preserving ML · CKKS</p>
-          <p><a href="#" aria-disabled="true">IEEE TAI 2026 (under review)</a> · <button class="read-more-btn" data-modal="hyperencrypt">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
-        </article>
-        <article class="card">
-          <h3>Adversarially Robust Hyperdimensional Computing</h3>
-          <p>A hybrid neuro-symbolic pipeline that fuses Vision Transformer features with classical texture-, shape-, and color descriptors (LBP, HOG, PHOG) through Hyperdimensional Computing. Across CIFAR10, COIL100, and ETH80 under FGSM and Genetic Attack, ViT + Classical HDC degrades more gracefully than pure HDC and ViT + HDC baselines — higher normalized AURC, tighter decision margins, and larger gains from partial adversarial retraining (+6.6–10.9 pp under FGSM, +17.1–26.3 pp under Genetic Attack).</p>
-          <p class="tags">HDC · Neurosymbolic AI · Adversarial Robustness · ViT</p>
-          <p><a href="https://doi.org/10.1145/3816440.3818596" target="_blank" rel="noopener">ISLPED 2026</a> · <button class="read-more-btn" data-modal="adversarial-hdc">✨ Read more<svg><rect pathLength="100"></rect></svg></button></p>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul class="list">
-        <li>
-          <strong>AdamsFoods Wholesale</strong> — Full-stack JavaScript app with React client and Node.js/Express server. Features product catalog, checkout system, AWS S3 integration, and JWT authentication. 
-          <a href="https://github.com/antsuh1028/AFStore">code</a> · <a href="https://adamsfoodswholesale.com/">live website</a> · <button class="read-more-btn" data-modal="adamsfood-app">✨ Read more<svg><rect pathLength="100"></rect></svg></button>
-        </li>
-        <li>
-          <strong>AdamsFoods Inventory Management System</strong> — React frontend for back-office stock tracking with item CRUD, search/filter, and low-stock alerts. 
-          <a href="https://github.com/antsuh1028/AdamsFoodsInventory">code</a> · <button class="read-more-btn" data-modal="adamsfood-inventory">✨ Read more<svg><rect pathLength="100"></rect></svg></button>
-        </li>
-        <li>
-          <strong>Feeding Pets of the Homeless Dashboard</strong> — Full-stack donation management platform for CTC @ UCI partnering with non-profit. React/TypeScript frontend with Node.js/Express backend, PostgreSQL database, Firebase Auth, and role-based access control. 
-          <a href="https://github.com/ctc-uci/fph-frontend">frontend</a> · <a href="https://github.com/ctc-uci/fph-backend">backend</a> · <button class="read-more-btn" data-modal="fph-dashboard">✨ Read more<svg><rect pathLength="100"></rect></svg></button>
-        </li>
-        <li>
-          <strong>Safe UAV Landing for U.S. Navy</strong> — Custom pose estimation & reasoning model for safe UAV landing in adverse weather. Reduces casualty rates through intelligent deck clearance detection. 
-          <button class="read-more-btn" data-modal="navy-uav">✨ Read more<svg><rect pathLength="100"></rect></svg></button>
-        </li>
-        <li>
-          <strong>Crash Anticipation</strong> — VideoMAE model achieving 100% on AP, F1, and lead-time recall with real-time inference capability. Future: neurosymbolic reasoning for proactive collision avoidance. 
-          <a href="https://github.com/ShawnnnLiu/Crash-Anticipation">code</a> · <button class="read-more-btn" data-modal="crash-anticipation">✨ Read more<svg><rect pathLength="100"></rect></svg></button>
-        </li>
-        <li>
-          <strong>Generalizable Arrhythmia Detection Under Patient-Wise Evaluation</strong> — Most MIT-BIH arrhythmia pipelines report ~98 to 99% accuracy using beat-wise splits, but these splits leak patient identity across train and test. This project benchmarks CNN and LSTM-autoencoder baselines under clean patient-wise evaluation, then introduces an optimal patient-wise split search that preserves patient separation while improving class coverage and generalization.
-          <div class="project-links">
-            <em>Manuscript in preparation (extended from CS184A)</em> · <a href="https://github.com/ShawnnnLiu/Arrythmia_Classifier">repo</a> · <button class="read-more-btn" data-modal="arrhythmia">✨ Read more<svg><rect pathLength="100"></rect></svg></button>
+        <!-- Teaching & Service -->
+        <div style="margin-top:clamp(2.5rem,5vw,4rem)">
+          <p class="sec-eyebrow" style="margin-bottom:1.4rem"><span class="idx">06</span> Teaching &amp; service</p>
+          <div class="svc-grid">
+            <div class="svc reveal">
+              <span class="svc__n">Teaching</span>
+              <h3 class="svc__t">Learning Assistant, ICS 33</h3>
+              <p class="svc__d">Intermediate programming with Python · UC Irvine, Spring 2025.</p>
+            </div>
+            <div class="svc reveal">
+              <span class="svc__n">Pro bono</span>
+              <h3 class="svc__t">Web dev for nonprofits</h3>
+              <p class="svc__d">Built &amp; maintained tooling for Feeding Pets of the Homeless, free of charge.</p>
+            </div>
+            <div class="svc reveal">
+              <span class="svc__n">Service</span>
+              <h3 class="svc__t">Youth In Action counselor</h3>
+              <p class="svc__d">Student counselor mentoring youth through the YIA program.</p>
+            </div>
           </div>
-        </li>
-        <li>
-          <strong>Structure-Aware Antimicrobial Peptide Prediction</strong> — ML pipeline combining traditional biochemical descriptors with structure-aware representations from ESMFold-predicted peptide conformations; compares SVM, MLP, and graph neural network approaches across QSAR, geometric, and residue-graph features, with extensions toward stapled peptide candidates and activity/hemolysis tradeoff analysis.
-          <div class="project-links">
-            <em>Ongoing research (BioIntelligence Lab @ UCI)</em>
-          </div>
-        </li>
-      </ul>
-
-      <h3>Safe UAV Landing — Demo</h3>
-      <div class="demo-carousel">
-        <div class="demo-item">
-          <img src="assets/naval_aeriel demonstration.gif" alt="Navy UAV aerial demonstration" />
-        </div>
-        <div class="demo-item">
-          <img src="assets/reasoning_1.png" alt="Object reasoning on aircraft carrier deck" />
-        </div>
-        <div class="demo-item">
-          <img src="assets/reasoning_2.png" alt="Object reasoning detecting crew and vehicles" />
         </div>
       </div>
-
-      <h3>Crash Anticipation — Demo</h3>
-      <div class="demo-carousel">
-        <div class="demo-item">
-          <img src="assets/ccd_000777.gif" alt="Crash Anticipation demo 1" />
-        </div>
-        <div class="demo-item">
-          <img src="assets/ccd_000855.gif" alt="Crash Anticipation demo 2" />
-        </div>
-        <div class="demo-item">
-          <img src="assets/ccd_001087.gif" alt="Crash Anticipation demo 3" />
-        </div>
-        <div class="demo-item">
-          <img src="assets/ccd_001096.gif" alt="Crash Anticipation demo 4" />
-        </div>
-        <div class="demo-item">
-          <img src="assets/ccd_001155.gif" alt="Crash Anticipation demo 5" />
-        </div>
-        <div class="demo-item">
-          <img src="assets/ccd_001184.gif" alt="Crash Anticipation demo 6" />
-        </div>
-      </div>
-    </section>
-
-    <section id="teaching">
-      <h2>Teaching & Service</h2>
-      <ul class="list">
-        <li>Learning Assistant — ICS 33 (Spring 2025)</li>
-        <li>Web dev for non‑profits, pro bono (Feeding Pets of the Homeless)</li>
-        <li>Youth In Action (YIA) - Student Counselor</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul class="list">
-        <li>Email: <a href="mailto:xiangjl4@uci.edu">xiangjl4@uci.edu</a></li>
-        <li>GitHub: <a href="https://github.com/ShawnnnLiu/" target="_blank" rel="noopener">ShawnnnLiu</a></li>
-        <li>OpenReview: <a href="https://openreview.net/profile?id=%7EXiangjian_Liu1" target="_blank" rel="noopener">Xiangjian Liu</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/xiangjian-shawn-liu/" target="_blank" rel="noopener">Xiangjian (Shawn) Liu</a></li>
-      </ul>
     </section>
   </main>
+
+    <!-- ============ CONTACT CTA ============ -->
+    <section class="cta" id="contact">
+      <div class="wrap cta__in">
+        <p class="cta__eyebrow"><span class="sq"></span> Contact</p>
+        <h2 class="cta__title">Let's build something that <span class="em">ships</span>.</h2>
+        <div class="cta__mails">
+          <a class="cta__mail" href="mailto:xiangjl4@uci.edu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9 6 9-6M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7M3 7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1"/></svg>
+            xiangjl4@uci.edu
+          </a>
+          <a class="cta__mail" href="mailto:xl3704@columbia.edu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9 6 9-6M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7M3 7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1"/></svg>
+            xl3704@columbia.edu
+          </a>
+        </div>
+        <div class="cta__links">
+          <a href="https://github.com/ShawnnnLiu/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg> GitHub</a>
+          <a href="https://www.linkedin.com/in/xiangjian-shawn-liu/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
+          <a href="https://openreview.net/profile?id=%7EXiangjian_Liu1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3.2A6.8 6.8 0 1 1 5.2 12 6.8 6.8 0 0 1 12 5.2zm0 3.1A3.7 3.7 0 1 0 15.7 12 3.7 3.7 0 0 0 12 8.3z"/></svg> OpenReview</a>
+          <a href="assets/CV/Shawn Liu - CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Download CV</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Xiangjian (Shawn) Liu</p>
+      <a class="foot-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 
   <!-- Hidden modal content templates -->
   <div hidden id="modal-content-secure-neurosymbolic" class="modal-content-template">
@@ -285,6 +679,8 @@
       A critical challenge in FHE-based deep learning is ciphertext noise accumulation. Without proper noise management, encrypted operations cause accuracy to collapse as noise overwhelms the signal. Our distributed bootstrapping scheme strategically refreshes ciphertexts at high-noise layers, achieving a 4× reduction in bootstrapping overhead compared to naive per-layer approaches.
     </p>
     <div class="research-figures">
+      <figure class="research-figure-single">
+        <img src="assets/research/Noise_accuracy_degradation.png" alt="Empirical noise growth leading to accuracy collapse under FHE without bootstrapping" loading="lazy" decoding="async" />
         <figcaption>Empirical analysis: Noise growth without bootstrapping leads to accuracy collapse. Our approach balances accuracy preservation with computational efficiency</figcaption>
       </figure>
     </div>
@@ -838,480 +1234,6 @@
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Shawn Liu</p>
-    </div>
-  </footer>
-
-  <script>
-    // Modal helpers
-    (function() {
-      const modal = document.getElementById('modal');
-      const body = document.getElementById('modal-body');
-      function openModal(key) {
-        const tpl = document.getElementById(`modal-content-${key}`);
-        if (!tpl) return;
-        body.innerHTML = tpl.innerHTML;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        // Start birthday countdown if present
-        startBirthdayCountdown();
-      }
-      function closeModal() {
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden', 'true');
-        body.innerHTML = '';
-        document.body.style.overflow = '';
-        if (countdownInterval) { clearInterval(countdownInterval); countdownInterval = null; }
-      }
-      modal.addEventListener('click', (e) => {
-        if (e.target.matches('[data-close]')) closeModal();
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-      });
-      document.addEventListener('click', (e) => {
-        const link = e.target.closest('.read-more, .read-more-btn, .clickable-image');
-        if (!link) return;
-        e.preventDefault();
-        const key = link.getAttribute('data-modal');
-        openModal(key);
-      });
-    })();
-
-    // Carousel scroll function
-    function scrollCarousel(direction) {
-      const carousel = document.querySelector('.cards-carousel');
-      const cardWidth = 320; // card width + gap
-      const scrollAmount = (cardWidth + 16) * direction;
-      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-
-    // ── Confetti engine ──
-    (function() {
-      var canvas, ctx, pieces, animId, running = false;
-      var COLORS = ['#a78bfa','#7dd3fc','#f472b6','#fbbf24','#34d399','#fb7185','#60a5fa','#c084fc'];
-
-      function initCanvas() {
-        if (!canvas) {
-          canvas = document.createElement('canvas');
-          canvas.id = 'confetti-canvas';
-          document.body.appendChild(canvas);
-        }
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        ctx = canvas.getContext('2d');
-      }
-
-      function randomPiece() {
-        return {
-          x: Math.random() * canvas.width,
-          y: Math.random() * -canvas.height * 0.6 - 20,
-          w: 5 + Math.random() * 7,
-          h: 3 + Math.random() * 4,
-          color: COLORS[Math.floor(Math.random() * COLORS.length)],
-          rotation: Math.random() * Math.PI * 2,
-          rotSpeed: (Math.random() - 0.5) * 0.15,
-          vx: (Math.random() - 0.5) * 3,
-          vy: 2.5 + Math.random() * 3.5,
-          wobble: Math.random() * Math.PI * 2,
-          wobbleSpeed: 0.03 + Math.random() * 0.05,
-          opacity: 1
-        };
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        var alive = false;
-        for (var i = 0; i < pieces.length; i++) {
-          var p = pieces[i];
-          p.x += p.vx + Math.sin(p.wobble) * 0.8;
-          p.y += p.vy;
-          p.rotation += p.rotSpeed;
-          p.wobble += p.wobbleSpeed;
-          if (p.y > canvas.height + 20) { p.opacity -= 0.05; }
-          if (p.opacity <= 0) continue;
-          alive = true;
-          ctx.save();
-          ctx.translate(p.x, p.y);
-          ctx.rotate(p.rotation);
-          ctx.globalAlpha = Math.max(0, p.opacity);
-          ctx.fillStyle = p.color;
-          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
-          ctx.restore();
-        }
-        if (alive) {
-          animId = requestAnimationFrame(draw);
-        } else {
-          running = false;
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-        }
-      }
-
-      window.launchConfetti = function() {
-        initCanvas();
-        pieces = [];
-        for (var i = 0; i < 280; i++) pieces.push(randomPiece());
-        if (running) cancelAnimationFrame(animId);
-        running = true;
-        draw();
-      };
-
-      window.addEventListener('resize', function() {
-        if (canvas) { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-      });
-    })();
-
-    // ── Birthday countdown (live ticker, PST) ──
-    var countdownInterval = null;
-    function isBirthdayToday() {
-      var nowPST = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-      return nowPST.getMonth() === 1 && nowPST.getDate() === 28;
-    }
-
-    function startBirthdayCountdown() {
-      var el = document.querySelector('#modal-body .birthday-countdown');
-      if (!el) return;
-      if (countdownInterval) clearInterval(countdownInterval);
-
-      // Setup confetti button
-      var btn = document.querySelector('#modal-body .confetti-btn');
-      if (btn) {
-        if (isBirthdayToday()) {
-          btn.textContent = '🎉 Release the confetti!';
-          btn.setAttribute('data-state', 'birthday');
-          launchConfetti(); // auto-fire on their birthday
-        } else {
-          btn.textContent = '🎉 Confetti!';
-          btn.setAttribute('data-state', 'initial');
-        }
-        btn.addEventListener('click', function() {
-          var state = btn.getAttribute('data-state');
-          if (state === 'birthday') {
-            launchConfetti();
-          } else if (state === 'initial') {
-            btn.textContent = '😿 Not yet... (I want confetti anyway)';
-            btn.setAttribute('data-state', 'not-yet');
-          } else if (state === 'not-yet') {
-            launchConfetti();
-            btn.textContent = '🎉 Again!';
-            btn.setAttribute('data-state', 'birthday');
-          }
-        });
-      }
-
-      function tick() {
-        var nowPST = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-        var year = nowPST.getFullYear();
-        var nextBday = new Date(year, 1, 28);
-        if (nowPST >= new Date(year, 1, 29)) {
-          nextBday = new Date(year + 1, 1, 28);
-        }
-        var diff = nextBday - nowPST;
-        if (diff <= 0) {
-          el.textContent = '🎉 Happy Birthday today!';
-          clearInterval(countdownInterval);
-          return;
-        }
-        var d = Math.floor(diff / 86400000);
-        var h = Math.floor((diff % 86400000) / 3600000);
-        var m = Math.floor((diff % 3600000) / 60000);
-        var s = Math.floor((diff % 60000) / 1000);
-        el.textContent = d + 'd ' + h + 'h ' + m + 'm ' + s + 's until their next birthday 🐱🐱';
-      }
-      tick();
-      countdownInterval = setInterval(tick, 1000);
-    }
-
-    // Lightbox for cat collage images
-    (function() {
-      var lightbox = document.createElement('div');
-      lightbox.className = 'lightbox';
-      lightbox.innerHTML =
-        '<button class="lightbox-close" aria-label="Close">&times;</button>' +
-        '<button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>' +
-        '<img src="" alt="Enlarged photo" />' +
-        '<button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>';
-      document.body.appendChild(lightbox);
-
-      var lbImg = lightbox.querySelector('img');
-      var images = [];
-      var currentIdx = 0;
-
-      function openLightbox(src, allImgs, idx) {
-        images = allImgs;
-        currentIdx = idx;
-        lbImg.src = src;
-        lightbox.style.display = 'flex';
-        requestAnimationFrame(function() { lightbox.classList.add('open'); });
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove('open');
-        setTimeout(function() {
-          lightbox.style.display = 'none';
-          lbImg.src = '';
-        }, 250);
-      }
-
-      function navigate(dir) {
-        currentIdx = (currentIdx + dir + images.length) % images.length;
-        lbImg.src = images[currentIdx].src;
-      }
-
-      lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-      lightbox.querySelector('.lightbox-prev').addEventListener('click', function(e) { e.stopPropagation(); navigate(-1); });
-      lightbox.querySelector('.lightbox-next').addEventListener('click', function(e) { e.stopPropagation(); navigate(1); });
-      lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
-
-      document.addEventListener('keydown', function(e) {
-        if (lightbox.style.display !== 'flex') return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') navigate(-1);
-        if (e.key === 'ArrowRight') navigate(1);
-      });
-
-      document.addEventListener('click', function(e) {
-        var img = e.target.closest('.cat-collage img');
-        if (!img) return;
-        var collage = img.closest('.cat-collage');
-        var allImgs = Array.from(collage.querySelectorAll('img'));
-        var idx = allImgs.indexOf(img);
-        openLightbox(img.src, allImgs, idx);
-      });
-    })();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Optional publications rendering (only if #pubs exists)
-    (function() {
-      const wrap = document.getElementById('pubs');
-      if (!wrap) return;
-      fetch('publications.json')
-        .then(r => r.json())
-        .then(items => {
-          if (!Array.isArray(items) || items.length === 0) {
-            wrap.innerHTML = '<p>No publications yet.</p>';
-            return;
-          }
-          wrap.innerHTML = '';
-          items.forEach(p => {
-            const el = document.createElement('div');
-            el.className = 'pub';
-            const authors = (p.authors || []).join(', ');
-            const venue = [p.venue, p.year].filter(Boolean).join(', ');
-            el.innerHTML = `
-              <p class="title">${p.title || ''}</p>
-              <p class="by">${authors}</p>
-              <p class="venue">${venue}</p>
-              <p class="links">
-                ${p.doi ? `<a href="${p.doi}" target="_blank" rel="noopener">DOI</a>` : ''}
-                ${p.arxiv ? `<a href="${p.arxiv}" target="_blank" rel="noopener">arXiv</a>` : ''}
-                ${p.code ? `<a href="${p.code}" target="_blank" rel="noopener">Code</a>` : ''}
-                ${p.poster ? `<a href="${p.poster}" target="_blank" rel="noopener">Poster</a>` : ''}
-              </p>`;
-            wrap.appendChild(el);
-          });
-        })
-        .catch(() => { if (wrap) wrap.innerHTML = '<p>(Could not load publications.json)</p>'; });
-    })();
-
-    // (demos removed; single GIF is rendered statically in markup)
-  </script>
-
-  <script>
-    // Spotify Stats — fetches from /api/spotify and renders into the existing modal
-    (function() {
-      var SPOTIFY_API = 'https://personal-website-mauve-tau.vercel.app/api/spotify';
-      var modal = document.getElementById('modal');
-      var modalBody = document.getElementById('modal-body');
-      var trigger = document.querySelector('.spotify-stats-trigger');
-      if (!trigger) return;
-
-      var SPOTIFY_SVG = '<svg viewBox="0 0 24 24" width="28" height="28" style="fill:#1DB954;flex-shrink:0"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>';
-
-      var spotifyData = null;
-      var activeTab = 'recent';
-      var activeRanges = { songs: 'short_term', albums: 'short_term', artists: 'short_term' };
-
-      function openSpotifyModal() {
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function esc(s) {
-        var d = document.createElement('div');
-        d.textContent = s;
-        return d.innerHTML;
-      }
-
-      var PODIUM_ICONS = ['\u{1F451}', '\u{1F948}', '\u{1F949}'];
-
-      function renderTracks(tracks, ranked) {
-        if (!tracks || !tracks.length) return '<p style="color:var(--muted)">No data available.</p>';
-        var items = tracks.map(function(t, i) {
-          var rankHtml;
-          if (ranked && i < 3) {
-            rankHtml = '<span class="spotify-rank spotify-rank-' + (i + 1) + '">' + PODIUM_ICONS[i] + '</span>';
-          } else {
-            rankHtml = '<span class="spotify-rank">' + (i + 1) + '</span>';
-          }
-          var popHtml = '';
-          if (ranked && t.popularity != null) {
-            popHtml = '<span class="spotify-popularity" title="Spotify Popularity Score">' +
-              '<svg class="spotify-pop-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>' +
-              t.popularity + '</span>';
-          }
-          return '<li class="spotify-track">' +
-            rankHtml +
-            '<img src="' + esc(t.image) + '" alt="" loading="lazy" />' +
-            '<div class="spotify-track-info">' +
-              '<a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.name) + '</a>' +
-              '<span>' + esc(t.artist) + '</span>' +
-            '</div>' +
-            popHtml +
-          '</li>';
-        }).join('');
-        return '<ul class="spotify-tracks">' + items + '</ul>';
-      }
-
-      function renderAlbums(albums) {
-        if (!albums || !albums.length) return '<p style="color:var(--muted)">No data available.</p>';
-        var items = albums.map(function(a, i) {
-          var badge = (i < 3) ? '<span class="spotify-podium-badge spotify-podium-' + (i + 1) + '">' + PODIUM_ICONS[i] + '</span>' : '';
-          return '<a href="' + esc(a.url) + '" target="_blank" rel="noopener" class="spotify-album">' +
-            '<div class="spotify-album-img-wrap">' + badge +
-            '<img src="' + esc(a.image) + '" alt="' + esc(a.name) + '" loading="lazy" />' +
-            '</div>' +
-            '<span class="spotify-album-name">' + esc(a.name) + '</span>' +
-            '<span class="spotify-album-artist">' + esc(a.artist) + '</span>' +
-          '</a>';
-        }).join('');
-        return '<div class="spotify-albums">' + items + '</div>';
-      }
-
-      function renderArtists(artists) {
-        if (!artists || !artists.length) return '<p style="color:var(--muted)">No data available.</p>';
-        var items = artists.map(function(a, i) {
-          var badge = (i < 3) ? '<span class="spotify-podium-badge spotify-podium-' + (i + 1) + '">' + PODIUM_ICONS[i] + '</span>' : '';
-          var genres = (a.genres || []).map(function(g) { return esc(g); }).join(', ');
-          var popHtml = '';
-          if (a.popularity != null) {
-            popHtml = '<span class="spotify-artist-popularity" title="Spotify Popularity Score">' +
-              '<svg class="spotify-pop-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>' +
-              a.popularity + '</span>';
-          }
-          return '<a href="' + esc(a.url) + '" target="_blank" rel="noopener" class="spotify-artist">' +
-            '<div class="spotify-artist-img-wrap">' + badge +
-            '<img src="' + esc(a.image) + '" alt="' + esc(a.name) + '" loading="lazy" />' +
-            '</div>' +
-            '<span class="spotify-artist-name">' + esc(a.name) + '</span>' +
-            (genres ? '<span class="spotify-artist-genres">' + genres + '</span>' : '') +
-            popHtml +
-          '</a>';
-        }).join('');
-        return '<div class="spotify-artists">' + items + '</div>';
-      }
-
-      function buildRangeButtons(tabId) {
-        return '<div class="spotify-tab-flyout">' +
-          '<button class="spotify-range active" data-stab="' + tabId + '" data-srange="short_term">4 Weeks</button>' +
-          '<button class="spotify-range" data-stab="' + tabId + '" data-srange="medium_term">6 Months</button>' +
-          '<button class="spotify-range" data-stab="' + tabId + '" data-srange="long_term">All Time</button>' +
-          '</div>';
-      }
-
-      function getPanelContent(tab, range) {
-        if (!spotifyData) return '';
-        if (tab === 'recent') return renderTracks(spotifyData.recentTracks, false);
-        if (tab === 'songs') return renderTracks(spotifyData.tracks && spotifyData.tracks[range], true);
-        if (tab === 'albums') return renderAlbums(spotifyData.albums && spotifyData.albums[range]);
-        if (tab === 'artists') return renderArtists(spotifyData.artists && spotifyData.artists[range]);
-        return '';
-      }
-
-      function buildContent(data) {
-        spotifyData = data;
-        activeTab = 'recent';
-        activeRanges = { songs: 'short_term', albums: 'short_term', artists: 'short_term' };
-
-        var html = '<div class="spotify-header">' +
-          '<h2 id="modal-title" class="spotify-modal-title">' + SPOTIFY_SVG + ' My Spotify Stats</h2>' +
-          '<div class="spotify-tabs" role="tablist">' +
-          '<button class="spotify-tab active" data-stab="recent" role="tab">Recently Played</button>' +
-          '<div class="spotify-tab-group"><button class="spotify-tab" data-stab="songs" role="tab">Top Songs</button>' + buildRangeButtons('songs') + '</div>' +
-          '<div class="spotify-tab-group"><button class="spotify-tab" data-stab="albums" role="tab">Top Albums</button>' + buildRangeButtons('albums') + '</div>' +
-          '<div class="spotify-tab-group"><button class="spotify-tab" data-stab="artists" role="tab">Top Artists</button>' + buildRangeButtons('artists') + '</div>' +
-          '</div></div>';
-
-        html += '<div class="spotify-panel" role="tabpanel">' + getPanelContent('recent', 'short_term') + '</div>';
-        return html;
-      }
-
-      function switchTab(tab, range) {
-        activeTab = tab;
-        if (range && activeRanges.hasOwnProperty(tab)) activeRanges[tab] = range;
-        var currentRange = activeRanges[tab] || 'short_term';
-
-        modalBody.querySelectorAll('.spotify-tab').forEach(function(t) {
-          t.classList.toggle('active', t.getAttribute('data-stab') === tab);
-        });
-        modalBody.querySelectorAll('.spotify-range').forEach(function(r) {
-          r.classList.toggle('active',
-            r.getAttribute('data-stab') === tab && r.getAttribute('data-srange') === currentRange);
-        });
-
-        var panel = modalBody.querySelector('.spotify-panel');
-        if (panel) {
-          panel.innerHTML = getPanelContent(tab, currentRange);
-          panel.style.animation = 'none';
-          void panel.offsetWidth;
-          panel.style.animation = '';
-        }
-      }
-
-      modalBody.addEventListener('click', function(e) {
-        var range = e.target.closest('.spotify-range');
-        if (range) {
-          switchTab(range.getAttribute('data-stab'), range.getAttribute('data-srange'));
-          return;
-        }
-        var tab = e.target.closest('.spotify-tab');
-        if (!tab) return;
-        switchTab(tab.getAttribute('data-stab'));
-      });
-
-      trigger.addEventListener('click', function() {
-        modalBody.innerHTML =
-          '<div class="spotify-header">' +
-          '<h2 id="modal-title" class="spotify-modal-title">' + SPOTIFY_SVG + ' My Spotify Stats</h2>' +
-          '</div>' +
-          '<div class="spotify-loading"><div class="spotify-spinner"></div><p>Loading stats from Spotify&hellip;</p></div>';
-        openSpotifyModal();
-
-        fetch(SPOTIFY_API)
-          .then(function(r) {
-            if (!r.ok) throw new Error(r.status);
-            return r.json();
-          })
-          .then(function(data) {
-            if (modal.classList.contains('open')) {
-              modalBody.innerHTML = buildContent(data);
-            }
-          })
-          .catch(function() {
-            if (modal.classList.contains('open')) {
-              modalBody.innerHTML =
-                '<div class="spotify-header">' +
-                '<h2 id="modal-title" class="spotify-modal-title">' + SPOTIFY_SVG + ' My Spotify Stats</h2>' +
-                '</div>' +
-                '<p class="spotify-error">Could not load Spotify data right now. Please try again later.</p>';
-            }
-          });
-      });
-    })();
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
