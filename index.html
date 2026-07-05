@@ -166,18 +166,18 @@
         <header class="sec-head">
           <p class="sec-eyebrow"><span class="idx">01</span> Flagship · LLM systems</p>
           <h2 class="sec-title">Loop</h2>
-          <p class="sec-sub">Interview prep, scheduled around your real life. Loop turns a career goal, weekly availability, and progress signals into a validated study plan, schedules it as a draft week, and — only after explicit approval — writes it to your Google Calendar with verification and rollback. Built for daily self-use, deployed live.</p>
+          <p class="sec-sub">Interview prep, scheduled around your real life. Loop takes a career goal, your weekly availability, and progress signals, turns them into a validated study plan, and drafts it as a real week on your calendar. Nothing touches Google Calendar until you approve it, and every write is verified, with a rollback path if something looks off. I built it for my own daily use, and it's deployed live.</p>
         </header>
 
         <div class="loop__thesis reveal">
           <p class="loop__quote">LLMs propose. <span class="em">Deterministic infrastructure disposes.</span></p>
-          <p class="loop__quote-sub">Four LLM nodes generate plans and prose. Everything that can touch the calendar is deterministic, validated, and gated behind human approval.</p>
+          <p class="loop__quote-sub">Four LLM nodes write the plans and the prose. Everything that can actually touch your calendar is deterministic, validated, and waits for your approval.</p>
         </div>
 
         <!-- Architecture: propose vs. dispose -->
         <div class="loop__arch reveal">
           <div class="loop__col loop__col--propose">
-            <div class="loop__col-head"><span class="loop__sq loop__sq--hot"></span> Propose — LLM, one isolated package</div>
+            <div class="loop__col-head"><span class="loop__sq loop__sq--hot"></span> Propose · LLM, one isolated package</div>
             <div class="loop__node">
               <span class="loop__node-t">Strategist</span>
               <span class="loop__node-s">syllabus with source-claim citations · Opus 4.8</span>
@@ -189,21 +189,21 @@
             </div>
             <div class="loop__node loop__node--prose">
               <span class="loop__node-t">Reflection · Explanation</span>
-              <span class="loop__node-s">prose only — never parsed · Sonnet 5</span>
+              <span class="loop__node-s">prose only, never parsed · Sonnet 5</span>
             </div>
-            <p class="loop__col-note">LLM SDK imports are mechanically forbidden outside this package — enforced by import-linter in CI.</p>
+            <p class="loop__col-note">The LLM SDK can't even be imported outside this package. import-linter fails the build if you try.</p>
           </div>
 
           <div class="loop__col loop__col--dispose">
-            <div class="loop__col-head"><span class="loop__sq"></span> Dispose — deterministic</div>
+            <div class="loop__col-head"><span class="loop__sq"></span> Dispose · deterministic</div>
             <div class="loop__node">
               <span class="loop__node-t">Validation layer</span>
-              <span class="loop__node-s">schema · graph · coverage · user-fit · scheduling preconditions, with a bounded typed-violation repair loop back to the LLM (≤2 attempts)</span>
+              <span class="loop__node-s">five checks: schema, graph, coverage, user-fit, scheduling. Failures go back to the LLM as typed repairs, twice at most</span>
             </div>
             <div class="loop__arrow">↓</div>
             <div class="loop__node">
               <span class="loop__node-t">Greedy scheduler</span>
-              <span class="loop__node-s">draft-only — cannot write</span>
+              <span class="loop__node-s">draft-only · no write access</span>
             </div>
             <div class="loop__arrow">↓</div>
             <div class="loop__node loop__node--gate">
@@ -213,7 +213,7 @@
             <div class="loop__arrow">↓</div>
             <div class="loop__node">
               <span class="loop__node-t">Calendar Write Manager</span>
-              <span class="loop__node-s">the only writer: approval ID + payload-hash recheck, dry-run, duplicate detection, verify-after-write, user-driven rollback / retry / keep</span>
+              <span class="loop__node-s">the only code that writes: it rechecks the approval and payload hash, dry-runs, catches duplicates, verifies after writing, and offers rollback / retry / keep</span>
             </div>
             <div class="loop__arrow">↓</div>
             <div class="loop__node loop__node--ext">
@@ -221,14 +221,14 @@
             </div>
           </div>
 
-          <p class="loop__feedback">Feedback loop: telemetry → deterministic drift classifier → accountability (check-ins, recommitment) → replan. Every failure is a typed reason code; a supervisor state machine owns all transitions.</p>
+          <p class="loop__feedback">Feedback loop: telemetry → deterministic drift classifier → accountability (check-ins, recommitment) → replan. Every failure carries a typed reason code, and one supervisor state machine owns every transition.</p>
         </div>
 
         <!-- Hard numbers -->
         <div class="metrics loop__metrics reveal">
           <div class="metric">
             <div class="num">2,691</div>
-            <div class="lab">Backend tests + 81 frontend — all green in CI</div>
+            <div class="lab">Backend tests, plus 81 on the frontend. All green in CI</div>
           </div>
           <div class="metric">
             <div class="num"><span class="cval" data-count="23">23</span></div>
@@ -236,11 +236,11 @@
           </div>
           <div class="metric">
             <div class="num"><span class="cval" data-count="4">4</span></div>
-            <div class="lab">LLM nodes — everything else is deterministic</div>
+            <div class="lab">LLM nodes. Everything else is deterministic</div>
           </div>
           <div class="metric">
             <div class="num"><span class="pfx">$</span>1.70</div>
-            <div class="lab">Expected monthly cost per user, derived in a written cost axiom · hard cap $8</div>
+            <div class="lab">Expected monthly cost per user, worked out in a written cost axiom. Hard cap: $8</div>
           </div>
         </div>
 
@@ -249,30 +249,30 @@
           <article class="disc reveal">
             <span class="badge badge--top"><span class="dot"></span> Done</span>
             <h3 class="disc__t">Loop engineering</h3>
-            <p class="disc__d">Closed the control-loop dead-ends users feel: failed calendar writes get a rollback / retry / keep recovery flow, silent "replan required" states are surfaced with a recovery-mode picker, and the accountability loop is answerable in the UI.</p>
+            <p class="disc__d">I closed the dead-ends you actually feel in a tool like this. A failed calendar write now offers rollback, retry, or keep. A needed replan says so and offers recovery modes. Check-ins can be answered right in the app.</p>
           </article>
           <article class="disc reveal">
-            <span class="badge badge--top"><span class="dot"></span> Done — one step left</span>
+            <span class="badge badge--top"><span class="dot"></span> Done, one step left</span>
             <h3 class="disc__t">Harness engineering</h3>
-            <p class="disc__d">Adapter resilience (timeouts, backoff, a typed provider-error taxonomy), a live-capture tool, a CI eval gate, and call-log readers all shipped. Next: the first real-prompt baseline recording.</p>
+            <p class="disc__d">Timeouts, backoff, and a typed taxonomy for provider errors, plus a live-capture tool, a CI eval gate, and call-log readers. All shipped. The one thing left is recording the first real-prompt baseline.</p>
           </article>
           <article class="disc reveal">
             <span class="badge badge--review"><span class="dot"></span> In progress</span>
             <h3 class="disc__t">Prompt engineering</h3>
-            <p class="disc__d">Few-shot exemplars, unified typed repair messages, and voice specs for user-facing prose are specified, not yet shipped.</p>
+            <p class="disc__d">Few-shot exemplars, unified repair messages, and voice specs for the prose you'd actually read. All specified in detail, none of it shipped yet.</p>
           </article>
           <article class="disc reveal">
             <span class="badge badge--review"><span class="dot"></span> Partial</span>
             <h3 class="disc__t">Context engineering</h3>
-            <p class="disc__d">Prompt caching shipped; source-claim curation, reflection-history injection, and prior-plan-aware replans are specified, not yet shipped.</p>
+            <p class="disc__d">Prompt caching is live. Source-claim curation, reflection history, and replans that remember the previous plan are specified, not yet built.</p>
           </article>
         </div>
 
         <!-- Eval harness -->
         <div class="loop__eval reveal">
           <p class="loop__eval-lbl"><span class="loop__sq"></span> The eval harness</p>
-          <p class="loop__eval-body">Every LLM call lands in a SQLite call log with tokens, cost, and latency. A capture tool records real model outputs into committed recordings that are re-graded deterministically in CI — schema validity, repair recovery, plan-quality metrics, plus an offline LLM judge for prose — so prompt and model changes ship with before/after deltas in the commit message. Live API calls never run in CI; prompt bytes are version-pinned by hash, so an unmeasured prompt change fails the build.</p>
-          <p class="loop__eval-note">Honestly: the gate currently runs on fixture recordings — one of which deliberately fails, proving the harness detects failures. The first real-prompt baseline capture is the next step.</p>
+          <p class="loop__eval-body">Every LLM call lands in a SQLite call log with tokens, cost, and latency. A capture tool records real model outputs into committed recordings, and CI re-grades them deterministically: schema validity, repair recovery, plan-quality metrics, plus an offline LLM judge for the prose. Prompt and model changes ship with before/after deltas in the commit message. Live API calls never run in CI, and prompt bytes are version-pinned by hash, so an unmeasured prompt change fails the build.</p>
+          <p class="loop__eval-note">Full honesty: the gate currently runs on fixture recordings, one of which deliberately fails so I know the harness actually catches failures. Recording the first real-prompt baseline is the next step.</p>
         </div>
 
         <div class="loop__foot reveal">
@@ -300,7 +300,7 @@
         <div class="pillar reveal">
           <div class="pillar__n">02 / LLM systems</div>
           <h3 class="pillar__t">Engineered to be <span class="em">trusted</span></h3>
-          <p class="pillar__d">I build LLM-powered systems with production discipline: Loop schedules real weeks on a real calendar behind deterministic validation, human approval gates, and a recordings-based eval harness — the same rigor behind a live e-commerce platform and a U.S. Navy CV collaboration.</p>
+          <p class="pillar__d">Loop, my LLM-powered scheduler, plans real weeks on a real calendar. Every write sits behind deterministic validation, a human approval gate, and a recordings-based eval harness. It's the same discipline behind a live e-commerce platform and a U.S. Navy CV collaboration.</p>
           <a class="pillar__lnk" href="#loop">See Loop</a>
         </div>
         <div class="pillar reveal">
@@ -442,7 +442,7 @@
         <header class="sec-head">
           <p class="sec-eyebrow"><span class="idx">03</span> Engineering</p>
           <h2 class="sec-title">Things I've shipped</h2>
-          <p class="sec-sub">Applied-ML systems first — a U.S. Navy computer-vision collaboration, crash anticipation, and honest healthcare-ML evaluation — plus the production full-stack products serving real customers below. Real stacks, real outcomes.</p>
+          <p class="sec-sub">Applied-ML systems up top: a U.S. Navy computer-vision collaboration, crash anticipation, and honest healthcare-ML evaluation. Below them, the production full-stack products real customers use every day. Real stacks, real outcomes.</p>
         </header>
 
         <div class="proj-grid">
@@ -479,7 +479,7 @@
             <h3 class="proj__title">Crash Anticipation</h3>
             <p class="proj__desc">A VideoMAE model that predicts vehicle crashes before they happen, with real-time inference. Next: a harder evaluation, model compression for embedded deployment, and a neurosymbolic module that issues direct avoidance commands.</p>
             <div class="chips"><span class="chip">VideoMAE</span><span class="chip">PyTorch</span><span class="chip">Real-time</span><span class="chip">Neurosymbolic</span></div>
-            <div class="proj__outcome"><span class="v">Saturates</span> the existing benchmark — building a harder eval.</div>
+            <div class="proj__outcome"><span class="v">Saturates</span> the benchmark. Next up: a harder eval.</div>
             <div class="proj__foot">
               <a class="lnk" href="https://github.com/ShawnnnLiu/Crash-Anticipation" target="_blank" rel="noopener">code ↗</a>
               <button class="read-more-btn" data-modal="crash-anticipation">Read more</button>
@@ -540,7 +540,7 @@
                 <span class="proj__flag proj__flag--live">● Live</span>
               </div>
               <h3 class="ship-card__t">AdamsFoods Wholesale</h3>
-              <p class="ship-card__d">Full-stack wholesale platform — React + Node/Express, S3 signed-URL media, JWT auth with role-guarded admin. Serving real customers today.</p>
+              <p class="ship-card__d">Full-stack wholesale platform: React and Node/Express, signed-URL media on S3, JWT auth with role-guarded admin routes. Serving real customers today.</p>
               <div class="proj__foot">
                 <a class="lnk" href="https://adamsfoodswholesale.com/" target="_blank" rel="noopener">live site ↗</a>
                 <a class="lnk" href="https://github.com/antsuh1028/AFStore" target="_blank" rel="noopener">code ↗</a>
@@ -648,7 +648,7 @@
         <div class="timeline">
           <div class="tl reveal">
             <div class="tl__date">Jul 2026</div>
-            <div class="tl__body"><strong>Loop</strong> is deployed live: an LLM-powered interview-prep scheduler with deterministic validation, human approval gates, and a recordings-based eval harness — built for daily self-use. <a href="#loop">[Case study]</a></div>
+            <div class="tl__body"><strong>Loop</strong> is deployed live: an LLM-powered interview-prep scheduler with deterministic validation, human approval gates, and a recordings-based eval harness. I built it for my own daily use. <a href="#loop">[Case study]</a></div>
           </div>
           <div class="tl reveal">
             <div class="tl__date">May 22, 2026</div>
@@ -1243,7 +1243,7 @@
     </p>
     <h3>Current Performance (VideoMAE Baseline)</h3>
     <ul class="list">
-      <li><strong>Saturated Benchmark:</strong> The VideoMAE baseline saturates the existing benchmark (AP, F1, and lead-time recall) — which says more about the benchmark than the model. Building a harder evaluation with tougher splits and more diverse scenarios is the active next step.</li>
+      <li><strong>Saturated Benchmark:</strong> The VideoMAE baseline saturates the existing benchmark (AP, F1, and lead-time recall), which says more about the benchmark than the model. The active next step is a harder evaluation with tougher splits and more diverse scenarios.</li>
       <li><strong>Real-time Inference:</strong> Capable of real-time processing with an NVIDIA 5070 Ti GPU</li>
     </ul>
     <h3>Current Limitations</h3>
