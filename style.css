@@ -273,6 +273,7 @@ p { margin: 0 0 1rem; }
 .metric { background: var(--paper); padding: 1.1rem 1.2rem; display: grid; gap: .3rem; }
 .metric .num { font-family: var(--display); font-size: clamp(1.7rem, 3.4vw, 2.6rem); font-weight: 600; letter-spacing: -.03em; color: var(--ink); line-height: 1; }
 .metric .num .sfx { color: var(--accent); }
+.metric .num .sfx--sm { font-size: .45em; letter-spacing: 0; margin-left: .12em; }
 .metric .lab { font-family: var(--mono); font-size: .72rem; color: var(--ink-3); line-height: 1.35; }
 @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
 

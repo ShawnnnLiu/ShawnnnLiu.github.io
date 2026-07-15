@@ -244,13 +244,15 @@
     function vh() { return window.innerHeight || document.documentElement.clientHeight; }
     function inView(el, frac) { var r = el.getBoundingClientRect(); return r.top < vh() * frac && r.bottom > 0; }
     function countUp(el) {
-      var target = parseFloat(el.getAttribute('data-count')), dur = 1100, start = null;
-      if (reduceMotion) { el.textContent = String(Math.round(target)); return; }
+      var raw = el.getAttribute('data-count'), target = parseFloat(raw), dur = 1100, start = null;
+      var dec = (raw.split('.')[1] || '').length;
+      function fmt(v) { return dec ? v.toFixed(dec) : String(Math.round(v)); }
+      if (reduceMotion) { el.textContent = fmt(target); return; }
       function step(ts) {
         if (start === null) start = ts;
         var p = Math.min((ts - start) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = String(Math.round(target * eased));
-        if (p < 1) requestAnimationFrame(step); else el.textContent = String(Math.round(target));
+        el.textContent = fmt(target * eased);
+        if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(target);
       }
       requestAnimationFrame(step);
     }
