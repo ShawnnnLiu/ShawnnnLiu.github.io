@@ -449,7 +449,7 @@ p { margin: 0 0 1rem; }
   flex: 0 0 auto; width: min(380px, 78vw); scroll-snap-align: start; border-radius: 6px; overflow: hidden;
   background: var(--dark); border: 1px solid var(--dark-line); position: relative;
 }
-.demo-card img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/10; }
+.demo-card img, .demo-card video { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/10; display: block; }
 .demo-card .img-failed { min-height: 200px; }
 
 /* shipped-products strip (compressed full-stack cards) */

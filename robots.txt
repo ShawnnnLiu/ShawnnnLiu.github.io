@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /171_Final_Manuscript.pdf
+Disallow: /LoopSummary.md
+Disallow: /Portfolio-Website-Restructure-Outline.docx
+Disallow: /Shawn%20Liu%20Portfolio%20Redesign.zip
+Disallow: /publications.json
+
+Sitemap: https://shawnnnliu.github.io/sitemap.xml

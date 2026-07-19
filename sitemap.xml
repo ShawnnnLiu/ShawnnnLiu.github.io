@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://shawnnnliu.github.io/</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shawnnnliu.github.io/assets/og-image.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://shawnnnliu.github.io/assets/research/peacock_attention_imagenet.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://shawnnnliu.github.io/assets/research/OVERALLframework.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://shawnnnliu.github.io/assets/research/figures-160.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://shawnnnliu.github.io/assets/self_picture_1.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>
-
