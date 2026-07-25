@@ -291,7 +291,7 @@
         <header class="sec-head">
           <p class="sec-eyebrow"><span class="idx">01</span> Flagship · LLM systems</p>
           <h2 class="sec-title">Loop</h2>
-          <p class="sec-sub">Interview prep, scheduled around your real life. Loop takes a career goal, your weekly availability, and progress signals, turns them into a validated study plan, and drafts it as a real week on your calendar. Nothing touches Google Calendar until you approve it, and every write is verified, with a rollback path if something looks off. I built it for my own daily use, and it's deployed live at <a href="https://loop-study.com" target="_blank" rel="noopener">loop-study.com</a>.</p>
+          <p class="sec-sub">Interview prep, scheduled around your real life. Loop takes a career goal across eight supported tracks, your weekly availability, and progress signals, turns them into a validated study plan grounded in a curated source corpus, and drafts it as a real week on your calendar. Nothing touches Google Calendar until you approve it, and every write is verified, with a rollback path if something looks off. I built it for my own daily use, and it's deployed live at <a href="https://loop-study.com" target="_blank" rel="noopener">loop-study.com</a>.</p>
           <div class="loop__cta">
             <a class="btn btn--accent" href="https://loop-study.com" target="_blank" rel="noopener">Try Loop live ↗</a>
           </div>
@@ -308,7 +308,7 @@
             <div class="loop__col-head"><span class="loop__sq loop__sq--hot"></span> Propose · LLM, one isolated package</div>
             <div class="loop__node">
               <span class="loop__node-t">Strategist</span>
-              <span class="loop__node-s">syllabus with source-claim citations · Opus 4.8</span>
+              <span class="loop__node-s">grounded syllabus with source-claim citations · Opus 4.8</span>
             </div>
             <div class="loop__arrow">↓</div>
             <div class="loop__node">
@@ -349,18 +349,18 @@
             </div>
           </div>
 
-          <p class="loop__feedback">Feedback loop: telemetry → deterministic drift classifier → accountability (check-ins, recommitment) → replan. Every failure carries a typed reason code, and one supervisor state machine owns every transition.</p>
+          <p class="loop__feedback">Feedback loop: telemetry → deterministic drift classifier → accountability (check-ins, recommitment) → replan. Every failure carries a typed reason code, and one supervisor state machine owns every transition. Calendar sync is reconciliation-based: your real calendar is authoritative for overlap, external daily load is advisory, valid external changes are adopted, and deleted events are remembered so they don't come back.</p>
         </div>
 
         <!-- Hard numbers -->
         <div class="metrics loop__metrics reveal">
           <div class="metric">
-            <div class="num">2,691</div>
-            <div class="lab">Backend tests, plus 81 on the frontend. All green in CI</div>
+            <div class="num">4,822</div>
+            <div class="lab">Backend tests, plus 313 on the frontend. All green in CI</div>
           </div>
           <div class="metric">
             <div class="num"><span class="cval" data-count="23">23</span></div>
-            <div class="lab">Written axioms + 8 ADRs governing every design decision</div>
+            <div class="lab">Written axioms + 10 ADRs governing every design decision</div>
           </div>
           <div class="metric">
             <div class="num"><span class="cval" data-count="4">4</span></div>
@@ -369,6 +369,22 @@
           <div class="metric">
             <div class="num"><span class="pfx">$</span>1.70</div>
             <div class="lab">Expected monthly cost per user, worked out in a written cost axiom. Hard cap: $8</div>
+          </div>
+          <div class="metric">
+            <div class="num"><span class="cval" data-count="242">242</span></div>
+            <div class="lab">Curated source documents in the grounding corpus, split into 7,776 retrieval chunks</div>
+          </div>
+          <div class="metric">
+            <div class="num"><span class="cval" data-count="8">8</span></div>
+            <div class="lab">Career tracks, a closed enum from SWE and MLE to quant dev and PM</div>
+          </div>
+          <div class="metric">
+            <div class="num"><span class="cval" data-count="8">8</span></div>
+            <div class="lab">Versioned eval sets. Prompt changes ship with before/after deltas</div>
+          </div>
+          <div class="metric">
+            <div class="num"><span class="cval" data-count="5">5</span></div>
+            <div class="lab">Deterministic validation checks between every LLM proposal and your calendar</div>
           </div>
         </div>
 
@@ -380,32 +396,51 @@
             <p class="disc__d">I closed the dead-ends you actually feel in a tool like this. A failed calendar write now offers rollback, retry, or keep. A needed replan says so and offers recovery modes. Check-ins can be answered right in the app.</p>
           </article>
           <article class="disc reveal">
-            <span class="badge badge--top"><span class="dot"></span> Done, one step left</span>
+            <span class="badge badge--top"><span class="dot"></span> Done</span>
             <h3 class="disc__t">Harness engineering</h3>
-            <p class="disc__d">Timeouts, backoff, and a typed taxonomy for provider errors, plus a live-capture tool, a CI eval gate, and call-log readers. All shipped. The one thing left is recording the first real-prompt baseline.</p>
+            <p class="disc__d">Timeouts, backoff, and a typed taxonomy for provider errors, plus a live-capture tool, a CI eval gate, and call-log readers. The real-prompt baseline is recorded, and CI now re-grades committed real-output recordings on every build.</p>
           </article>
           <article class="disc reveal">
-            <span class="badge badge--review"><span class="dot"></span> In progress</span>
+            <span class="badge badge--top"><span class="dot"></span> Done</span>
             <h3 class="disc__t">Prompt engineering</h3>
-            <p class="disc__d">Few-shot exemplars, unified repair messages, and voice specs for the prose you'd actually read. All specified in detail, none of it shipped yet.</p>
+            <p class="disc__d">Few-shot exemplars, unified repair messages, and voice specs for the prose you'd actually read. All shipped, each with recorded before/after eval deltas. The Strategist prompt is at v8.</p>
           </article>
           <article class="disc reveal">
-            <span class="badge badge--review"><span class="dot"></span> Partial</span>
+            <span class="badge badge--top"><span class="dot"></span> Done, one step left</span>
             <h3 class="disc__t">Context engineering</h3>
-            <p class="disc__d">Prompt caching is live. Source-claim curation, reflection history, and replans that remember the previous plan are specified, not yet built.</p>
+            <p class="disc__d">Prompt caching is live, source curation feeds the Strategist a grounded context slice, and mastery memory carries reflection history across plans. The one piece left: replans that regenerate only part of a syllabus.</p>
           </article>
+        </div>
+
+        <!-- Grounding layer -->
+        <div class="loop__eval reveal">
+          <p class="loop__eval-lbl"><span class="loop__sq"></span> The grounding layer</p>
+          <p class="loop__eval-body">Syllabi aren't generated from vibes. A curated corpus of 242 source documents, split into 7,776 retrieval chunks, sits behind BM25-first retrieval with deterministic source-confidence scoring, so every claim in a plan can point back at where it came from. The bibliography is auto-generated from the same corpus, and retrieval is deterministic code: the LLM only consumes what it's handed.</p>
+        </div>
+
+        <!-- Beyond the planner -->
+        <div class="loop__eval reveal">
+          <p class="loop__eval-lbl"><span class="loop__sq"></span> Beyond the planner</p>
+          <p class="loop__eval-body">Résumé intake stores your résumé and maps it through a closed, review-gated skill taxonomy; it is never free-parsed into control state. Career support spans eight tracks, from SWE and MLE to quant dev and PM. A pathway observatory renders the knowledge map with its community structure and drawer navigation, and mastery memory carries what you've already proven across plans into the Strategist's context, behind a deterministic review-output gate. The scheduler scores placement quality, and freebusy checks include Loop's dedicated calendar.</p>
         </div>
 
         <!-- Eval harness -->
         <div class="loop__eval reveal">
           <p class="loop__eval-lbl"><span class="loop__sq"></span> The eval harness</p>
           <p class="loop__eval-body">Every LLM call lands in a SQLite call log with tokens, cost, and latency. A capture tool records real model outputs into committed recordings, and CI re-grades them deterministically: schema validity, repair recovery, plan-quality metrics, plus an offline LLM judge for the prose. Prompt and model changes ship with before/after deltas in the commit message. Live API calls never run in CI, and prompt bytes are version-pinned by hash, so an unmeasured prompt change fails the build.</p>
-          <p class="loop__eval-note">Full honesty: the gate currently runs on fixture recordings, one of which deliberately fails so I know the harness actually catches failures. Recording the first real-prompt baseline is the next step.</p>
+          <p class="loop__eval-note">The first real-prompt baseline was recorded in July 2026, and committed recordings now cover few-shot, voice, and grounding before/after runs across eight versioned eval sets. One fixture still deliberately fails, so I know the gate actually catches regressions.</p>
+        </div>
+
+        <!-- Deployment -->
+        <div class="loop__eval reveal">
+          <p class="loop__eval-lbl"><span class="loop__sq"></span> The deployment</p>
+          <p class="loop__eval-body">The whole app ships as one Docker image on Fly.io. A two-stage build compiles the React SPA under Node 20, then a python:3.11-slim stage installs exact-pinned runtime dependencies with <code>uv sync --frozen</code>, so no Node and no dev tooling reach production. A single uvicorn process serves everything: the API, the built SPA, and the static landing pages. It's deliberately single-process on a single always-on machine, because SQLite with WAL is a one-process store - no worker pools, no autoscaling to fight over the database. State lives on a persistent Fly volume, OAuth tokens are encrypted at rest, and every secret is injected at runtime; nothing sensitive is baked into the image.</p>
+          <p class="loop__eval-note">Canonical domain is loop-study.com, with 301 redirects from the legacy hosts.</p>
         </div>
 
         <div class="loop__foot reveal">
           <div class="chips">
-            <span class="chip">Python 3.11</span><span class="chip">Pydantic v2</span><span class="chip">FastAPI</span><span class="chip">SQLite + WAL</span><span class="chip">React + TS + Vite</span><span class="chip">Anthropic Messages API</span><span class="chip">Google Calendar OAuth</span><span class="chip">Fly.io</span>
+            <span class="chip">Python 3.11</span><span class="chip">Pydantic v2</span><span class="chip">FastAPI</span><span class="chip">SQLite + WAL</span><span class="chip">React + TS + Vite</span><span class="chip">Anthropic Messages API</span><span class="chip">Google Calendar OAuth</span><span class="chip">Docker</span><span class="chip">Fly.io</span>
           </div>
           <p class="loop__privacy">Privacy by design: Loop never stores raw calendar event titles or descriptions.</p>
           <div class="loop__links">
