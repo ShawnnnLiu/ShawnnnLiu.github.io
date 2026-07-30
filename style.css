@@ -1,5 +1,5 @@
 /* ============================================================
-   Shawn Liu — Portfolio
+   Shawn Liu - Portfolio
    Identity: editorial-technical. Warm paper + ink, one electric
    cobalt accent, IBM Plex + Space Grotesk. Dark "proof" surfaces
    for demos and modals. Designed, not templated.
@@ -15,8 +15,8 @@
   --ink-2:   #4f4b3d;   /* secondary text */
   --ink-3:   #7b7666;   /* muted */
   --line:    #ddd5c4;   /* hairline */
-  --line-2:  #cabf a8;
-  --accent:  #2438e8;   /* electric cobalt — graphic use */
+  --line-2:  #cabfa8;
+  --accent:  #2438e8;   /* electric cobalt - graphic use */
   --accent-deep: #1a2bc0; /* links / small text on paper */
   --accent-soft: #e4e3ff; /* tinted fill */
   --hot:     #ff4b2b;   /* coral spark, used sparingly */
@@ -30,7 +30,7 @@
   --dark-text: #efe9da;
   --dark-muted:#a8a18d;
 
-  /* legacy/compat names — the injected Spotify + research-modal
+  /* legacy/compat names - the injected Spotify + research-modal
      markup reads these. Light values here; overridden dark in modal. */
   --bg: var(--paper);
   --card: var(--paper-3);
@@ -48,9 +48,6 @@
   --shadow-1: 0 1px 2px rgba(24,22,14,.05), 0 10px 30px -20px rgba(24,22,14,.45);
   --shadow-2: 0 2px 6px rgba(24,22,14,.06), 0 26px 50px -28px rgba(24,22,14,.55);
 }
-
-/* fix accidental space in token above */
-:root { --line-2: #cabfa8; }
 
 /* ---------- Reset / base ---------- */
 * { box-sizing: border-box; }
@@ -527,7 +524,7 @@ p { margin: 0 0 1rem; }
 .albums a:hover { transform: translateY(-3px); }
 .albums a:hover img { box-shadow: var(--shadow-1); }
 
-/* Spotify stats tile — keeps green identity, restyled for light theme */
+/* Spotify stats tile - keeps green identity, restyled for light theme */
 .spotify-stats-trigger {
   width: 100%; aspect-ratio: 1; border-radius: 5px;
   border: 1px solid color-mix(in srgb, var(--spotify) 35%, var(--line));
@@ -584,7 +581,7 @@ p { margin: 0 0 1rem; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; } }
 
 /* ============================================================
-   MODAL (dark focus surface) — hosts research/project deep-dives,
+   MODAL (dark focus surface) - hosts research/project deep-dives,
    cat collage, and Spotify. Token overrides make injected markup
    (which reads --muted/--text/--border/--card/--bg/--accent) sit
    correctly on dark.

@@ -1,5 +1,5 @@
 /* ============================================================
-   Shawn Liu — Portfolio JS
+   Shawn Liu - Portfolio JS
    Preserves: modal system, Spotify live stats, cat lightbox,
    confetti + birthday countdown. Adds: scroll reveals, metric
    count-up, universal image fallback, mobile nav, nav highlight.
@@ -312,7 +312,7 @@
   })();
 
   /* ============================================================
-     SPOTIFY LIVE STATS — fetches external serverless endpoint
+     SPOTIFY LIVE STATS - fetches external serverless endpoint
      ============================================================ */
   (function () {
     var SPOTIFY_API = 'https://personal-website-mauve-tau.vercel.app/api/spotify';
