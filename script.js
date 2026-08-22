@@ -88,6 +88,36 @@
   })();
 
   /* ============================================================
+     YOUTUBE FACADE (click-to-load; survives modal innerHTML clones)
+     ============================================================ */
+  (function () {
+    function activate(facade) {
+      var id = facade.getAttribute('data-yt');
+      if (!id) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'yt-embed';
+      if (facade.classList.contains('yt-facade--fill')) wrap.className += ' yt-embed--fill';
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = facade.getAttribute('data-yt-title') || 'Video';
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture; web-share';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      wrap.appendChild(iframe);
+      facade.replaceWith(wrap);
+    }
+    document.addEventListener('click', function (e) {
+      var facade = e.target.closest('.yt-facade');
+      if (facade) activate(facade);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var facade = e.target.closest && e.target.closest('.yt-facade');
+      if (facade) { e.preventDefault(); activate(facade); }
+    });
+  })();
+
+  /* ============================================================
      CONFETTI ENGINE
      ============================================================ */
   (function () {

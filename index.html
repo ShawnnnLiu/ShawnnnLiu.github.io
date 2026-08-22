@@ -7,6 +7,8 @@
   <meta name="description" content="Xiangjian (Shawn) Liu is an applied AI engineer with published ML research (WACV, NeurIPS, ISLPED, Frontiers in AI) who builds reliable LLM systems for high-stakes workflows. CS at UC Irvine '26, incoming M.S. CS at Columbia. Open to Applied AI, ML Engineer, and AI product roles." />
   <meta name="author" content="Xiangjian (Shawn) Liu" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <!-- YouTube embeds require a Referer header (their error 153 otherwise) -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#f3efe6" />
   <link rel="canonical" href="https://shawnnnliu.github.io/" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -69,7 +71,7 @@
         "name": "Shawn Liu · Applied AI engineer who ships reliable LLM systems",
         "isPartOf": { "@id": "https://shawnnnliu.github.io/#website" },
         "mainEntity": { "@id": "https://shawnnnliu.github.io/#person" },
-        "dateModified": "2026-07-18",
+        "dateModified": "2026-08-21",
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://shawnnnliu.github.io/assets/og-image.png",
@@ -100,6 +102,36 @@
           "https://www.linkedin.com/in/xiangjian-shawn-liu/",
           "https://openreview.net/profile?id=%7EXiangjian_Liu1"
         ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://foothold-transfer.com/#app",
+        "name": "Foothold",
+        "alternateName": "Foothold · Transfer Credit Navigator",
+        "url": "https://foothold-transfer.com",
+        "sameAs": "https://github.com/ShawnnnLiu/Foothold",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "isAccessibleForFree": true,
+        "author": { "@id": "https://shawnnnliu.github.io/#person" },
+        "creator": { "@id": "https://shawnnnliu.github.io/#person" },
+        "datePublished": "2026-08-21",
+        "description": "A transfer credit navigator for California community college students transferring to a UC or CSU. Foothold checks courses line by line against the official ASSIST articulation agreement, triages every credit (transfers cleanly, at risk, no articulation), and drafts a citation-validated credit appeal letter for credits at risk. Built solo for the Stellic Pathfinders 2026 challenge.",
+        "about": ["Transfer Credit", "Articulation Agreements", "ASSIST.org", "California Community Colleges", "University of California", "California State University", "College Transfer"],
+        "subjectOf": { "@id": "https://shawnnnliu.github.io/#foothold-demo" },
+        "mainEntityOfPage": "https://shawnnnliu.github.io/#projects"
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://shawnnnliu.github.io/#foothold-demo",
+        "name": "Foothold - Keep the Credits You Already Earned | Demo",
+        "description": "A 2-minute demo of Foothold, a transfer credit navigator for California community college students transferring to a UC or CSU: course triage against official ASSIST articulation agreements, cited verdicts, and a citation-validated credit appeal letter.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/Jop91D81H2c/maxresdefault.jpg",
+        "uploadDate": "2026-08-21",
+        "contentUrl": "https://www.youtube.com/watch?v=Jop91D81H2c",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/Jop91D81H2c",
+        "author": { "@id": "https://shawnnnliu.github.io/#person" },
+        "about": { "@id": "https://foothold-transfer.com/#app" }
       },
       {
         "@type": "ScholarlyArticle",
@@ -459,7 +491,7 @@
         <div class="pillar reveal">
           <div class="pillar__n">01 / Applied AI</div>
           <h3 class="pillar__t">Engineered to be <span class="em">trusted</span></h3>
-          <p class="pillar__d">Loop, my LLM-powered scheduler, plans real weeks on a real calendar. Every write sits behind deterministic validation, a human approval gate, and a recordings-based eval harness. It's the same discipline behind a live e-commerce platform and a U.S. Navy CV collaboration.</p>
+          <p class="pillar__d">Loop, my LLM-powered scheduler, plans real weeks on a real calendar. Every write sits behind deterministic validation, a human approval gate, and a recordings-based eval harness. It's the same discipline behind Foothold, my live transfer-credit navigator, a live e-commerce platform, and a U.S. Navy CV collaboration.</p>
           <a class="pillar__lnk" href="#loop">See Loop</a>
         </div>
         <div class="pillar reveal">
@@ -607,10 +639,39 @@
         <header class="sec-head">
           <p class="sec-eyebrow"><span class="idx">03</span> Engineering</p>
           <h2 class="sec-title">Things I've shipped</h2>
-          <p class="sec-sub">Applied-ML systems up top: a U.S. Navy computer-vision collaboration, crash anticipation, and honest healthcare-ML evaluation. Below them, the production full-stack products real customers use every day. Real stacks, real outcomes.</p>
+          <p class="sec-sub">Up top, Foothold: a live transfer-credit navigator and my Stellic Pathfinders 2026 entry. Then the applied-ML systems: a U.S. Navy computer-vision collaboration, crash anticipation, and honest healthcare-ML evaluation. Below them, the production full-stack products real customers use every day. Real stacks, real outcomes.</p>
         </header>
 
         <div class="proj-grid">
+          <!-- Featured: Foothold -->
+          <article class="proj proj--feat reveal">
+            <div class="proj__media">
+              <div class="yt-facade yt-facade--fill" data-yt="Jop91D81H2c" data-yt-title="Foothold - Keep the Credits You Already Earned | Demo" role="button" tabindex="0" aria-label="Play the 2-minute Foothold demo video">
+                <img src="https://i.ytimg.com/vi/Jop91D81H2c/maxresdefault.jpg" alt="Foothold demo video: the triage wall sorting a student's credits" loading="lazy" width="1280" height="720" />
+                <span class="yt-facade__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                <span class="yt-facade__lbl">Watch the 2-minute demo</span>
+              </div>
+            </div>
+            <div class="proj__body">
+              <div class="proj__top">
+                <span class="proj__kicker">LLM systems · Stellic Pathfinders 2026 entry</span>
+                <span class="proj__flag proj__flag--live">● Live</span>
+              </div>
+              <h3 class="proj__title">Foothold · Transfer Credit Navigator</h3>
+              <p class="proj__desc">Transfer students lose 43% of their credits on average (GAO-17-574). Foothold checks a California community college student's courses line by line against the official ASSIST articulation agreement for their target UC or CSU, triages every credit - transfers cleanly, at risk, no articulation - and drafts a citation-validated appeal letter for the ones at risk. Claude writes prose at exactly two edges; the transfer verdict is fully deterministic. Built solo in the 33-day Stellic Pathfinders window, live at <a href="https://foothold-transfer.com" target="_blank" rel="noopener">foothold-transfer.com</a>.</p>
+              <div class="chips">
+                <span class="chip">FastAPI + Pydantic</span><span class="chip">SQLite FTS5</span><span class="chip">React + TS</span><span class="chip">Claude API</span><span class="chip">Fly.io</span>
+              </div>
+              <div class="proj__outcome"><span class="v">31,236 agreements</span> indexed; one caught mistake is a $340 fix now instead of a $15,686 extra quarter later.</div>
+              <div class="proj__foot">
+                <a class="lnk" href="https://foothold-transfer.com" target="_blank" rel="noopener">live site ↗</a>
+                <a class="lnk" href="https://www.youtube.com/watch?v=Jop91D81H2c" target="_blank" rel="noopener">2-min demo ↗</a>
+                <a class="lnk" href="https://github.com/ShawnnnLiu/Foothold" target="_blank" rel="noopener">code ↗</a>
+                <button class="read-more-btn" data-modal="foothold">Read more</button>
+              </div>
+            </div>
+          </article>
+
           <!-- Featured: Navy -->
           <article class="proj proj--feat reveal">
             <div class="proj__media proj__media--restricted">
@@ -810,6 +871,10 @@
           <h2 class="sec-title">Recent updates</h2>
         </header>
         <div class="timeline">
+          <div class="tl reveal">
+            <div class="tl__date">Aug 21, 2026</div>
+            <div class="tl__body"><strong>Foothold</strong> is live at <a href="https://foothold-transfer.com" target="_blank" rel="noopener">foothold-transfer.com</a>: a transfer-credit navigator for the California community college to UC/CSU corridor, built solo in the 33-day <a href="https://www.stellic.com/pathfinders" target="_blank" rel="noopener">Stellic Pathfinders</a> challenge window. The AI never decides what transfers; the articulation agreement does. <a href="https://www.youtube.com/watch?v=Jop91D81H2c" target="_blank" rel="noopener">[2-min demo]</a> <a href="#projects">[Project]</a></div>
+          </div>
           <div class="tl reveal">
             <div class="tl__date">Jul 2026</div>
             <div class="tl__body"><strong>Loop</strong> is deployed live at <a href="https://loop-study.com" target="_blank" rel="noopener">loop-study.com</a>: an LLM-powered interview-prep scheduler with deterministic validation, human approval gates, and a recordings-based eval harness. I built it for my own daily use. <a href="#loop">[Case study]</a></div>
@@ -1359,6 +1424,33 @@
     <p>
       <a href="https://github.com/ctc-uci/fph-frontend" target="_blank" rel="noopener">Frontend Repository</a> · 
       <a href="https://github.com/ctc-uci/fph-backend" target="_blank" rel="noopener">Backend Repository</a>
+    </p>
+  </div>
+
+  <div hidden id="modal-content-foothold" class="modal-content-template">
+    <h2 id="modal-title">Foothold · Transfer Credit Navigator</h2>
+    <p class="tags">LLM Systems · Deterministic Evaluation · FastAPI · Pydantic · SQLite FTS5 · React · Claude API</p>
+    <p>
+      Foothold reads the transfer rules so students don't lose the credits they already paid for. It's my solo entry to the <a href="https://www.stellic.com/pathfinders" target="_blank" rel="noopener">Stellic Pathfinders 2026 challenge</a> (category: Overcoming Obstacles); every line was written inside the 33-day submission window, Jul 20 - Aug 21, 2026. It's deployed live at <a href="https://foothold-transfer.com" target="_blank" rel="noopener">foothold-transfer.com</a>.
+    </p>
+    <h3>Problem Statement</h3>
+    <p>
+      About 80,000 Californians transfer from a community college to a UC or CSU every year, and the GAO found transfer students lose 43% of their credits on average (GAO-17-574). The rules that decide what transfers are public: they sit in thousands of articulation agreements on ASSIST.org, and almost nobody reads them before applying. In the canonical demo, a De Anza student headed to UCSD computer science finds nine units of C++ that articulate to nothing and an assembly-language series she's two-thirds through, which counts as zero until the last course is done. Caught now, that's about a $340 fix. Caught after transfer, it's a $15,686 extra quarter.
+    </p>
+    <h3>What It Does</h3>
+    <ul class="list">
+      <li><strong>Triage wall:</strong> a student picks their community college, target university, and major, adds courses as chips or pastes their transcript, and every course is checked line by line against the official ASSIST articulation agreement: transfers cleanly, at risk, or no articulation, plus what's still owed in units and dollars.</li>
+      <li><strong>Grounded citations:</strong> every verdict is clickable and cites its exact source (agreement key, articulation position, academic year). Advisement notes are never silently satisfied; they downgrade a match to at-risk and are always surfaced.</li>
+      <li><strong>Citation-validated appeal letters:</strong> from the at-risk findings, Foothold drafts a credit appeal letter. A validator rejects any draft citing a course or agreement fact not in the deterministic findings; after two failed repairs, a plain deterministic template is used instead.</li>
+      <li><strong>Gen-ed arbitrage:</strong> a second mode inverts the same index for already-enrolled students: which community college courses articulate back into your degree, ranked by dollars saved.</li>
+    </ul>
+    <h3>The Rule That Shaped the Build</h3>
+    <p>
+      <strong>LLMs propose. Deterministic infrastructure disposes.</strong> The AI never decides what transfers; the articulation agreement does. Claude appears at exactly two request-time edges (transcript text in, petition letter out), every call is bounded, cost-logged, and typed on failure, and there is no LLM anywhere in the verdict path, the retrieval path, or the data build.
+    </p>
+    <h3>Scale and Trust</h3>
+    <p>
+      The corpus is 31,236 articulation agreements and 352,024 articulation rows, covering 115 California community colleges into all nine UC campuses and the six largest CSUs, committed as read-only SQLite artifacts that rebuild byte-identically. 953 automated tests sit behind the verdicts, including one named fixture per evaluation reason code and the repair loop against a fake transport.
     </p>
   </div>
 
