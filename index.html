@@ -137,7 +137,7 @@
         "@type": "ScholarlyArticle",
         "headline": "Robust Reasoning and Learning with Brain-Inspired Representations under Homomorphic Encryption",
         "author": { "@id": "https://shawnnnliu.github.io/#person" },
-        "creativeWorkStatus": "Under review (IEEE TAI 2026)",
+        "creativeWorkStatus": "Withdrawn from review (2026)",
         "about": ["Fully Homomorphic Encryption", "Hyperdimensional Computing", "Neurosymbolic AI", "Privacy-Preserving ML"],
         "mainEntityOfPage": "https://shawnnnliu.github.io/#research"
       },
@@ -184,7 +184,7 @@
         "@type": "ScholarlyArticle",
         "headline": "HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient and Secure Learning",
         "author": { "@id": "https://shawnnnliu.github.io/#person" },
-        "creativeWorkStatus": "Under review (IEEE TAI 2026)",
+        "creativeWorkStatus": "Withdrawn from review (2026)",
         "about": ["Hyperdimensional Computing", "CKKS", "Privacy-Preserving ML", "Kernel Methods"],
         "mainEntityOfPage": "https://shawnnnliu.github.io/#research"
       },
@@ -294,16 +294,15 @@
           <span class="badge badge--top"><span class="dot"></span> NeurIPS 2025</span>
           <span class="badge"><span class="dot"></span> ISLPED 2026</span>
           <span class="badge"><span class="dot"></span> Frontiers in AI</span>
-          <span class="badge badge--review"><span class="dot"></span> IEEE TAI ×2 (under review)</span>
         </div>
         <div class="metrics reveal">
           <div class="metric">
-            <div class="num"><span class="cval" data-count="6">6</span></div>
-            <div class="lab">Papers at top venues · 4 accepted, 2 under review</div>
+            <div class="num"><span class="cval" data-count="4">4</span></div>
+            <div class="lab">Papers accepted or published at top venues</div>
           </div>
           <div class="metric">
             <div class="num"><span class="cval" data-count="4">4</span><span class="sfx">×</span></div>
-            <div class="lab">Lower FHE bootstrapping overhead at &gt;90% encrypted-inference accuracy</div>
+            <div class="lab">Lower projected FHE bootstrapping overhead · CKKS simulation study</div>
           </div>
           <div class="metric">
             <div class="num"><span class="pfx">+</span><span class="cval" data-count="15.2">15.2</span><span class="sfx sfx--sm">pts</span></div>
@@ -497,7 +496,7 @@
         <div class="pillar reveal">
           <div class="pillar__n">02 / Research</div>
           <h3 class="pillar__t">Published &amp; <span class="em">peer-reviewed</span></h3>
-          <p class="pillar__d">I work on secure ML inference (FHE/CKKS), neurosymbolic AI, and hyperdimensional computing. I'm lead author on work at IEEE TAI, with papers at WACV, NeurIPS, and ISLPED.</p>
+          <p class="pillar__d">I work on secure ML inference (FHE/CKKS), neurosymbolic AI, and hyperdimensional computing, with papers at WACV, NeurIPS, ISLPED, and Frontiers in AI.</p>
           <a class="pillar__lnk" href="#research">Read the papers</a>
         </div>
         <div class="pillar reveal">
@@ -515,31 +514,11 @@
         <header class="sec-head">
           <p class="sec-eyebrow"><span class="idx">02</span> Selected research</p>
           <h2 class="sec-title">Publications</h2>
-          <p class="sec-sub">Six papers across secure ML inference, neurosymbolic AI, and hyperdimensional computing: four accepted or published, two under review. The ones marked <em>lead</em> are where I'm first author. Open any of them for the full abstract, key results, figures, and exactly what I worked on.</p>
+          <p class="sec-sub">Six papers across secure ML inference, neurosymbolic AI, and hyperdimensional computing: four accepted or published, two withdrawn from review. The ones marked <em>lead</em> are where I'm first author. Open any of them for the full abstract, key results, figures, and exactly what I worked on.</p>
         </header>
 
         <div class="pub-list">
-          <!-- Featured 1: FHE, lead author -->
-          <article class="pub pub--feat reveal">
-            <div class="pub__main">
-              <div class="pub__badges">
-                <span class="badge badge--lead"><span class="dot"></span> Lead author</span>
-                <span class="badge badge--review"><span class="dot"></span> IEEE TAI 2026 · under review</span>
-              </div>
-              <h3 class="pub__title">Brain-Inspired Reasoning under Homomorphic Encryption</h3>
-              <p class="pub__sum">A privacy-preserving neurosymbolic framework that runs inference <span class="hl">entirely under CKKS-FHE</span> while keeping HDC-based reasoning robust. It holds <span class="hl">&gt;90% accuracy</span> on encrypted graph inference with a <span class="hl">4× reduction</span> in bootstrapping overhead, thanks to noise-adaptive scheduling.</p>
-              <p class="pub__tags">FHE · HDC · Neurosymbolic AI · Privacy-Preserving ML</p>
-              <div class="pub__cta">
-                <button class="read-more-btn" data-modal="secure-neurosymbolic">Read more</button>
-                <span class="pub__tags">Lead &amp; corresponding author · rebuttal completed</span>
-              </div>
-            </div>
-            <figure class="pub__fig" data-label="FHE neurosymbolic framework">
-              <img src="assets/research/OVERALLframework.png" alt="End-to-end neuro-symbolic FHE pipeline with distributed bootstrapping and symbolic decoding" loading="lazy" decoding="async" />
-            </figure>
-          </article>
-
-          <!-- Featured 2: WACV -->
+          <!-- Featured 1: WACV -->
           <article class="pub pub--feat reveal">
             <div class="pub__main">
               <div class="pub__badges">
@@ -601,9 +580,27 @@
 
           <article class="pub reveal">
             <div class="pub__main">
-              <div class="pub__badges"><span class="badge badge--review"><span class="dot"></span> IEEE TAI 2026 · under review</span></div>
+              <div class="pub__badges">
+                <span class="badge badge--lead"><span class="dot"></span> Lead author</span>
+                <span class="badge"><span class="dot"></span> Withdrawn from review · 2026</span>
+              </div>
+              <h3 class="pub__title">Brain-Inspired Reasoning under Homomorphic Encryption</h3>
+              <p class="pub__sum">A simulation study of noise-adaptive bootstrapping for encrypted GNN inference: real CKKS noise characterized empirically with Microsoft SEAL, then calibrated noise injection used to evaluate distributed bootstrapping schedules, cutting projected bootstrapping overhead 4× in HDC-based graph reasoning.</p>
+              <p class="pub__tags">FHE · HDC · Neurosymbolic AI · Privacy-Preserving ML</p>
+            </div>
+            <div class="pub__side">
+              <span class="pub__year">2026</span>
+              <div class="pub__links">
+                <button class="read-more-btn" data-modal="secure-neurosymbolic">Read more</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub__main">
+              <div class="pub__badges"><span class="badge"><span class="dot"></span> Withdrawn from review · 2026</span></div>
               <h3 class="pub__title">HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient &amp; Secure Learning</h3>
-              <p class="pub__sum">Positions HDC as an alternative to encrypted deep learning: shallow, noise-resilient algebra that fits FHE, using up to an <span class="hl">order-of-magnitude fewer</span> bootstrapping ops at near-clean accuracy.</p>
+              <p class="pub__sum">Positions HDC as an alternative to encrypted deep learning: shallow, noise-resilient algebra that fits FHE constraints. Under modeled CKKS noise, sparse bootstrapping schedules recover near-clean accuracy with up to an <span class="hl">order-of-magnitude fewer</span> refresh ops.</p>
               <p class="pub__tags">HDC · Kernel Methods · CKKS · Privacy-Preserving ML</p>
             </div>
             <div class="pub__side">
@@ -1008,73 +1005,51 @@
   <div hidden id="modal-content-secure-neurosymbolic" class="modal-content-template">
     <h2 id="modal-title">Robust Reasoning and Learning with Brain-Inspired Representations under Homomorphic Encryption</h2>
     <p class="tags">Privacy-Preserving AI · Neuro-Symbolic Learning · Homomorphic Encryption · HDC</p>
-    <p><strong>IEEE Transactions on Artificial Intelligence (2026, under review)</strong></p>
+    <p><strong>Withdrawn from review, 2026</strong></p>
     <p>
-      We propose a privacy-preserving neurosymbolic framework that executes inference entirely under CKKS Fully Homomorphic Encryption (FHE) while preserving the robustness and interpretability of Hyperdimensional Computing (HDC)-based reasoning. The framework introduces distributed bootstrapping to mitigate ciphertext-noise explosion across deep layers, balancing accuracy and compute cost.
+      A simulation study of noise-adaptive bootstrapping for encrypted GNN inference. We characterized real CKKS noise distributions empirically using Microsoft SEAL, then used a calibrated noise-injection model to evaluate how distributed bootstrapping schedules trade off accuracy and compute in HDC-based graph reasoning.
     </p>
 
     <h3>Key Results</h3>
     <ul class="list">
-      <li>Maintains <strong>>90% accuracy</strong> on encrypted graph inference without plaintext access</li>
-      <li><strong>4× reduction</strong> in bootstrapping overhead through noise-adaptive scheduling</li>
-      <li>Preserves symbolic structure of neural states under encrypted operations</li>
-      <li>Robust performance across multiple graph-based reasoning tasks</li>
+      <li><strong>4× reduction</strong> in projected bootstrapping overhead via noise-adaptive scheduling, in simulation</li>
+      <li>Empirical characterization of CKKS noise distributions under GNN operations, measured with Microsoft SEAL</li>
+      <li>HDC symbolic structure preserved under modeled encrypted operations</li>
     </ul>
 
     <h3>Why Homomorphic Encryption?</h3>
     <p>
-      Cloud-based AI inference poses significant privacy risks when handling sensitive data (medical records, financial information, biometric data). Traditional encryption requires decryption before processing, exposing data to potential breaches. Fully Homomorphic Encryption enables computation directly on encrypted data, ensuring privacy even in untrusted cloud environments.
+      FHE allows computation directly on encrypted data, which would let cloud inference run without exposing sensitive inputs.
     </p>
-    <div class="research-figures">
-      <figure class="research-figure-single">
-        <img src="assets/research/WhyFHEframework.png" alt="Why FHE framework diagram" loading="lazy" decoding="async" />
-        <figcaption>FHE's security advantage: Data remains encrypted throughout the entire inference pipeline in untrusted cloud environments</figcaption>
-      </figure>
-    </div>
 
-    <h3>Framework Overview</h3>
+    <h3>Simulation Framework</h3>
     <p>
-      Our end-to-end neurosymbolic pipeline integrates HDC-based symbolic reasoning with CKKS-FHE operations. The framework employs distributed bootstrapping at strategic network layers to prevent noise accumulation while minimizing computational overhead. Graph Neural Networks operate entirely on encrypted representations, with symbolic decoding preserving interpretability.
+      The pipeline couples HDC-based symbolic reasoning with a GNN and models CKKS behavior through calibrated noise injection: noise distributions measured in SEAL are injected at each encrypted-equivalent operation, and distributed bootstrapping is modeled as a scheduled noise reset. This makes it possible to sweep bootstrapping schedules and measure the accuracy-compute trade-off without running the full pipeline under encryption.
     </p>
     <div class="research-figures">
       <figure class="research-figure-single">
-        <img src="assets/research/OVERALLframework.png" alt="Overall framework architecture" loading="lazy" decoding="async" />
-        <figcaption>End-to-end neuro-symbolic FHE pipeline with distributed bootstrapping and symbolic decoding</figcaption>
+        <img src="assets/research/OVERALLframework.png" alt="Neuro-symbolic pipeline with distributed bootstrapping, evaluated under calibrated noise injection" loading="lazy" decoding="async" />
+        <figcaption>Neuro-symbolic pipeline with distributed bootstrapping, evaluated under calibrated noise injection</figcaption>
       </figure>
     </div>
 
     <h3>Noise-Adaptive Bootstrapping</h3>
     <p>
-      A critical challenge in FHE-based deep learning is ciphertext noise accumulation. Without proper noise management, encrypted operations cause accuracy to collapse as noise overwhelms the signal. Our distributed bootstrapping scheme strategically refreshes ciphertexts at high-noise layers, achieving a 4× reduction in bootstrapping overhead compared to naive per-layer approaches.
+      Ciphertext noise accumulates with multiplicative depth, and unmanaged noise collapses accuracy. Scheduling bootstrapping at the layers where measured noise grows fastest, rather than at every layer, cut projected bootstrapping overhead by 4× in simulation compared to naive per-layer refreshing, while holding accuracy on the evaluated graph-reasoning tasks.
     </p>
     <div class="research-figures">
       <figure class="research-figure-single">
-        <img src="assets/research/Noise_accuracy_degradation.png" alt="Empirical noise growth leading to accuracy collapse under FHE without bootstrapping" loading="lazy" decoding="async" />
-        <figcaption>Empirical analysis: Noise growth without bootstrapping leads to accuracy collapse. Our approach balances accuracy preservation with computational efficiency</figcaption>
+        <img src="assets/research/Noise_accuracy_degradation.png" alt="Empirical noise growth leading to accuracy collapse without bootstrapping" loading="lazy" decoding="async" />
+        <figcaption>Empirical analysis: noise growth without bootstrapping leads to accuracy collapse</figcaption>
       </figure>
     </div>
 
-    <h3>Technical Innovation</h3>
-    <ul class="list">
-      <li><strong>SEAL-Based Implementation:</strong> Built on Microsoft SEAL library for CKKS operations</li>
-      <li><strong>Noise Characterization:</strong> Empirical analysis of real noise distributions in encrypted GNN operations</li>
-      <li><strong>Distributed Bootstrapping:</strong> Adaptive scheduling reduces compute cost by 75% while maintaining accuracy</li>
-      <li><strong>Symbolic Preservation:</strong> HDC-based representations maintain interpretability under encryption</li>
-      <li><strong>Graph Reasoning:</strong> Encrypted inference on graph-structured data for video anomaly detection</li>
-    </ul>
-
     <h3>Applications</h3>
     <p>
-      The framework enables privacy-preserving AI for sensitive domains:
+      Relevant to privacy-sensitive graph inference, such as encrypted medical or financial data and video anomaly detection.
     </p>
-    <ul class="list">
-      <li><strong>Healthcare:</strong> Encrypted medical diagnosis without exposing patient data</li>
-      <li><strong>Finance:</strong> Fraud detection on encrypted transaction graphs</li>
-      <li><strong>Surveillance:</strong> Privacy-preserving video anomaly detection in public spaces</li>
-      <li><strong>IoT Security:</strong> Encrypted reasoning on edge device data</li>
-    </ul>
 
-    <p><strong>My contribution:</strong> Lead author and corresponding author. Designed and conducted SEAL-based experiments to characterize real noise distributions and evaluate CKKS performance under GNN operations. Implemented noise injection mechanisms and distributed bootstrapping schemes within the graph network to achieve robust encrypted reasoning. Led rebuttal process for IEEE TAI 2026.</p>
+    <p><strong>My contribution:</strong> Lead and corresponding author. Ran SEAL-based experiments to characterize CKKS noise under GNN operations, built the calibrated noise-injection and distributed-bootstrapping simulation framework, and led the full submission and rebuttal cycle.</p>
   </div>
 
   <div hidden id="modal-content-geometric-priors" class="modal-content-template">
@@ -1262,17 +1237,17 @@
   <div hidden id="modal-content-hyperencrypt" class="modal-content-template">
     <h2 id="modal-title">HyperEncrypt: Homomorphic Hyperdimensional Computing for Efficient and Secure Learning</h2>
     <p class="tags">Fully Homomorphic Encryption · Hyperdimensional Computing · Kernel Methods · Privacy-Preserving ML · CKKS</p>
-    <p><strong>IEEE TAI 2026 (under review)</strong></p>
+    <p><strong>Withdrawn from review, 2026</strong></p>
     <p>
-      We study Hyperdimensional Computing (HDC) as an alternative to encrypted deep learning: instead of long DNN compute chains that force frequent bootstrapping, HDC uses shallow, noise-resilient algebra that better matches FHE constraints. Using FHRR and GHRR, we connect hypervector similarity to shift-invariant kernels via Bochner's theorem, then quantify how CKKS noise degrades similarity structure, capacity, classification accuracy, and input decodability.
+      We study Hyperdimensional Computing (HDC) as an alternative to encrypted deep learning: instead of long DNN compute chains that force frequent bootstrapping, HDC uses shallow, noise-resilient algebra that better matches FHE constraints. Using FHRR and GHRR, we connect hypervector similarity to shift-invariant kernels via Bochner's theorem, then quantify how modeled CKKS noise degrades similarity structure, capacity, classification accuracy, and input decodability.
     </p>
 
     <h3>Key Results</h3>
     <ul class="list">
-      <li><strong>Bootstrapping reduction:</strong> Modest bootstrapping schedules + noise-robust encodings recover near-clean performance, achieving up to an order-of-magnitude fewer bootstrapping operations without sacrificing accuracy.</li>
-      <li><strong>Theory-backed noise behavior:</strong> Under CKKS noise, similarity remains unbiased but its variance grows with encryption noise and shrinks with hypervector dimension (∝ σ²/D). This yields an explicit SNR expression that predicts when classification becomes unreliable.</li>
-      <li><strong>Capacity under noise:</strong> CKKS noise collapses the separation between positive vs. negative cosine-similarity distributions; 25%–50% bootstrapping restores much of the margin, with GHRR recovering faster and more fully than FHRR.</li>
-      <li><strong>Encrypted classification:</strong> On FMNIST, sparse schedules like 25% or 50% bootstrapping recover most of the lost accuracy (with diminishing returns beyond 50%); the plot reports an ~18% improvement from minimal bootstrapping.</li>
+      <li><strong>Bootstrapping reduction:</strong> Under modeled CKKS noise, modest bootstrapping schedules + noise-robust encodings recover near-clean performance, projecting up to an order-of-magnitude fewer bootstrapping operations without sacrificing accuracy.</li>
+      <li><strong>Theory-backed noise behavior:</strong> Under the CKKS noise model, similarity remains unbiased but its variance grows with encryption noise and shrinks with hypervector dimension (∝ σ²/D). This yields an explicit SNR expression that predicts when classification becomes unreliable.</li>
+      <li><strong>Capacity under noise:</strong> Modeled CKKS noise collapses the separation between positive vs. negative cosine-similarity distributions; 25%–50% bootstrapping restores much of the margin, with GHRR recovering faster and more fully than FHRR.</li>
+      <li><strong>Classification under modeled noise:</strong> On FMNIST, sparse schedules like 25% or 50% bootstrapping recover most of the lost accuracy (with diminishing returns beyond 50%); the plot reports an ~18% improvement from minimal bootstrapping.</li>
       <li><strong>Decodability trade-off:</strong> Increasing hypervector dimension and using moderate bootstrapping (e.g., 25%) restores much of the input reconstruction quality at far lower cost than full refresh; at higher D, 25% can get close to the clean baseline.</li>
     </ul>
 
@@ -1283,10 +1258,10 @@
 
     <h3>Technical Idea</h3>
     <p>
-      We treat hypervector similarity as a kernel estimator (for FHRR) and analyze how CKKS perturbations distort that similarity. The analysis shows exactly how noise scales with multiplicative depth and how increasing D and choosing sparse bootstrapping points can preserve margins. Empirically, GHRR + sparse bootstrapping consistently maintains higher capacity and better downstream accuracy than FHRR under the same noise budget.
+      We treat hypervector similarity as a kernel estimator (for FHRR) and analyze how CKKS-style perturbations distort that similarity. The analysis shows exactly how noise scales with multiplicative depth and how increasing D and choosing sparse bootstrapping points can preserve margins. Under the same modeled noise budget, GHRR + sparse bootstrapping consistently maintains higher capacity and better downstream accuracy than FHRR.
     </p>
 
-    <p><strong>My contribution:</strong> I analyzed how CKKS noise and bootstrapping distort the kernel behavior of HDC representations, and ran controlled comparisons between GHRR vs. FHRR under identical noise budgets. I produced the bootstrapping-by-noise heatmaps, the binding/bundling sensitivity plots, and cosine-similarity histograms that quantify margin collapse and recovery with refresh. I also implemented and evaluated reconstruction of binarized images from FHRR under CKKS noise to measure how encryption noise impacts decodability and information retention.</p>
+    <p><strong>My contribution:</strong> I analyzed how modeled CKKS noise and bootstrapping distort the kernel behavior of HDC representations, and ran controlled comparisons between GHRR vs. FHRR under identical noise budgets. I produced the bootstrapping-by-noise heatmaps, the binding/bundling sensitivity plots, and cosine-similarity histograms that quantify margin collapse and recovery with refresh. I also implemented and evaluated reconstruction of binarized images from FHRR under modeled CKKS noise to measure how the noise impacts decodability and information retention.</p>
   </div>
 
   <div hidden id="modal-content-adversarial-hdc" class="modal-content-template">
