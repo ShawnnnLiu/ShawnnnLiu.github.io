@@ -208,6 +208,11 @@ p { margin: 0 0 1rem; }
   .nav__status { display: none; }
 }
 
+/* keep the header from overflowing on phones; the drawer still links both PDFs */
+@media (max-width: 480px) {
+  .nav__cta .btn--ghost { display: none; }
+}
+
 /* ---------- Hero ---------- */
 .hero { padding-top: clamp(2.5rem, 6vw, 4.5rem); padding-bottom: clamp(2rem, 5vw, 3.5rem); position: relative; overflow: hidden; }
 .hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
@@ -762,7 +767,8 @@ p { margin: 0 0 1rem; }
 .nav__drawer.open { display: block; animation: fadeIn .2s ease; }
 .nav__drawer nav { display: flex; flex-direction: column; gap: .2rem; padding: 92px var(--pad) 2rem; }
 .nav__drawer a { font-family: var(--display); font-size: clamp(1.6rem, 7vw, 2.2rem); color: var(--ink); padding: .55rem 0; border-bottom: 1px solid var(--line); letter-spacing: -.02em; }
-.nav__drawer a:last-child { font-family: var(--mono); font-size: 1rem; color: var(--accent-deep); border-bottom: none; margin-top: 1.2rem; }
+.nav__drawer a:nth-last-child(-n+2) { font-family: var(--mono); font-size: 1rem; color: var(--accent-deep); border-bottom: none; }
+.nav__drawer a:nth-last-child(2) { margin-top: 1.2rem; }
 
 /* me-photo as button */
 .me-photo { -webkit-appearance: none; appearance: none; font: inherit; color: inherit; text-align: left; width: 100%; padding: 0; }
