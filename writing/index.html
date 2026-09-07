@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing · Shawn Liu</title>
+  <meta name="description" content="Posts by Shawn Liu on evaluation for language-model systems: the Loop eval gate, and patient identity leaking through the usual MIT-BIH train/test split." />
+  <meta name="author" content="Xiangjian (Shawn) Liu" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f3efe6" />
+  <link rel="canonical" href="https://shawnnnliu.github.io/writing/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shawnnnliu.github.io/writing/" />
+  <meta property="og:site_name" content="Shawn Liu" />
+  <meta property="og:title" content="Writing · Shawn Liu" />
+  <meta property="og:description" content="Posts on evaluation for language-model systems." />
+  <meta property="og:image" content="https://shawnnnliu.github.io/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#writing">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a href="/" class="nav__brand"><span class="mk">SL</span> Shawn&nbsp;Liu</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/#loop">Loop</a>
+        <a href="/#research">Research</a>
+        <a href="/#projects">Projects</a>
+        <a href="/writing/" aria-current="page">Writing</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--ghost" href="/assets/CV/Shawn_Liu_CV_Research_17.pdf" target="_blank" rel="noopener">CV
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+        <a class="btn btn--accent" href="/assets/CV/Shawn_Liu_Resume_20.pdf" target="_blank" rel="noopener">Resume
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="writing">
+    <section class="section" style="padding-top:clamp(6rem,12vw,9rem)">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-eyebrow"><span class="idx">01</span> Writing</p>
+          <h2 class="sec-title">Writing</h2>
+          <p class="sec-sub">Notes on evaluating systems built around language models. Each post is about something I actually built, with the numbers, what broke, and what the fix cost.</p>
+        </header>
+
+        <p class="writing__empty">Nothing published here yet. Two posts are in progress.</p>
+
+        <ol class="writing-list">
+          <li class="writing-item">
+            <span class="writing-item__status">In progress</span>
+            <h3 class="writing-item__t">The eval gate in Loop, and the one check it still misses</h3>
+            <p class="writing-item__d">How prompts get pinned by hash, how CI re-grades recorded model outputs offline, and the retrieval floors that are pinned in the repo but still checked by a command I run myself.</p>
+          </li>
+          <li class="writing-item">
+            <span class="writing-item__status">In progress</span>
+            <h3 class="writing-item__t">The MIT-BIH split that learns the patient</h3>
+            <p class="writing-item__d">The same CNN scores 98.36% one way and 83.88% the honest way. What the beat-wise split leaks, and how the split search keeps all six classes in the test set anyway.</p>
+          </li>
+        </ol>
+
+        <p class="writing__foot"><a class="lnk" href="/">Back to the rest of the site</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Xiangjian (Shawn) Liu</p>
+      <a class="foot-top" href="#writing">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
