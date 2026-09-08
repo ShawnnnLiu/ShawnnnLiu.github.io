@@ -36,7 +36,7 @@ All paths relative to the job-scrape folder.
   its current level of detail (CUI rule, no exceptions, no visuals).
 - project/humanizing-ai-writing.md: binding on every sentence. Read it in full first.
 - project/resume-master.md: the current resume, with the reasoning in comments. The site must not contradict it.
-- project/Shawn_Liu_Resume_20.pdf and project/Shawn_Liu_CV_Research_17.pdf: current renders for the download links.
+- project/Shawn_Liu_Resume_21.pdf and project/Shawn_Liu_CV_Research_18.pdf: current renders for the download links.
 - tailored/2026-09-04/google_swe-intern-ms-summer-2027/cover-letter.md and
   tailored/2026-09-07/scaleai_software-engineering-intern/cover-letter.md: the voice samples. Read both.
 
@@ -63,7 +63,7 @@ All paths relative to the job-scrape folder.
 8. Foothold: 352,024 articulation rows, 31,236 agreements, 115 colleges with agreements, 15 campuses, solo, July 31 to
    August 21 2026. Keep "$15,686" only if the site can say what it is (an example tuition cost from one demo case, not a
    measured saving). No usage numbers for Loop or Foothold anywhere. (facts-digest.md Foothold)
-9. Download links: point Resume to Shawn_Liu_Resume_20.pdf and CV to Shawn_Liu_CV_Research_17.pdf.
+9. Download links: point Resume to Shawn_Liu_Resume_21.pdf and CV to Shawn_Liu_CV_Research_18.pdf.
 10. Never a user count, a "serving users" phrase, a preprint that does not exist, or a planned PR or post as if done.
 
 ## Voice: what the letters sound like, and why the site should match
@@ -171,6 +171,6 @@ every variant, resume rule).
 - Every number on the page traces to facts-digest.md or unverified-ledger.md; list the trace in the PR description.
 - grep the built site for each banned word and for the em dash character; zero hits.
 - Read the hero and one project card aloud. If a sentence would sound rehearsed said across a table to a friend, rewrite it.
-- The bio says Columbia, present tense. The download links resolve to Resume_20 and CV_17.
+- The bio says Columbia, present tense. The download links resolve to Resume_21 and CV_18.
 - "Applied AI engineer" appears nowhere.
 - Nothing claims a user count, a manuscript, or work that is planned.
