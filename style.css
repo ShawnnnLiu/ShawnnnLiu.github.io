@@ -193,19 +193,10 @@ p { margin: 0 0 1rem; }
 .nav__links a:hover { color: var(--ink); }
 .nav__links a:hover::after { transform: scaleX(1); }
 .nav__cta { display: flex; align-items: center; gap: .6rem; }
-.nav__status {
-  display: inline-flex; align-items: center; gap: .45rem; font-family: var(--mono);
-  font-size: .72rem; color: var(--ink-2); padding: .35rem .6rem; border: 1px solid var(--line-2);
-  border-radius: 999px; white-space: nowrap;
-}
-.nav__status .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--hot); position: relative; }
-.nav__status .pulse::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 1.5px solid var(--hot); animation: pulse 2s ease-out infinite; }
-@keyframes pulse { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(1.5); opacity: 0; } }
 .nav__menu { display: none; }
 
 @media (max-width: 880px) {
   .nav__links { display: none; }
-  .nav__status { display: none; }
 }
 
 /* ---------- Hero ---------- */
